@@ -8,7 +8,7 @@
 
 PROG_NAME = backup
 
-PROJECT_DIR =  ../../..
+PROJECT_DIR =  ../..
 DIR =       ..
 TMP_DIR =   $(DIR)
 
@@ -22,7 +22,7 @@ OBJ_DIR = $(TMP_DIR)/obj
 INC_DIR = $(DIR)/inc
 BIN_DIR = $(DIR)/mak
 
-MBUTILS_DIR     = $(PROJECT_DIR)/mbUtilsLinux/trunk
+MBUTILS_DIR     = $(PROJECT_DIR)/mbUtilsLinux
 MBUTILS_INC_DIR = $(MBUTILS_DIR)/inc
 MBUTILS_LIB_DIR = $(MBUTILS_DIR)/mak
 MBUTILS_MAC_DIR = $(MBUTILS_DIR)/mak

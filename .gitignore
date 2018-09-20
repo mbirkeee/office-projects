@@ -1,3 +1,4 @@
 *.o
 backup/mak/backup
 backup/mak/restore
+*.a
