@@ -79,11 +79,11 @@ INC_DIRS =                  \
 ifeq ($(OS),fc32)
 LIBS = \
 	$(MBUTILS_LIB_DIR)/mbUtils.a \
-	/usr/lib/libpthread.so 
+	/usr/lib/libpthread.so.0
 else
 LIBS = \
 	$(MBUTILS_LIB_DIR)/mbUtils.a \
-	$(LINUX_LIB_DIR_64)/libpthread.so
+	$(LINUX_LIB_DIR_64)/libpthread.so.0
 endif
 
 ######################################################################
