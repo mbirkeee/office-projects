@@ -1,0 +1,8 @@
+./backup -h drbree.com  \
+         -r /data/backups/local \
+	 -d /data/backups/hazel2 \
+	 -l /home/mikeb/projects/backup_new/mak
+
+
+
+

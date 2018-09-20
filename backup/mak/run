@@ -1,0 +1,8 @@
+
+./backup -d /home/mikeb/projects/backup_new  \
+	 -d /home/mikeb/projects \
+	 -l /home/mikeb/projects/backup_new/mak \
+	 -b /home/mikeb/projects/backup_new/mak
+
+
+
