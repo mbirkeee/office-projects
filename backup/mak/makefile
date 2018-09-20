@@ -12,6 +12,8 @@ PROJECT_DIR =  ../..
 DIR =       ..
 TMP_DIR =   $(DIR)
 
+LINUX_LIB_DIR_64 = /lib/x86_64-linux-gnu
+
 ######################################################################
 # Source, Object, and Binary Directories
 #---------------------------------------------------------------------
@@ -81,7 +83,7 @@ LIBS = \
 else
 LIBS = \
 	$(MBUTILS_LIB_DIR)/mbUtils.a \
-	/usr/lib64/libpthread.so
+	$(LINUX_LIB_DIR_64)/libpthread.so
 endif
 
 ######################################################################
