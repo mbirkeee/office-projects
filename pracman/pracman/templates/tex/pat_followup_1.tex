@@ -1,0 +1,155 @@
+%------------------------------------------------------------------------------
+% Dr. Bree Consult Letter
+%
+% Author: Michael Bree
+% Date:   April 12, 2009
+%------------------------------------------------------------------------------
+
+% \tiny             \,	        a small space
+% \scriptsize       \:	        a medium space
+% \footnotesize     \;	        a large space
+% \small            \quad	    a really large space
+% \normalsize       \qquad	    a huge space
+% \large            \!	        a negative space (moves things back to the left)
+% \Large
+% \LARGE
+% \huge
+% \Huge
+
+\documentclass[10pt,letterpaper]{letter}
+
+% Seems that if I put the fullpage here, before other declarations,
+% more of the page will get used.  I think putting fullpage after the
+% textheight basically overrides the textheight.
+\usepackage{fullpage}
+\raggedbottom
+
+\setlength\topmargin{0.0in}
+\setlength\headheight{0in}
+\setlength\headsep{0in}
+\setlength\textheight{9.0in}
+\setlength\textwidth{6.5in}
+\setlength\oddsidemargin{0.0in}
+\setlength\evensidemargin{0.0in}
+\setlength\parindent{0.0in}
+\setlength\parskip{0.2in}
+
+%\usepackage{palatino,url}
+\usepackage{pslatex}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{draftwatermark}
+\usepackage{booktabs}
+%\usepackage{fullpage}
+
+\SetWatermarkText{[_WATERMARK_]}
+
+\fancyhf{}
+\pagestyle{fancy}
+
+\rfoot{\scriptsize \textsf{Page \thepage \ of \pageref{LastPage}}}
+\lfoot{\scriptsize \textsf{Confidential}}
+% \cfoot{\scriptsize \textsf{Dr. T. L. Bree $\:$  Suite 203 - 728 Spadina Crescent East, \ Saskatoon \ SK \ S7K 4H7 \ Canada  $\:$ (306) 975-0600 }}
+\cfoot{\scriptsize \textsf{Dr. T. L. Bree $\quad$ Re: [_PAT_TITLE_] [_PAT_FIRST_NAME_] [_PAT_LAST_NAME_] PHN: [_PAT_PHN_] ([_PAT_PHN_PROVINCE_]) }}
+
+\renewcommand{\footrulewidth}{0.3pt}
+\renewcommand{\headrulewidth}{0.0pt}
+
+%------------------------------------------------------------------------------
+% "Enumerate" that reduces the spacing between the items
+%------------------------------------------------------------------------------
+\newenvironment{myenumerate}{\vspace{-0.15in}
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}}{\end{enumerate}
+}
+
+%------------------------------------------------------------------------------
+% "Itemize" that reduces the spacing between the items
+%------------------------------------------------------------------------------
+
+\newenvironment{myitemize}{\vspace{-0.15in}
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}}{\end{itemize}
+}
+
+%------------------------------------------------------------------------------
+% Define a heading style that pracman can use
+% -looks like the newcommand command is failing if there is an underscore
+%  in the name.
+% -need the space after the first line
+%------------------------------------------------------------------------------
+
+\newcommand{\myheading}[1]{{\normalsize{\textbf{\textit{#1}}}}
+\\*
+\\*
+}
+
+%------------------------------------------------------------------------------
+% Start of the document
+%------------------------------------------------------------------------------
+
+\widowpenalty=300
+\clubpenalty=300
+
+\linespread{1.0}
+
+\begin{document}
+\sffamily
+\begin{center}
+{\huge \textbf{Dr. T. L. Bree$^{*}$} $\:$ {\Large M.D. $\:$ F.R.C.P.(C)} $\:$ \textbf{Cardiology}}\\[.5pc]
+%\vspace{-0.05in}
+{\small  Suite 203 - 728 Spadina Crescent East, \ Saskatoon \ SK \ S7K 4H7 \ Canada}\\
+\vspace{-0.03in}
+{\small  Phone (306) 975-0600 $\:$ Fax: (306) 978-5254}\\
+{\footnotesize\textit{ $^{*}$Professional Medical Corporation }}
+\end{center}
+\vspace{-0.25in}
+\underline{\hspace{6.5in}}
+\\
+
+\begin{tabular*}{1.00\textwidth}{@{\extracolsep{\fill}}ll}
+Dr. [_CONSULT_DR_FIRST_NAME_] [_CONSULT_DR_LAST_NAME_]  &   [_LETTER_DATE_] \\
+[_CONSULT_DR_ADDRESS_1_]                                & \\
+[_CONSULT_DR_ADDRESS_2_]                                & Phone: [_CONSULT_DR_PHONE_] \\
+[_CONSULT_DR_ADDRESS_3_]                                & Fax: [_CONSULT_DR_FAX_]     \\
+\end{tabular*}
+
+Dear Dr. [_CONSULT_DR_LAST_NAME_],\\
+\\
+\underline{Re: \textbf{ [_PAT_LAST_NAME_], [_PAT_FIRST_NAME_] ([_PAT_TITLE_]) $\:$ PHN: [_PAT_PHN_] ([_PAT_PHN_PROVINCE_]) $\:$ D.O.B [_PAT_BIRTH_DATE_]  $\:$ Age: [_PAT_AGE_]}}  \\
+\vspace{-0.15in}
+\normalsize
+\\
+\\
+FOLLOWUP
+It was a pleasure to see [_PAT_TITLE_] [_PAT_FIRST_NAME_] [_PAT_LAST_NAME_] in clinic on [_APP_DATE_].
+
+[_IF_FOLLOWED_]
+\normalsize{[_FOLLOWED_]}
+[_ENDIF_FOLLOWED_]
+
+[_IF_MEDICATIONS_]
+\Large\textbf{Medications}
+\\*\\*
+\normalsize{[_MEDICATIONS_]}
+[_ENDIF_MEDICATIONS_]
+
+[_IF_ALLERGIES_]
+\Large\textbf{Allergies}
+\\*\\*
+\normalsize{[_ALLERGIES_]}
+[_ENDIF_ALLERGIES_]
+
+[_IF_HISTORY_]
+\Large\textbf{History}
+\\*\\*
+\normalsize{[_HISTORY_]}
+[_ENDIF_HISTORY_]
+
+\vspace{0.5in}
+\samepage{Sincerely,\\*\\*\\*\\*Dr. T. L. Bree, M.D., F.R.C.P.(C)}
+\end{document}
