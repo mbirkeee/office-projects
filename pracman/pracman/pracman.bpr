@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="pracman.exe"/>
+    <OBJFILES value="..\obj\pracman\pracman.obj ..\obj\pracman\pmcMainForm.obj 
+      ..\obj\pracman\pmcPatientListForm.obj ..\obj\pracman\pmcCalendar.obj 
+      ..\obj\pracman\pmcNewProviderForm.obj ..\obj\pracman\pmcSplashScreen.obj 
+      ..\obj\pracman\pmcUtils.obj ..\obj\pracman\pmcPatientEditForm.obj 
+      ..\obj\pracman\pmcDateSelectForm.obj 
+      ..\obj\pracman\pmcPatientListUpdate.obj ..\obj\pracman\pmcAppList.obj 
+      ..\obj\pracman\pmcPollTableThread.obj ..\obj\pracman\pmcPromptForm.obj 
+      ..\obj\pracman\pmcPatAppListForm.obj ..\obj\pracman\pmcDoctorListForm.obj 
+      ..\obj\pracman\pmcDoctorListUpdate.obj 
+      ..\obj\pracman\pmcAppLettersForm.obj ..\obj\pracman\pmcDoctorEditForm.obj 
+      ..\obj\pracman\pmcDatabaseMaint.obj ..\obj\pracman\pmcSeiko62.obj 
+      ..\obj\pracman\pmcAboutForm.obj ..\obj\pracman\pmcClaimListForm.obj 
+      ..\obj\pracman\pmcInitialize.obj ..\obj\pracman\pmcClaimEditForm.obj 
+      ..\obj\pracman\pmcReportForm.obj ..\obj\pracman\pmcWeekView.obj 
+      ..\obj\pracman\pmcDayView.obj ..\obj\pracman\pmcMonthView.obj 
+      ..\obj\pracman\pmcMspClaimsin.obj ..\obj\pracman\pmcMspValidrpt.obj 
+      ..\obj\pracman\pmcMspNotice.obj ..\obj\pracman\pmcMspReturns.obj 
+      ..\obj\pracman\pmcAppListForm.obj ..\obj\pracman\pmcUtilsSql.obj 
+      ..\obj\pracman\pmcBatchImportForm.obj 
+      ..\obj\pracman\pmcDocumentEditForm.obj 
+      ..\obj\pracman\pmcDocumentListForm.obj 
+      ..\obj\pracman\pmcWordCreateForm.obj ..\obj\pracman\pmcSelectForm.obj 
+      ..\obj\pracman\pmcProviderView.obj ..\obj\pracman\pmcPatientForm.obj 
+      ..\obj\pracman\pmcIcdForm.obj ..\obj\pracman\pmcAppHistoryForm.obj 
+      ..\obj\pracman\pmcEchoImportForm.obj 
+      ..\obj\pracman\pmcEchoCDContentsForm.obj 
+      ..\obj\pracman\pmcEchoListForm.obj ..\obj\pracman\pmcTextEditForm.obj 
+      ..\obj\pracman\pmcEchoBackup.obj ..\obj\pracman\pmcEchoPatSelectForm.obj 
+      ..\obj\pracman\pmcMedListForm.obj ..\obj\pracman\pmcEchoDetailsForm.obj 
+      ..\obj\pracman\pmcFormPickList.obj ..\obj\pracman\hpSonosDB.obj 
+      ..\obj\pracman\pmcPDF.obj ..\obj\pracman\pmcDoctor.obj 
+      ..\obj\pracman\pmcPatient.obj ..\obj\pracman\pmcPatientRecord.obj 
+      ..\obj\pracman\pmcDocumentUtils.obj ..\obj\pracman\pmcDocument.obj 
+      ..\obj\pracman\pmcConsult.obj"/>
+    <RESFILES value="pracman.res"/>
+    <IDLFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) pmcMainForm.dfm pmcPatientListForm.dfm pmcNewProviderForm.dfm 
+      pmcSplashScreen.dfm pmcPatientEditForm.dfm pmcDateSelectForm.dfm 
+      pmcPromptForm.dfm pmcPatAppListForm.dfm pmcDoctorListForm.dfm 
+      pmcAppLettersForm.dfm pmcDoctorEditForm.dfm pmcAboutForm.dfm 
+      pmcClaimListForm.dfm pmcClaimEditForm.dfm pmcReportForm.dfm 
+      pmcAppListForm.dfm pmcBatchImportForm.dfm pmcDocumentEditForm.dfm 
+      pmcDocumentListForm.dfm pmcWordCreateForm.dfm pmcSelectForm.dfm 
+      pmcPatientForm.dfm pmcIcdForm.dfm pmcAppHistoryForm.dfm 
+      pmcEchoImportForm.dfm pmcEchoCDContentsForm.dfm pmcEchoListForm.dfm 
+      pmcTextEditForm.dfm pmcEchoPatSelectForm.dfm pmcMedListForm.dfm 
+      pmcEchoDetailsForm.dfm pmcFormPickList.dfm"/>
+    <LIBFILES value="..\mbUtils\mbUtils.lib ..\mbSql\mbSqlLib.lib ..\mbSql\mysql\libmysql.lib 
+      seiko\pmcSlpApi62.lib"/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="rtl.lib vcl.lib bcbsmp.lib vclx.lib dbrtl.lib vcldb.lib bdertl.lib"/>
+    <PACKAGES value="rtl.bpi vcl.bpi vclx.bpi vcljpg.bpi bcbsmp.bpi qrpt.bpi dbrtl.bpi 
+      vcldb.bpi bdertl.bpi ibsmp.bpi vcldbx.bpi teeui.bpi teedb.bpi tee.bpi 
+      nmfast.bpi dclocx.bpi"/>
+    <PATHCPP value=".;..\hpSonosLib"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="pracman.cpp"/>
+    <INCLUDEPATH value="$(BCB)\include;$(BCB)\include\vcl;bitmaps;..\mbSql;..\hpSonosLib;..\mbUtils;..\mbSql\mysql"/>
+    <LIBPATH value="..\mbSql;..\hpSonosLib;$(BCB)\lib\obj;$(BCB)\lib;..\mbUtils;..\mysql;seiko"/>
+    <WARNINGS value="-w8092 -w8091 -w8090 -w8089 -w8087 -wprc -wuse -wucp -wstu -wsig -wpin 
+      -w-par -wnod -wnak -w-8027 -wdef -wcln -wbbf -w-aus -wasm -wamp -wamb"/>
+    <WARNOPTSTR value=""/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-O2 -Q -Vx -Ve -X- -a8 -5 -b -d -k- -vi -c -tW -tWM"/>
+    <PFLAGS value="-N2..\obj\pracman -N0..\obj\pracman -$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value="$(BCB)\include;$(BCB)\include\vcl"/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="-I..\obj\pracman -D&quot;&quot; -H:0x1000000 -S:0x200000 -aa -Tpe -x -Gn"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj $(PACKAGES) sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="pracman.cpp" FORMNAME="" UNITNAME="pracman" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pracman.res" FORMNAME="" UNITNAME="pracman" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcMainForm.cpp" FORMNAME="MainForm" UNITNAME="pmcMainForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcPatientListForm.cpp" FORMNAME="PatientListForm" UNITNAME="pmcPatientListForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcCalendar.cpp" FORMNAME="" UNITNAME="pmcCalendar" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcNewProviderForm.cpp" FORMNAME="ProviderDetailsForm" UNITNAME="pmcNewProviderForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcSplashScreen.cpp" FORMNAME="SplashScreen" UNITNAME="pmcSplashScreen" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcUtils.cpp" FORMNAME="" UNITNAME="pmcUtils" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcPatientEditForm.cpp" FORMNAME="PatientEditForm" UNITNAME="pmcPatientEditForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcDateSelectForm.cpp" FORMNAME="DateSelectForm" UNITNAME="pmcDateSelectForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcPatientListUpdate.cpp" FORMNAME="" UNITNAME="pmcPatientListUpdate" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcAppList.cpp" FORMNAME="" UNITNAME="pmcAppList" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcPollTableThread.cpp" FORMNAME="" UNITNAME="pmcPollTableThread" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcPromptForm.cpp" FORMNAME="AppCommentForm" UNITNAME="pmcPromptForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcPatAppListForm.cpp" FORMNAME="PatAppListForm" UNITNAME="pmcPatAppListForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcDoctorListForm.cpp" FORMNAME="DoctorListForm" UNITNAME="pmcDoctorListForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcDoctorListUpdate.cpp" FORMNAME="" UNITNAME="pmcDoctorListUpdate" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcAppLettersForm.cpp" FORMNAME="AppLettersForm" UNITNAME="pmcAppLettersForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcDoctorEditForm.cpp" FORMNAME="DoctorEditForm" UNITNAME="pmcDoctorEditForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcDatabaseMaint.cpp" FORMNAME="" UNITNAME="pmcDatabaseMaint" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcSeiko62.cpp" FORMNAME="" UNITNAME="pmcSeiko62" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcAboutForm.cpp" FORMNAME="AboutForm" UNITNAME="pmcAboutForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcClaimListForm.cpp" FORMNAME="ClaimListForm" UNITNAME="pmcClaimListForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcInitialize.cpp" FORMNAME="" UNITNAME="pmcInitialize" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcClaimEditForm.cpp" FORMNAME="ClaimEditForm" UNITNAME="pmcClaimEditForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcReportForm.cpp" FORMNAME="ReportForm" UNITNAME="pmcReportForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcWeekView.cpp" FORMNAME="" UNITNAME="pmcWeekView" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcDayView.cpp" FORMNAME="" UNITNAME="pmcDayView" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcMonthView.cpp" FORMNAME="" UNITNAME="pmcMonthView" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcMspClaimsin.cpp" FORMNAME="" UNITNAME="pmcMspClaimsin" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcMspValidrpt.cpp" FORMNAME="" UNITNAME="pmcMspValidrpt" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcMspNotice.cpp" FORMNAME="" UNITNAME="pmcMspNotice" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcMspReturns.cpp" FORMNAME="" UNITNAME="pmcMspReturns" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcAppListForm.cpp" FORMNAME="AppListForm" UNITNAME="pmcAppListForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcUtilsSql.cpp" FORMNAME="" UNITNAME="pmcUtilsSql" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcBatchImportForm.cpp" FORMNAME="BatchImportForm" UNITNAME="pmcBatchImportForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcDocumentEditForm.cpp" FORMNAME="DocumentEditForm" UNITNAME="pmcDocumentEditForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcDocumentListForm.cpp" FORMNAME="DocumentListForm" UNITNAME="pmcDocumentListForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcWordCreateForm.cpp" FORMNAME="WordCreateForm" UNITNAME="pmcWordCreateForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcSelectForm.cpp" FORMNAME="SelectForm" UNITNAME="pmcSelectForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcProviderView.cpp" FORMNAME="" UNITNAME="pmcProviderView" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcPatientForm.cpp" FORMNAME="PatientForm" UNITNAME="pmcPatientForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcIcdForm.cpp" FORMNAME="IcdForm" UNITNAME="pmcIcdForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcAppHistoryForm.cpp" FORMNAME="AppHistoryForm" UNITNAME="pmcAppHistoryForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcEchoImportForm.cpp" FORMNAME="EchoImportForm" UNITNAME="pmcEchoImportForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcEchoCDContentsForm.cpp" FORMNAME="EchoCDContentsForm" UNITNAME="pmcEchoCDContentsForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcEchoListForm.cpp" FORMNAME="EchoListForm" UNITNAME="pmcEchoListForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcTextEditForm.cpp" FORMNAME="TextEditForm" UNITNAME="pmcTextEditForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcEchoBackup.cpp" FORMNAME="" UNITNAME="pmcEchoBackup" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcEchoPatSelectForm.cpp" FORMNAME="EchoPatSelectForm" UNITNAME="pmcEchoPatSelectForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcMedListForm.cpp" FORMNAME="MedListForm" UNITNAME="pmcMedListForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcEchoDetailsForm.cpp" FORMNAME="EchoDetailsForm" UNITNAME="pmcEchoDetailsForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcFormPickList.cpp" FORMNAME="Form_PickList" UNITNAME="pmcFormPickList" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\hpSonosLib\hpSonosDB.cpp" FORMNAME="" UNITNAME="hpSonosDB" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\mbUtils\mbUtils.lib" FORMNAME="" UNITNAME="mbUtils.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\mbSql\mbSqlLib.lib" FORMNAME="" UNITNAME="mbSqlLib.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\mbSql\mysql\libmysql.lib" FORMNAME="" UNITNAME="libmysql.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcPDF.cpp" FORMNAME="" UNITNAME="pmcPDF" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcDoctor.cpp" FORMNAME="" UNITNAME="pmcDoctor" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcPatient.cpp" FORMNAME="" UNITNAME="pmcPatient" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcPatientRecord.cpp" FORMNAME="" UNITNAME="pmcPatientRecord" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcDocumentUtils.cpp" FORMNAME="" UNITNAME="pmcDocumentUtils" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcDocument.cpp" FORMNAME="" UNITNAME="pmcDocument" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="pmcConsult.cpp" FORMNAME="" UNITNAME="pmcConsult" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="seiko\pmcSlpApi62.lib" FORMNAME="" UNITNAME="pmcSlpApi62.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=0
+MinorVer=3
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=Michael  A. Bree
+FileDescription=Practice Manager
+FileVersion=0.3.0.0
+InternalName=
+LegalCopyright=(c) 2007 Michael A. Bree
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[Excluded Packages]
+c:\program files\borland\cbuilder6\Bin\dclite60.bpl=Borland Integrated Translation Environment
+
+[HistoryLists\hlIncludePath]
+Count=6
+Item0=$(BCB)\include;$(BCB)\include\vcl;bitmaps;..\mbSql;..\hpSonosLib;..\mbUtils;..\mbSql\mysql
+Item1=..\mbSql;..\hpSonosLib;bitmaps;$(BCB)\include;$(BCB)\include\vcl;..\mbUtils;mysql
+Item2=..\hpSonosLib;bitmaps;$(BCB)\include;$(BCB)\include\vcl;..\mbUtils;mysql
+Item3=..\mysql;..\hpSonosLib;bitmaps;$(BCB)\include;$(BCB)\include\vcl;..\mbUtils
+Item4=..\hpSonosLib;bitmaps;$(BCB)\include;$(BCB)\include\vcl;..\mbUtils;..\mysql-libs-3.23.36-borland
+Item5=..\hpSonosLib;bitmaps;$(BCB)\include;$(BCB)\include\vcl;..\mbUtils
+
+[HistoryLists\hlLibraryPath]
+Count=6
+Item0=..\mbSql;..\hpSonosLib;$(BCB)\lib\obj;$(BCB)\lib;..\mbUtils;..\mysql;seiko
+Item1=..\hpSonosLib;$(BCB)\lib\obj;$(BCB)\lib;..\mbUtils;..\mysql;seiko
+Item2=..\hpSonosLib;$(BCB)\lib\obj;$(BCB)\lib;..\mbUtils;..\mysql;..\seiko;seiko
+Item3=..\hpSonosLib;$(BCB)\lib\obj;$(BCB)\lib;..\mbUtils;..\mysql
+Item4=..\hpSonosLib;$(BCB)\lib\obj;$(BCB)\lib;..\mbUtils;..\mysql-libs-3.23.36-borland
+Item5=..\hpSonosLib;$(BCB)\lib\obj;$(BCB)\lib;..\mbUtils
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=3
+Item0=..\obj\pracman
+Item1=..\pracman\obj
+Item2=..\obj
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=1
+LinkDebugVcl=0
+LinkCGLIB=0
+  </IDEOPTIONS>
+</PROJECT>

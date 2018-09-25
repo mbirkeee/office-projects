@@ -1,0 +1,254 @@
+%------------------------------------------------------------------------------
+% Dr. Bree Patient Record
+%
+% Author: Michael Bree
+% Date:   April 12, 2009
+%------------------------------------------------------------------------------
+
+% \tiny             \,	        a small space
+% \scriptsize       \:	        a medium space
+% \footnotesize     \;	        a large space
+% \small            \quad	    a really large space
+% \normalsize       \qquad	    a huge space
+% \large            \!	        a negative space (moves things back to the left)
+% \Large
+% \LARGE
+% \huge
+% \Huge
+
+\documentclass[10pt,letterpaper]{letter}
+
+\usepackage{fullpage}
+\raggedbottom
+
+\setlength\topmargin{0.0in}
+\setlength\headheight{0in}
+\setlength\headsep{0in}
+\setlength\textheight{9.0in}
+\setlength\textwidth{6.5in}
+\setlength\oddsidemargin{0.0in}
+\setlength\evensidemargin{0.0in}
+\setlength\parindent{0.0in}
+\setlength\parskip{0.2in}
+
+\usepackage{palatino,url}
+\usepackage{pslatex}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{draftwatermark}
+\usepackage{booktabs}
+\usepackage{fullpage}
+\usepackage{longtable}
+
+\SetWatermarkText{[_WATERMARK_]}
+
+\fancyhf{}
+\pagestyle{fancy}
+
+\rfoot{\scriptsize Page \thepage \ of \pageref{LastPage}}
+\lfoot{\scriptsize Confidential }
+\cfoot{\scriptsize Dr. T. L. Bree (306) 975-0600 $\:$ Printed: [_PRINT_DATE_] }
+
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0.0pt}
+
+%------------------------------------------------------------------------------
+% Enumerate that reduces the spacing between the items
+%------------------------------------------------------------------------------
+\newenvironment{myenumerate}{\vspace{-0.15in}
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}}{\end{enumerate}
+}
+
+\newenvironment{myitemize}{\vspace{-0.15in}
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}}{\end{itemize}
+}
+
+
+%------------------------------------------------------------------------------
+% Define a heading style that pracman can use
+% -looks like the newcommand command is failing if there is an underscore in the name
+%------------------------------------------------------------------------------
+
+\newcommand{\myheading}[1]{{\normalsize{\textbf{\textit{#1}}}}
+\\
+\\
+}
+
+%------------------------------------------------------------------------------
+% Start of the document
+%------------------------------------------------------------------------------
+
+\begin{document}
+
+% \begin{center}
+% {\large         Dr. T. L. Bree$^{*}$ $\:$ {\small MD \ F.R.C.P.(C)}} \\[.5pc]
+% {\footnotesize  Suite 203 - 728 Spadina Crescent East, \ Saskatoon \ SK \ S7K 4H7 \ Canada}\\
+% {\footnotesize  Phone (306) 975-0600 $\:$ Fax: (306) 978-5254}\\
+% {\scriptsize    $^{*}$Professional Medical Corporation}
+% \end{center}
+% \vspace{-0.35in}
+% \underline{\hspace{6.5in}}
+\vspace{-0.35in}
+\begin{center}
+\Large{\textsf{\textbf{ [_PAT_LAST_NAME_], [_PAT_FIRST_NAME_] ([_PAT_TITLE_]) $\:$ PHN: [_PAT_PHN_] [_PAT_PHN_PROVINCE_] }}} \\
+\vspace{-0.15in}
+\end{center}
+\underline{\hspace{6.5in}}
+
+\sffamily
+\small{
+\begin{tabular}{llll}
+Address: & \textbf{[_PAT_ADDRESS_1_]}                                   & Phone: & \textbf{[_PAT_PHONE_HOME_]}  \\
+         & \textbf{[_PAT_ADDRESS_2_]}                                   & Work:  & \textbf{[_PAT_PHONE_WORK_]}  \\
+         & \textbf{[_PAT_CITY_] [_PAT_PROVINCE_] [_PAT_POSTAL_CODE_]}   & Cell:  & \textbf{[_PAT_PHONE_CELL_]}  \\
+         & \textbf{[_PAT_COUNTRY_]}                                     & Email: & \textbf{[_PAT_EMAIL_]}       \\
+ & & & \\
+Birth Date: & \textbf{[_PAT_BIRTH_DATE_]} & Age:  & \textbf{[_PAT_AGE_]}  \\
+[_IF_DECEASED_]
+Deceased:   & \textbf{[_PAT_DECEASED_DATE_]} & Age:  & \textbf{[_PAT_AGE_]}  \\
+[_ENDIF_DECEASED_]
+ & & & \\
+Employer: & \textbf{[_PAT_WORK_DESC_]} & & \\
+ & & & \\
+Contact:  & \textbf{[_CONTACT_NAME_]}                                   &  Phone:    & \textbf{[_CONTACT_PHONE_]} \\
+Desc.     & \textbf{[_CONTACT_DESC_]}                                   &            & \\
+ & & & \\
+Family Dr: &    \textbf{[_FAMILY_DR_FIRST_NAME_]}    \textbf{[_FAMILY_DR_LAST_NAME_]} & Phone: & \textbf{[_FAMILY_DR_PHONE_]} \\
+           &                                                                          & Fax:   & \textbf{[_FAMILY_DR_FAX_]}   \\
+Referring Dr: & \textbf{[_REF_DR_FIRST_NAME_]}       \textbf{[_REF_DR_LAST_NAME_]}    & Phone: & \textbf{[_REF_DR_PHONE_]}    \\
+           &                                                                          & Fax:   & \textbf{[_REF_DR_FAX_]}      \\
+\end{tabular}}
+
+\underline{\hspace{6.5in}}
+
+[_IF_PROBLEM_LIST_]
+\Large\textbf{Problem List} \small{(Last Updated: [_PROBLEM_LIST_UPDATE_DATE_] [_PROBLEM_LIST_UPDATE_TIME_])}
+\\*\\*
+\small{[_PROBLEM_LIST_]}
+[_ELSE_PROBLEM_LIST_]
+\Large\textbf{Problem List} \small{No Data}
+[_ENDIF_PROBLEM_LIST_]
+
+[_IF_RISK_FACTORS_]
+\Large\textbf{Risk Factors} \small{(Last Updated: [_RISK_FACTORS_UPDATE_DATE_] [_RISK_FACTORS_UPDATE_TIME_])}
+\\*\\*
+\small{[_RISK_FACTORS_]}
+[_ELSE_RISK_FACTORS_]
+\Large\textbf{Risk Factors} \small{No Data}
+[_ENDIF_RISK_FACTORS_]
+
+[_IF_PAST_MEDICAL_HISTORY_]
+\Large\textbf{Past Medical History} \small{(Last Updated: [_PAST_MEDICAL_HISTORY_UPDATE_DATE_] [_PAST_MEDICAL_HISTORY_UPDATE_TIME_])}
+\\*\\*
+\small{[_PAST_MEDICAL_HISTORY_]}
+[_ELSE_PAST_MEDICAL_HISTORY_]
+\Large\textbf{Past Medical History} \small{No Data}
+[_ENDIF_PAST_MEDICAL_HISTORY_]
+
+[_IF_SOCIAL_HISTORY_]
+\Large\textbf{Social History} \small{(Last Updated: [_SOCIAL_HISTORY_UPDATE_DATE_] [_SOCIAL_HISTORY_UPDATE_TIME_])}
+\\*\\*
+\small{[_SOCIAL_HISTORY_]}
+[_ELSE_SOCIAL_HISTORY_]
+\Large\textbf{Social History} \small{No Data}
+[_ENDIF_SOCIAL_HISTORY_]
+
+[_IF_FAMILY_HISTORY_]
+\Large\textbf{Family History} \small{(Last Updated: [_FAMILY_HISTORY_UPDATE_DATE_] [_FAMILY_HISTORY_UPDATE_TIME_])}
+\\*\\*
+\small{[_FAMILY_HISTORY_]}
+[_ELSE_FAMILY_HISTORY_]
+\Large\textbf{Family History} \small{No Data}
+[_ENDIF_FAMILY_HISTORY_]
+
+[_IF_ALLERGIES_]
+\Large\textbf{Allergies} \small{(Last Updated: [_ALLERGIES_UPDATE_DATE_] [_ALLERGIES_UPDATE_TIME_] )}
+\\*\\*
+\small{[_ALLERGIES_]}
+[_ELSE_ALLERGIES_]
+\Large\textbf{Allergies} \small{No Data}
+[_ENDIF_ALLERGIES_]
+
+[_IF_MEDICATIONS_]
+\Large\textbf{Medications} \small{(Last Updated: [_MEDICATIONS_UPDATE_DATE_] [_MEDICATIONS_UPDATE_TIME_])}
+\\*\\*
+\small{[_MEDICATIONS_]}
+[_ELSE_MEDICATIONS_]
+\Large\textbf{Medications} \small{No Data}
+[_ENDIF_MEDICATIONS_]
+
+[_IF_FUNC_INQUIRY_]
+\Large\textbf{Functional Inquiry} \small{(Last Updated: [_FUNC_INQUIRY_UPDATE_DATE_] [_FUNC_INQUIRY_UPDATE_TIME_])}
+\\*\\*
+\small{[_FUNC_INQUIRY_]}
+[_ELSE_FUNC_INQUIRY_]
+\Large\textbf{Functional Inquiry} \small{No Data}
+[_ENDIF_FUNC_INQUIRY_]
+
+[_IF_PHYSICAL_EXAM_]
+\Large\textbf{Physical Exam} \small{(Last Updated: [_PHYSICAL_EXAM_UPDATE_DATE_] [_PHYSICAL_EXAM_UPDATE_TIME_])}
+\\*\\*
+\small{[_PHYSICAL_EXAM_]}
+[_ELSE_PHYSICAL_EXAM_]
+\Large\textbf{Pysical Exam} \small{No Data}
+[_ENDIF_PHYSICAL_EXAM_]
+
+[_IF_ECG_]
+\Large\textbf{ECG} \small{(Last Updated: [_ECG_UPDATE_DATE_] [_ECG_UPDATE_TIME_])}
+\\*\\*
+\small{[_ECG_]}
+[_ELSE_ECG_]
+\Large\textbf{ECG} \small{No Data}
+[_ENDIF_ECG_]
+
+[_IF_CONCLUSION_]
+\Large\textbf{Conclusion} \small{(Last Updated: [_CONCLUSION_UPDATE_DATE_] [_CONCLUSION_UPDATE_TIME_])}
+\\*\\*
+\small{[_CONCLUSION_]}
+[_ELSE_CONCLUSION_]
+\Large\textbf{Conclusion} \small{No Data}
+[_ENDIF_CONCLUSION_]
+
+[_IF_RECOMMENDATIONS_]
+\Large\textbf{Recommendations} \small{(Last Updated: [_RECOMMENDATIONS_UPDATE_DATE_] [_RECOMMENDATIONS_UPDATE_TIME_])}
+\\*\\*
+\small{[_RECOMMENDATIONS_]}
+[_ELSE_RECOMMENDATIONS_]
+\Large\textbf{Recommentations} \small{No Data}
+[_ENDIF_RECOMMENDATIONS_]
+
+[_IF_DOCUMENT_FLAG_]
+\Large\textbf{Documents}
+\small{
+\begin{longtable}{lllll}
+\textbf{Date} & \textbf{Description} & \textbf{Provider} & \textbf{Status} & \textbf{File Name}\\
+\hline
+[_DOCUMENT_LIST_]
+\end{longtable}
+}
+[_ELSE_DOCUMENT_FLAG_]
+Documents - none
+[_ENDIF_DOCUMENT_FLAG_]
+
+END OF PATIENT RECORD
+
+\end{document}
+
+_PROBLEM_LIST_
+_RISK_FACTORS_
+_PAST_MEDICAL_HISTORY_
+_SOCIAL_HISTORY_
+_FAMILY_HISTORY_
+_ALLERGIES_
+_MEDICATIONS_
+_FUNC_INQUIRY_
+_PHYSICAL_EXAM_
+_ECG_
+_CONCLUSION_
+_RECOMMENDATIONS_

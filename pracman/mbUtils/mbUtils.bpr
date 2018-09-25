@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="mbUtils.lib"/>
+    <OBJFILES value="..\obj\mbUtils\mbLock.obj ..\obj\mbUtils\mbQueue.obj 
+      ..\obj\mbUtils\mbDebug.obj ..\obj\mbUtils\mbMalloc.obj 
+      ..\obj\mbUtils\mbDlg.obj ..\obj\mbUtils\mbLog.obj 
+      ..\obj\mbUtils\mbDateTimeUtils.obj ..\obj\mbUtils\mbDateTime.obj 
+      ..\obj\mbUtils\mbCrc.obj ..\obj\mbUtils\mbStrUtils.obj 
+      ..\obj\mbUtils\mbThermometer.obj ..\obj\mbUtils\mbFileList.obj 
+      ..\obj\mbUtils\mbFileUtils.obj ..\obj\mbUtils\mbProperty.obj 
+      ..\obj\mbUtils\mbPopup.obj ..\obj\mbUtils\mbDlgBrowseFolder.obj 
+      ..\obj\mbUtils\mbString.obj"/>
+    <RESFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) mbThermometer.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <PACKAGES value=""/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <LINKER value="TLib"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="NO_STRICT"/>
+    <MAINSOURCE value="mbUtils.bpf"/>
+    <INCLUDEPATH value="..\pracman2;$(BCB)\include;$(BCB)\include\vcl;..\zlib122"/>
+    <LIBPATH value="..\pracman2;$(BCB)\lib\obj;$(BCB)\lib;..\zlib122"/>
+    <WARNINGS value="-w-par -w-aus"/>
+    <LISTFILE value=""/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <CFLAG1 value="-O2 -Vx -Ve -X- -a8 -b- -d -k- -vi -c -tW -tWM"/>
+    <PFLAGS value="-N2..\obj\mbUtils -N0..\obj\mbUtils -$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="/P64"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="$(OBJFILES)"/>
+    <ALLLIB value=""/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="mbUtils.bpf" FORMNAME="" UNITNAME="mbUtils" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="mbLock.cpp" FORMNAME="" UNITNAME="mbLock" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="mbQueue.cpp" FORMNAME="" UNITNAME="mbQueue" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="mbDebug.cpp" FORMNAME="" UNITNAME="mbDebug" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="mbMalloc.cpp" FORMNAME="" UNITNAME="mbMalloc" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="mbDlg.cpp" FORMNAME="" UNITNAME="mbDlg" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="mbLog.cpp" FORMNAME="" UNITNAME="mbLog" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="mbDateTimeUtils.cpp" FORMNAME="" UNITNAME="mbDateTimeUtils" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="mbDateTime.cpp" FORMNAME="" UNITNAME="mbDateTime" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="mbCrc.cpp" FORMNAME="" UNITNAME="mbCrc" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="mbStrUtils.cpp" FORMNAME="" UNITNAME="mbStrUtils" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="mbThermometer.cpp" FORMNAME="Thermometer" UNITNAME="mbThermometer" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="mbFileList.cpp" FORMNAME="" UNITNAME="mbFileList" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="mbFileUtils.cpp" FORMNAME="" UNITNAME="mbFileUtils" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="mbProperty.cpp" FORMNAME="" UNITNAME="mbProperty" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="mbPopup.cpp" FORMNAME="" UNITNAME="mbPopup" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="mbDlgBrowseFolder.cpp" FORMNAME="" UNITNAME="mbDlgBrowseFolder" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="mbString.cpp" FORMNAME="" UNITNAME="mbString" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=4105
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=4
+Item0=..\pracman2;$(BCB)\include;$(BCB)\include\vcl;..\zlib122
+Item1=$(BCB)\include;$(BCB)\include\vcl;..\zlib122
+Item2=$(BCB)\include;$(BCB)\include\vcl
+Item3=$(BCB)\include;$(BCB)\include\vcl;..\mbCommon
+
+[HistoryLists\hlLibraryPath]
+Count=4
+Item0=..\pracman2;$(BCB)\lib\obj;$(BCB)\lib;..\zlib122
+Item1=$(BCB)\lib\obj;$(BCB)\lib;..\zlib122
+Item2=$(BCB)\lib\obj;$(BCB)\lib;..\zlib122;c:\program files\Borland\Cbuilder6\lib
+Item3=$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=1
+Item0=..\obj\mbUtils
+
+[HistoryLists\hlTlibPageSize]
+Count=3
+Item0=0x0040
+Item1=0x0020
+Item2=0x0010
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>
