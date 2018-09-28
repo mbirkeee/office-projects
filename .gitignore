@@ -2,3 +2,4 @@
 backup/mak/backup
 backup/mak/restore
 *.a
+.echoget-lockfile

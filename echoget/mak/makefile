@@ -52,7 +52,8 @@ CC =  gcc
 CFLAGS =        \
 	-DLINUX=1   \
 	-Wall       \
-	-I$(INCDIR)
+	-I$(INCDIR) \
+	-I/usr/local/mysql/include
 
 ######################################################################
 # Debug Flags

@@ -77,7 +77,8 @@
 #define EG_LOCAL_BAD_DIR    "../echos-bad/"
 
 //#define EG_SCP_CMD          "/usr/local/bin/scp -B -q -c blowfish"
-#define EG_SCP_CMD          "/usr/bin/scp -p -B -C -q -c blowfish"
+//#define EG_SCP_CMD          "/usr/bin/scp -p -B -C -q -c blowfish"
+#define EG_SCP_CMD          "/usr/bin/scp -p -B -C -q"
 
 #define EG_RM_CMD           "/bin/rm -rf "
 #define EG_MV_CMD           "/bin/mv -f "
