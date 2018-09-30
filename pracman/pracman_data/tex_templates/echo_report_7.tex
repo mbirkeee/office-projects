@@ -1,0 +1,116 @@
+% this is a comment
+% \tiny             \,	        a small space
+% \scriptsize       \:	        a medium space
+% \footnotesize     \;	        a large space
+% \small            \quad	    a really large space
+% \normalsize       \qquad	    a huge space
+% \large            \!	        a negative space (moves things back to the left)
+% \Large
+% \LARGE
+% \huge
+% \Huge
+
+\documentclass[12pt]{article}
+
+\setlength\topmargin{0.25in}
+\setlength\headheight{0in}
+\setlength\headsep{0in}
+\setlength\textheight{9.5in}
+\setlength\textwidth{6.5in}
+\setlength\oddsidemargin{0.0in}
+\setlength\evensidemargin{0.0in}
+\setlength\parindent{0.0in}
+\setlength\parskip{0.2in}
+
+\usepackage{palatino,url}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{draftwatermark}
+
+\SetWatermarkText{[_WATERMARK_]}
+
+\fancyhf{}
+\pagestyle{fancy}
+
+\rfoot{\scriptsize Page \thepage \ of \pageref{LastPage}}
+\lfoot{\scriptsize Confidential}
+\cfoot{\scriptsize Dr. D. Dewa \ Echo Doppler Report: \textbf{[_PAT_NAME_FIRST_] [_PAT_NAME_LAST_]} }
+
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0.0pt}
+
+\begin{document}
+
+\begin{center}
+{\large         Dr. D. Dewa$^{*}$ $\:$ {\small MD \ F.R.C.P.(C)} $\:$ Echo Doppler Report} \\[.5pc]
+{\footnotesize  Suite 203 - 728 Spadina Crescent East, \ Saskatoon \ SK \ S7K 4H7 \ Canada}\\
+{\footnotesize  Phone (306) 975-0600 $\:$ Fax: (306) 978-5254}\\
+{\scriptsize    $^{*}$Professional Medical Corporation}
+\end{center}
+\vspace{-0.35in}
+
+\underline{\hspace{6.5in}}
+\vspace{-0.35in}
+
+\scriptsize{
+\textsf{
+\begin{tabular}{ll|ll|ll}
+Patient:     & [_PAT_NAME_FIRST_] [_PAT_NAME_LAST_]  &  Ref. Dr. & [_DR_NAME_FIRST_] [_DR_NAME_LAST_]  &  Study Date:  & [_STUDY_DATE_]  \\
+PHN:         & [_PAT_PHN_]                           &  Phone:   & [_DR_PHONE_]                       &  Read Date:   & [_READ_DATE_]  \\
+Birth Date:  & [_PAT_DOB_]                           &  Fax:     & [_DR_FAX_]                         &               & \\
+\end{tabular}
+}}
+
+\vspace{-0.2in}
+\underline{\hspace{6.5in}}
+
+[_INDICATION_]
+\vspace{-0.1in}
+
+\scriptsize{
+\textsf{
+\begin{tabular}{lrlllrl}
+\textbf{Cardiac Dimensions} & & & Normal & \textbf{Mitral Valve} & & \\
+&&&&&&\\
+Right ventricle: & \textbf{[_CD_RV_]}   &  $ cm     $  & $ < 3.0   $   & Regurgitation:    & \textbf{[_MV_REG_]}  &          \\
+Ascending aorta: & \textbf{[_CD_AA_]}   &  $ cm     $  & $ < 3.7   $   & MR jet area:      & \textbf{[_MV_MRJA_]} & $ cm^2 $ \\
+Lt. atrium:      & \textbf{[_CD_LA_]}   &  $ cm     $  & $ < 4.0   $   & Stenosis:         & \textbf{[_MV_STEN_]} &          \\
+LV end-diastole: & \textbf{[_CD_LVED_]} &  $ cm     $  & $ 3.5-5.7 $   & Valve area:       & \textbf{[_MV_VA_]}   & $ cm^2 $ \\
+LV end-systole:  & \textbf{[_CD_LVES_]} &  $ cm     $  & $ 2.5-4.0 $   & Peak E velocity:  & \textbf{[_MV_PEV_]}  & $ m/s  $ \\
+Septum           & \textbf{[_CD_SEPT_]} &  $ cm     $  & $ < 1.1   $   & Peak A velocity:  & \textbf{[_MV_PAV_]}  & $ m/s  $ \\
+Post wall:       & \textbf{[_CD_PW_]}   &  $ cm     $  & $ < 1.1   $   & Mean gradient:    & \textbf{[_MV_MG_]}   & $ mmHg $ \\
+LV mass index:   & \textbf{[_CD_MI_]}   &  $ gm/m^2 $  & $ < 131   $   & IVRT:             & \textbf{[_MV_IVRT_]} &          \\
+Estimated LVEF:  & \textbf{[_CD_LVEF_]} &  $ \%     $  & $         $   & E decel. time:    & \textbf{[_MV_EDT_]}  & $ ms   $ \\
+&&&&&&\\
+\textbf{Aortic Valve} & & & & \textbf{Pulmonic Valve} & & \\
+&&&&&&\\
+Regurgitation:       & \textbf{[_AV_REG_]}  &           &  &    Regurgitation:  & \textbf{[_PV_REG_]}   &           \\
+AR jet/LVOT:         & \textbf{[_AV_AJL_]}  & $\%   $   &  &    Velocity:       & \textbf{[_PV_VEL_]}   & $ m/s   $ \\
+AR pres. half time:  & \textbf{[_AV_APHT_]} & $ms   $   &  &    PAT:            & \textbf{[_PV_PAT_]}   & $ s     $ \\
+Stenosis:            & \textbf{[_AV_STEN_]} &           &  &    Gradient:       & \textbf{[_PV_GRAD_]}  & $ mmHg  $ \\
+Max velocity:        & \textbf{[_AV_MV_]}   & $m/s  $   &  &    \\
+Peak gradient:       & \textbf{[_AV_PG_]}   & $mmHg $   &  &    \textbf{Pulmonic Vein Flow}   \\
+Mean gradient:       & \textbf{[_AV_MG_]}   & $mmHg $   &  &    \\
+LVOT diameter:       & \textbf{[_AV_LD_]}   & $cm   $   &  &    Systole:       & \textbf{[_PVF_SYS_]} & $ m/s $ \\
+LVOT velocity:       & \textbf{[_AV_LV_]}   & $m/s  $   &  &    Diastole:      & \textbf{[_PVF_DIA_]} & $ m/s $ \\
+VTI:                 & \textbf{[_AV_VTI_]}  & $s    $   &  &    A reversal:    & \textbf{[_PVF_AR_]}  & $ m/s $ \\
+Valve area:          & \textbf{[_AV_VA_]}   & $cm^2 $   &  &    LAA:           & \textbf{[_PVF_LAA_]} & $ m/s $ \\
+&&&&&&\\
+\textbf{Tricuspid Valve}  & & & &  \textbf{Heart Rate \& Rhythm} & &  \\
+&&&&&&\\
+Regurgitation:  & \textbf{[_TV_REG_]}   &           & & Rate:           & \textbf{[_RATE_]}   \\
+TR jet area:    & \textbf{[_TV_TRJA_]}  & $ cm^2 $  & & Rhythm:         & \textbf{[_RHYTHM_]} \\
+RVSP:           & \textbf{[_TV_RVSP_]}  & $ mmHg $  & &                 & \\
+E velocity:     & \textbf{[_TV_EV_]}    & $ m/s  $  & &                 & \\
+Stenosis:       & \textbf{[_TV_STEN_]}  &           & & Image Quality:  & \textbf{[_IMAGE_QUALITY_]}\\
+Valve area:     & \textbf{[_TV_VA_]}    & $ cm^2 $  & & \\
+\end{tabular}}}
+
+\vspace{0.2in}
+
+\footnotesize
+
+\setlength\parskip{0.0in}
+
+\underline{\hspace{6.5in}}
+\vspace{-0.1in}

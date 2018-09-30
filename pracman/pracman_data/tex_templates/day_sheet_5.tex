@@ -1,0 +1,97 @@
+% this is a comment
+% \tiny             \,	        a small space
+% \scriptsize       \:	        a medium space
+% \footnotesize     \;	        a large space
+% \small            \quad	    a really large space
+% \normalsize       \qquad	    a huge space
+% \large            \!	        a negative space (moves things back to the left)
+% \Large
+% \LARGE
+% \huge
+% \Huge
+
+\documentclass[12pt]{article}
+
+\setlength\topmargin{0.25in}
+\setlength\headheight{0in}
+\setlength\headsep{0in}
+\setlength\textheight{9.5in}
+\setlength\textwidth{6.5in}
+\setlength\oddsidemargin{0.0in}
+\setlength\evensidemargin{0.0in}
+\setlength\parindent{0.0in}
+\setlength\parskip{0.2in}
+
+\usepackage{palatino,url}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{draftwatermark}
+\usepackage{booktabs}
+
+\SetWatermarkText{}
+
+\fancyhf{}
+\pagestyle{fancy}
+
+\rfoot{\scriptsize Page \thepage \ of \pageref{LastPage}}
+\lfoot{\scriptsize Confidential}
+\cfoot{\scriptsize Printed: [_PRINT_DATE_] }
+
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0.0pt}
+
+\newenvironment{my_enumerate}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}}{\end{enumerate}
+}
+
+
+\begin{document}
+
+\begin{center}
+{\Large Dr. T. L. Bree - TILT - [_DATE_]} \\[.5pc]
+\end{center}
+% \vspace{-0.35in}
+% \underline{\hspace{6.5in}}
+
+% \begin{center}
+% {\Large [_DATE_] }
+% \vspace{-0.1in}
+% \end{center}
+
+\footnotesize
+\vspace{0.12in}
+
+\begin{center}
+\begin{tabular}{rllrll}
+\textbf{Time} & \textbf{PHN} & \textbf{Name} & \textbf{Phone} & \textbf{Conf} & \textbf{Comment} \\
+\midrule
+[_CONTENTS_]
+\bottomrule
+\vspace{-0.40in}
+\end{tabular}
+\end{center}
+
+\begin{center}
+{\scriptsize * Indicates Conflict.  Conf: P: Phone L: Letter X: Wrong Time}
+\end{center}
+
+% \vspace{-0.25in}
+% {\large Notes:}
+% \vspace{-0.25in}
+% \begin{enumerate}
+% \begin{footnotesize}
+% \item this is note 1
+% \item this is note 2
+% \end{footnotesize}
+% \end{enumerate}
+
+[_IF_NOTE_COUNT_]
+\begin{my_enumerate}
+[_NOTES_]
+\end{my_enumerate}
+[_ENDIF_NOTE_COUNT_]
+
+\end{document}
