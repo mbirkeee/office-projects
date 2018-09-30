@@ -13,4 +13,6 @@ pracman.prefs
 mbUtils.lib
 mbSqlLib.lib
 hpSonosDB.lib
+*.bak
 *.log
+reports/*.txt
