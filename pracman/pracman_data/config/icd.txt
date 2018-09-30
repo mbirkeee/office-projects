@@ -1,0 +1,1619 @@
+042AIDS - (Acquired Immune Deficiency Syndrome)                              
+Z07Abdominal pain or swelling Not Otherwise Specified                        
+781Abnormality of gait                                                       
+637Abortion - incomplete(complete)                                           
+632Abortion - missed                                                         
+634Abortion - spontaneous                                                    
+640Abortion - threatened                                                     
+616Abscess - bartholin                                                       
+611Abscess - breast                                                          
+522Abscess - dental                                                          
+682Abscess - gluteal                                                         
+566Abscess - ischio-rectal                                                   
+475Abscess - peritonsillar                                                   
+608Abscess - scrotum                                                         
+522Abscess - teeth - acquired                                                
+682Abscess Not Otherwise Specified                                           
+Z40Abuse - child                                                             
+305Abuse of drugs - non-dependent                                            
+706Acne                                                                      
+303Addiction - alcohol                                                       
+304Addiction - drug                                                          
+289Adenitis - tonsillar                                                      
+289Adenitis - unspecified                                                    
+785Adenopathy                                                                
+568Adhesion - intra-abdominal                                                
+313Adjustment Reaction of Adolescence                                        
+309Adult situational reaction                                                
+791Albuminuria                                                               
+303Alcoholism                                                                
+493Allergic - bronchitis                                                     
+372Allergic - conjunctivitis                                                 
+692Allergic - contact with skin                                              
+692Allergic - dermatitis                                                     
+995Allergic - insect bite                                                    
+692Allergic - rash                                                           
+995Allergic - reaction                                                       
+477Allergic - respiratory                                                    
+477Allergic - rhinitis (Hay Fever)                                           
+693Allergic - to food                                                        
+995Allergy                                                                   
+704Alopecia                                                                  
+331Alzheimer's disease                                                       
+368Amblyopia                                                                 
+Z08Amenorrhea                                                                
+780Amnesia                                                                   
+006Amoebiasis                                                                
+887Amputation - arm or hand                                                  
+886Amputation - finger                                                       
+896Amputation - foot                                                         
+736Amputation - healed or old                                                
+897Amputation - leg                                                          
+997Amputation - painful or with complications                                
+895Amputation - toe                                                          
+284Anaemia - aplastic                                                        
+280Anaemia - hypochromic                                                     
+280Anaemia - iron deficiency                                                 
+280Anaemia - microcytic                                                      
+648Anaemia - of pregnancy                                                    
+281Anaemia - pernicious                                                      
+285Anaemia Not Otherwise Specified                                           
+Z17Anaesthetic - no diagnosis                                                
+569Anal polyp                                                                
+995Anaphylactic shock                                                        
+442Aneurysm                                                                  
+441Aneurysm - abdominal                                                      
+441Aneurysm - aortic                                                         
+437Aneurysm - brain - cerebral                                               
+442Aneurysm - ruptured                                                       
+414Aneurysm - ventricular                                                    
+413Angina Not Otherwise Specified - pectoris                                 
+995Angioneurotic edema                                                       
+V70Annual check-up                                                           
+783Anorexia                                                                  
+755Anteversion - femur,congenital                                            
+300Anxiety                                                                   
+379Aphakia                                                                   
+786Apnea                                                                     
+770Apnea - newborn                                                           
+540Appendicitis - acute - ruptured                                           
+541Appendicitis - unqualified                                                
+440Arteriosclerosis                                                          
+437Arteriosclerotic cerebrovascular disease                                  
+414Arteriosclerotic heart disease                                            
+447Arteritis                                                                 
+446Arteritis - nodosa - temporal                                             
+719Arthralgia                                                                
+716Arthritis - Not Otherwise Specified                                       
+714Arthritis - rheumatoid                                                    
+711Arthritis - septic                                                        
+721Arthritis - spine                                                         
+127Ascariasis                                                                
+933Asphyxia - food                                                           
+987Asphyxia - gas fumes                                                      
+768Asphyxia - newborn                                                        
+770Aspiration - amniotic fluid                                               
+933Aspiration - food                                                         
+933Aspiration - mucous                                                       
+919Assault - adult                                                           
+Z39Assault - sexual                                                          
+780Asthenia                                                                  
+493Asthma (bronchial) allergic - Not Otherwise Specified                     
+367Astigmatism                                                               
+331Ataxia - cerebral                                                         
+781Ataxia Not Otherwise Specified                                            
+518Atelectasis                                                               
+110Athlete's foot                                                            
+745Atrial septal defect                                                      
+627Atrophy vagina                                                            
+624Atrophy vulva                                                             
+426Attack - Stokes - Adams                                                   
+410Attack - heart                                                            
+780Attack - vasovagal                                                        
+312Attention deficit disorder-acquired                                       
+314Attention deficit disorder-congenital                                     
+465Atypical - cells in sputum                                                
+616Atypical - cervix                                                         
+621Atypical - endometrium                                                    
+724Backache - low back pain                                                  
+607Balanitis                                                                 
+704Baldness                                                                  
+616Bartholinitis                                                             
+312Behaviour problem                                                         
+V25Birth control advice                                                      
+767Birth trauma (newborn)                                                    
+373Blepharitis                                                               
+289Blood dyscrasia                                                           
+616Boil - carbuncle - labia                                                  
+597Boil - carbuncle - urethra                                                
+680Boil - carbuncle Not Otherwise Specified                                  
+557Bowel - embolism                                                          
+560Bowel - obstruction                                                       
+427Bradycardia                                                               
+348Brain damage - organic                                                    
+854Brain injury Not Otherwise Specified                                      
+784Breath - foul                                                             
+312Breath - holder - child                                                   
+786Breath - holding spell                                                    
+786Breath - shortness                                                        
+786Breathing - laboured                                                      
+784Breathing - mouth                                                         
+494Bronchiectasis                                                            
+466Bronchiolitis                                                             
+466Bronchitis - acute                                                        
+493Bronchitis - allergic                                                     
+491Bronchitis - chronic                                                      
+490Bronchitis - unqualified                                                  
+485Bronchopneumonia                                                          
+519Bronchospasm                                                              
+727Bunions                                                                   
+940Burn - eye and adnexa                                                     
+941Burn - face - head & neck                                                 
+947Burn - internal organs                                                    
+945Burn - lower limbs                                                        
+949Burn - multiple                                                           
+942Burn - trunk                                                              
+949Burn - unspecified                                                        
+943Burn - upper limb - except wrist & hand                                   
+944Burn - wrist(s) and hand(s)                                               
+727Bursitis                                                                  
+726Bursitis - site indicated                                                 
+592Calculus - renal                                                          
+592Calculus - urinary tract                                                  
+594Calculus - urinary tract(lower)                                           
+700Callosity                                                                 
+199Cancer Report (50A only without site)                                     
+112Candida Albicans                                                          
+528Canker Sore                                                               
+726Capsulites                                                                
+986Carbon Monoxide poisoning                                                 
+680Carbuncle - Boil(see also boil)                                           
+427Cardiac - arrhythmia                                                      
+429Cardiac - decompensation                                                  
+410Cardiac - infarction                                                      
+414Cardiac - ischemia                                                        
+306Cardiac - neurosis                                                        
+427Cardio-pulmonary arrest                                                   
+Z30Cardio-pulmonary monitoring - I.C.U.                                      
+429Cardiomegaly                                                              
+425Cardiomyopathy                                                            
+429Cardiovascular accident                                                   
+366Cataract                                                                  
+381Catarrh of middle ear                                                     
+354Causalgia                                                                 
+682Cellulitis                                                                
+380Cellulitis - ear                                                          
+373Cellulitis - eyelid                                                       
+681Cellulitis - finger or toe                                                
+437Cerebral arteriosclerosis                                                 
+437Cerebral ischemia Not Otherwise Specified                                 
+434Cerebral occlusion thrombosis                                             
+436Cerebrovascular accident (Stroke Not Otherwise Specified)                 
+380Cerumen (accumulation) (impacted)                                         
+756Cervical - rib                                                            
+733Cervical - spine                                                          
+616Cervical Intraepithelial Neoplasia (CIN) - Class I - IV                   
+180Cervical Intraepithelial Neoplasia (CIN) - Class V                        
+616Cervicitis - chronic - acute - Not Otherwise Specified                    
+669Cesarian section                                                          
+373Chalazion                                                                 
+Z23Chemical sympathectomy                                                    
+786Chest pain                                                                
+052Chicken Pox                                                               
+576Cholangitis                                                               
+575Cholecystitis                                                             
+574Cholelithiasis                                                            
+733Chondritis                                                                
+730Chondritis - costal                                                       
+733Chondromalacia                                                            
+717Chondromalacia - patella                                                  
+605Circumcision                                                              
+571Cirrhosis of liver                                                        
+443Claudication                                                              
+749Cleft palate                                                              
+627Climacteric (symptoms)                                                    
+Z61Clubfoot                                                                  
+286Coagulation defects                                                       
+724Coccydynia                                                                
+460Cold                                                                      
+490Cold - chest                                                              
+459Cold - feet                                                               
+054Cold sore                                                                 
+789Colic                                                                     
+574Colic - biliary                                                           
+789Colic - intestinal                                                        
+788Colic - renal                                                             
+788Colic - ureteric                                                          
+009Colitis - Not Otherwise Specified                                         
+558Colitis - chronic                                                         
+564Colitis - mucous                                                          
+564Colitis - spastic                                                         
+556Colitis - ulcerative                                                      
+569Colostomy malfunction                                                     
+780Coma                                                                      
+V70Complete exam or physical                                                 
+Z12Complete exam or physical - Third Party                                   
+999Complications - injection or vaccination                                  
+674Complications - puerperium                                                
+996Complications - specified procedures (e.g. mechanical device)             
+998Complications - surgical procedures                                       
+724Compression - nerve root                                                  
+850Concussion                                                                
+078Condylomata accuminata                                                    
+650Confinement or delivery                                                   
+669Confinement or delivery - complicated                                     
+290Confusion senile                                                          
+298Confusion state                                                           
+750Congenital anomalies - alimentary tract (upper)                           
+755Congenital anomalies - arm - hand                                         
+742Congenital anomalies - brain                                              
+758Congenital anomalies - chromosomal                                        
+747Congenital anomalies - circulatory                                        
+751Congenital anomalies - digestive system                                   
+744Congenital anomalies - ear - face - neck                                  
+743Congenital anomalies - eye                                                
+755Congenital anomalies - foot - leg                                         
+752Congenital anomalies - genital organs                                     
+756Congenital anomalies - head                                               
+746Congenital anomalies - heart                                              
+759Congenital anomalies - multiple                                           
+756Congenital anomalies - musculoskeletal                                    
+742Congenital anomalies - nervous system                                     
+748Congenital anomalies - respiratory                                        
+759Congenital anomalies - unspecified                                        
+753Congenital anomalies - urinary system                                     
+Z60Congenital hip dislocation                                                
+428Congestive Heart Failure                                                  
+372Conjunctivitis                                                            
+564Constipation                                                              
+V25Contraceptive Advice                                                      
+921Contusion - eye and adnexa                                                
+920Contusion - face - scalp and neck except eye(s)                           
+924Contusion - lower limb and of other unspecified sites                     
+919Contusion - multiple                                                      
+922Contusion - trunk                                                         
+923Contusion - upper limb                                                    
+780Convulsions Not Otherwise Specified                                       
+416Cor Pulmonale                                                             
+415Cor Pulmonale acute                                                       
+414Coronary (Artery) Disease - Chronic                                       
+411Coronary Insufficiency                                                    
+410Coronary Occlusion - Thrombosis                                           
+414Coronary Sclerosis                                                        
+460Coryza - Common Cold - Head                                               
+786Cough                                                                     
+V65Counselling Not Otherwise Specified                                       
+Z84Counselling(third party)family member due to serious and complex problem  
+555Crohn's disease                                                           
+464Croup                                                                     
+925Crush injury - face - scalp & neck                                        
+928Crush injury - lower limb                                                 
+929Crush injury - multiple & unspecified sites                               
+926Crush injury - trunk                                                      
+927Crush injury - upper limb                                                 
+737Curvature of spine                                                        
+727Cyst - Baker's                                                            
+616Cyst - Bartholin's gland                                                  
+733Cyst - bone                                                               
+610Cyst - breast                                                             
+608Cyst - epididymis - testes                                                
+373Cyst - eyelid                                                             
+593Cyst - kidney - acquired                                                  
+753Cyst - kidney - congenital                                                
+216Cyst - neck                                                               
+528Cyst - oral soft tissue                                                   
+620Cyst - ovary or broad ligament                                            
+685Cyst - pilonidal                                                          
+569Cyst - rectal                                                             
+706Cyst - sebaceous                                                          
+706Cyst - skin                                                               
+727Cyst - synovial                                                           
+759Cyst - thyroglossal duct                                                  
+595Cystitis                                                                  
+618Cystocele - female                                                        
+596Cystocele - male                                                          
+389Deafness                                                                  
+798Death - cause unknown (or D.O.A.)                                         
+656Death - intrauterine - affecting pregnancy                                
+779Death - neonatal                                                          
+799Debility                                                                  
+267Deficiency - ascorbic acid                                                
+275Deficiency - calcium                                                      
+271Deficiency - disaccharidase                                               
+277Deficiency - enzymes                                                      
+256Deficiency - estrogen                                                     
+266Deficiency - folic acid                                                   
+279Deficiency - gamma globulin                                               
+271Deficiency - glucose - phosphatase                                        
+253Deficiency - hormone                                                      
+271Deficiency - lactose                                                      
+269Deficiency - nutritional                                                  
+260Deficiency - protein                                                      
+286Deficiency - prothrombin                                                  
+257Deficiency - testicular                                                   
+257Deficiency - totesterone                                                  
+264Deficiency - vitamin A                                                    
+266Deficiency - vitamin B                                                    
+268Deficiency - vitamin D                                                    
+736Deformity - acquired - foot                                               
+736Deformity - acquired - hand                                               
+738Deformity - acquired - nose                                               
+754Deformity - congenital - foot                                             
+755Deformity - congenital - hand                                             
+331Degeneration - cerebral                                                   
+437Degeneration - cerebrovascular                                            
+362Degeneration - macula                                                     
+733Degeneration - spine                                                      
+722Degenerative disc disease                                                 
+715Degenerative joint disease                                                
+998Dehiscence of wound                                                       
+669Delivery - cesarian section                                               
+650Delivery - vaginal - uncomplicated                                        
+669Delivery - with complications                                             
+652Delivery - with malpresentation                                           
+298Dementia                                                                  
+290Dementia - senile                                                         
+521Dental caries                                                             
+524Dentofacial anomalies                                                     
+304Dependence drug                                                           
+311Depression                                                                
+296Depression - acute or involutional                                        
+296Depression - manic                                                        
+300Depression - neurotic or reactive                                         
+296Depression - psychotic                                                    
+718Derangement of joint                                                      
+692Dermatitis                                                                
+692Dermatitis - allergic                                                     
+692Dermatitis - contact                                                      
+111Dermatitis - mycotic                                                      
+690Dermatitis - seborrheic                                                   
+686Dermatitis - septic                                                       
+454Dermatitis - varicose                                                     
+110Dermatophytosis                                                           
+V07Desensitization                                                           
+361Detachment - retina                                                       
+470Deviated nasal septum                                                     
+250Diabetes                                                                  
+648Diabetes - in pregnancy                                                   
+Z80Diagnosis is not confirmed                                                
+691Diaper rash                                                               
+009Diarrhea                                                                  
+558Diarrhea - chronic or recurrent                                           
+722Disc displacement - prolapse - rupture                                    
+255Disease - Addison's                                                       
+255Disease - Cushing's                                                       
+201Disease - Hodgkin's                                                       
+731Disease - Paget's (bone)                                                  
+443Disease - Raynoud's                                                       
+732Disease - Scheuermann's                                                   
+255Disease - adrenal                                                         
+525Disease - alveoli                                                         
+335Disease - anterior horn cell                                              
+040Disease - bacterial                                                       
+289Disease - blood and blood forming organs                                  
+733Disease - bone and cartilage                                              
+569Disease - bowel                                                           
+564Disease - bowel - functional                                              
+348Disease - brain                                                           
+611Disease - breast                                                          
+610Disease - breast - cystic                                                 
+448Disease - capillaries                                                     
+416Disease - cardiopulmonary                                                 
+429Disease - cardiovascular                                                  
+349Disease - central nervous system                                          
+437Disease - cerebrovascular                                                 
+622Disease - cervix                                                          
+286Disease - coagulation                                                     
+579Disease - coeliac                                                         
+283Disease - cold - agglutinin                                               
+710Disease - collagen                                                        
+426Disease - conduction                                                      
+372Disease - conjunctiva                                                     
+710Disease - connective tissue                                               
+414Disease - coronary artery heart                                           
+722Disease - disc - intervertebral                                           
+388Disease - ear                                                             
+424Disease - endocardium                                                     
+530Disease - esophagus                                                       
+381Disease - eustachian tube                                                 
+333Disease - extrapyramidal                                                  
+379Disease - eye                                                             
+374Disease - eye - lid                                                       
+378Disease - eye - muscle                                                    
+620Disease - fallopian tube                                                  
+614Disease - fallopian tube - infectious                                     
+620Disease - fallopian tube - non-infectious                                 
+277Disease - fibrocystic                                                     
+575Disease - gall bladder                                                    
+569Disease - gastro-intestinal                                               
+523Disease - gum                                                             
+398Disease - heart - rheumatic                                               
+429Disease - heart - unspecified                                             
+573Disease - hepatocellular                                                  
+719Disease - hip                                                             
+755Disease - hip - congenital                                                
+526Disease - jaw                                                             
+719Disease - joint NEC                                                       
+593Disease - kidney                                                          
+366Disease - lens                                                            
+573Disease - liver                                                           
+518Disease - lung                                                            
+289Disease - lymph glands                                                    
+524Disease - mandible                                                        
+528Disease - mouth                                                           
+728Disease - muscle - Inflammatory                                           
+359Disease - muscle - wasting                                                
+703Disease - nail                                                            
+530Disease - oesophagus                                                      
+779Disease - originating in the perinatal period                             
+577Disease - pancreas                                                        
+134Disease - parasitic                                                       
+527Disease - parotid                                                         
+614Disease - pelvic inflammatory - female                                    
+789Disease - pelvic inflammatory - male                                      
+607Disease - penis                                                           
+423Disease - pericardium                                                     
+443Disease - peripheral vascular                                             
+253Disease - pituitary gland                                                 
+602Disease - prostate                                                        
+569Disease - rectum                                                          
+593Disease - renal                                                           
+527Disease - salivary gland                                                  
+336Disease - spinal cord                                                     
+527Disease - submandibular gland                                             
+525Disease - teeth                                                           
+478Disease - throat                                                          
+529Disease - tongue                                                          
+478Disease - upper respiratory tract                                         
+465Disease - upper respiratory tract-infectious                              
+424Disease - valve - aortic                                                  
+394Disease - valve - mitral                                                  
+397Disease - valve - tricuspid                                               
+459Disease - vascular                                                        
+099Disease - venereal                                                        
+733Disease - vertebrae                                                       
+078Disease - viral                                                           
+288Disease - white blood cells                                               
+837Dislocation - ankle                                                       
+832Dislocation - elbow                                                       
+834Dislocation - finger                                                      
+838Dislocation - foot                                                        
+835Dislocation - hip                                                         
+Z60Dislocation - hip-congenital                                              
+830Dislocation - jaw                                                         
+836Dislocation - knee                                                        
+839Dislocation - multiple & ill defined                                      
+831Dislocation - shoulder                                                    
+833Dislocation - wrist                                                       
+255Disorder - adrenal gland                                                  
+447Disorder - arteries & arterioles                                          
+576Disorder - biliary tract                                                  
+596Disorder - bladder                                                        
+733Disorder - bone and cartilage                                             
+459Disorder - circulatory                                                    
+352Disorder - cranial nerves                                                 
+388Disorder - ear                                                            
+259Disorder - endocrine                                                      
+276Disorder - fluid - electrolyte - acid base balance                        
+564Disorder - functional digestive                                           
+629Disorder - genital organs (female)                                        
+608Disorder - genital organs (male)                                          
+569Disorder - intestines                                                     
+457Disorder - lymphatic channels                                             
+277Disorder - metabolism                                                     
+385Disorder - middle ear & mastoid                                           
+728Disorder - muscle - ligament & fascia                                     
+Z99Disorder - myeloproliferative                                             
+358Disorder - myoneural                                                      
+349Disorder - nerve                                                          
+350Disorder - nerve - trigeminal                                             
+354Disorder - nerve - ulnar                                                  
+349Disorder - nervous system                                                 
+337Disorder - nervous system (autonomic)                                     
+253Disorder - pituitary gland                                                
+709Disorder - skin & subcutaneous tissue                                     
+537Disorder - stomach & duodenum                                             
+705Disorder - sweat gland                                                    
+246Disorder - thyroid                                                        
+599Disorder - urethra & urinary tract                                        
+427Disordered action of heart                                                
+562Diverticulitis - intestine                                                
+562Diverticulosis - intestine                                                
+Z06Dizziness                                                                 
+V59Donor                                                                     
+V58Dressing                                                                  
+994Drowning                                                                  
+535Duodenitis                                                                
+728Dupuytren's contracture                                                   
+781Dyskinesia                                                                
+784Dyslexia                                                                  
+625Dysmenorrhea                                                              
+625Dyspareunia                                                               
+536Dyspepsia                                                                 
+787Dysphagia                                                                 
+622Dysplasia - cervix                                                        
+733Dysplasia - fibrous - bone                                                
+786Dyspnea                                                                   
+706Dyssebacea                                                                
+333Dystonia                                                                  
+788Dysuria                                                                   
+Z14E.C.G. - No diagnosis specified                                           
+Z15E.E.G. - No diagnosis specified                                           
+359E.M.G.                                                                    
+478Ear - nose - throat exam                                                  
+388Earache                                                                   
+459Ecchymosis                                                                
+921Ecchymosis - eye - traumatic                                              
+374Ectropion                                                                 
+691Eczema - atopic                                                           
+691Eczema - infantile                                                        
+454Eczema - stasis                                                           
+454Eczema - varicose                                                         
+692Eczema Not Otherwise Specified                                            
+782Edema N.Y.D.                                                              
+989Effects of - chemical substance (toxic)                                   
+977Effects of - drug (toxic)                                                 
+991Effects of - frostbite                                                    
+992Effects of - heat                                                         
+719Effusion - of joint                                                       
+511Effusion - pleural                                                        
+994Electrocution                                                             
+444Embolism - aortic                                                         
+433Embolism - basilar                                                        
+557Embolism - bowel                                                          
+433Embolism - carotid                                                        
+434Embolism - cerebral                                                       
+433Embolism - choroidal                                                      
+410Embolism - coronary                                                       
+444Embolism - extremities                                                    
+444Embolism - femoral                                                        
+415Embolism - pulmonary                                                      
+492Emphysema                                                                 
+510Empyema                                                                   
+323Encephalitis - encephalomyelitis                                          
+424Endocarditis - aortic                                                     
+394Endocarditis - mitral                                                     
+617Endometriosis                                                             
+615Endometritis                                                              
+009Enteritis unspecified                                                     
+788Enuresis                                                                  
+726Epicondylitis                                                             
+604Epididymitis                                                              
+345Epilepsy                                                                  
+375Epiphora                                                                  
+379Episcleritis                                                              
+Z29Epistaxis                                                                 
+Z02Erosion of cervix (uteri)                                                 
+035Erysipelas                                                                
+750Esophageal atresia                                                        
+530Esophageal stenosis                                                       
+530Esophagitis                                                               
+378Esotropia                                                                 
+381Eustachian tube dysfunction                                               
+780Exhaustion                                                                
+378Exotropia                                                                 
+427Extrasystoles - ventricular                                               
+428Failure - heart                                                           
+572Failure - hepatic                                                         
+572Failure - liver                                                           
+586Failure - renal                                                           
+799Failure - respiratory                                                     
+428Failure - ventricular - left                                              
+783Failure to thrive                                                         
+780Fainting spells                                                           
+309Family problems                                                           
+729Fasciitis                                                                 
+728Fasciitis - plantar                                                       
+780Fatigue                                                                   
+560Fecal impaction                                                           
+783Feeding problem                                                           
+656Fetal & placental problems affecting mother                               
+780Fever of unknown origin                                                   
+427Fibrillation - atrial auricular ventricular                               
+217Fibroadenoma of breast                                                    
+218Fibroid uterus                                                            
+277Fibrosis - cystic (of pancreas)                                           
+515Fibrosis - lung                                                           
+709Fibrosis - skin                                                           
+729Fibrositis                                                                
+565Fissure in anus                                                           
+686Fistula - Not Otherwise Specified                                         
+569Fistula - abdominal wall                                                  
+565Fistula - anal & rectal                                                   
+686Fistula - skin                                                            
+596Fistula - vesico-sigmoidal                                                
+596Fistula - vesico-ureteral                                                 
+619Fistula - vesico-uterine                                                  
+619Fistula - vulvo-rectal                                                    
+768Foetal distress                                                           
+704Folliculitis                                                              
+005Food poisoning                                                            
+937Foreign body - anus                                                       
+938Foreign body - digestive organ or tract                                   
+931Foreign body - ear                                                        
+930Foreign body - eye                                                        
+871Foreign body - eye - penetrating                                          
+939Foreign body - genitourinary tract                                        
+932Foreign body - nose                                                       
+933Foreign body - pharynx & larynx                                           
+938Foreign body - swallowed                                                  
+934Foreign body - trachea - bronchus lung                                    
+939Foreign body - vagina                                                     
+813Fracture - Colles                                                         
+824Fracture - ankle                                                          
+814Fracture - carpal bones                                                   
+810Fracture - clavicle                                                       
+802Fracture - face bones                                                     
+821Fracture - femur                                                          
+817Fracture - hand bones multiple                                            
+820Fracture - hip                                                            
+812Fracture - humerus                                                        
+815Fracture - metacarpal bones                                               
+733Fracture - non-union                                                      
+822Fracture - patella                                                        
+808Fracture - pelvis                                                         
+826Fracture - phalanges - foot                                               
+816Fracture - phalanges - hand                                               
+813Fracture - radius & ulna                                                  
+807Fracture - ribs                                                           
+811Fracture - scapula                                                        
+803Fracture - skull                                                          
+825Fracture - tarsal & metatarsal bones                                      
+823Fracture - tibia & fibula                                                 
+805Fracture - vertebral or spine                                             
+788Frequency (of urine)                                                      
+302Frigidity                                                                 
+991Frostbite                                                                 
+680Furunculosis (boil)                                                       
+676Galactorrhea                                                              
+574Gall stones                                                               
+727Ganglion                                                                  
+785Gangrene                                                                  
+306Gastric neurosis                                                          
+535Gastritis (acute) (chronic)                                               
+536Gastro-intestinal disorder - indigestion                                  
+009Gastroenteritis Not Otherwise Specified                                   
+780General symptoms Not Otherwise Specified                                  
+007Giardiasis                                                                
+523Gingivitis                                                                
+365Glaucoma                                                                  
+529Glossitis                                                                 
+240Goitre                                                                    
+098Gonorrhea                                                                 
+274Gout                                                                      
+274Gouty arthritis                                                           
+345Grand Mal                                                                 
+686Granuloma - skin                                                          
+629Granuloma - vaginal                                                       
+611Gynecomastia                                                              
+773Haemolytic disease of newborn                                             
+735Hammer toe                                                                
+994Hanging                                                                   
+477Hay fever                                                                 
+346Headache - migraine                                                       
+307Headache - tension                                                        
+784Headache Not Otherwise Specified                                          
+426Heart - block                                                             
+428Heart failure   - undefined                                               
+992Heatstroke                                                                
+228Hemangioma                                                                
+719Hemarthrosis                                                              
+578Hematemesis                                                               
+599Hematuria                                                                 
+342Hemiplegia                                                                
+786Hemoptysis                                                                
+569Hemorrhage - anal & rectal                                                
+641Hemorrhage - antepartum                                                   
+431Hemorrhage - brain & cerebral                                             
+372Hemorrhage - conjunctival                                                 
+578Hemorrhage - gastro-intestinal                                            
+432Hemorrhage - intra-cranial                                                
+666Hemorrhage - post-partum                                                  
+379Hemorrhage - vitreous                                                     
+455Hemorrhoids                                                               
+573Hepatitis - Not Otherwise Specified                                       
+571Hepatitis - chronic                                                       
+070Hepatitis - infectious                                                    
+552Hernia - diaphragmatic - hiatal - umbilical - ventral-with obstruction    
+553Hernia - diaphragmatic - hiatal - umbilical - ventral-without obstruction 
+550Hernia - inguinal - with or without obstruction                           
+054Herpes - Labialis                                                         
+054Herpes - Simplex                                                          
+053Herpes - Zoster (Shingles)                                                
+786Hiccups                                                                   
+784Hoarseness                                                                
+373Hordoleum                                                                 
+630Hydatidiform mole                                                         
+705Hydradenitis                                                              
+603Hydrocele                                                                 
+331Hydrocephalus                                                             
+742Hydrocephalus - congenital                                                
+591Hydronephrosis                                                            
+272Hypercholesterinemia                                                      
+790Hyperglycemia                                                             
+780Hyperhidrosis                                                             
+272Hyperlipidemia                                                            
+367Hyperopia                                                                 
+401Hypertension - Not Otherwise Specified - benign - essential               
+402Hypertensive - heart disease                                              
+403Hypertensive - renal disease                                              
+242Hyperthroidsim                                                            
+Z01Hypertrophy - breast                                                      
+600Hypertrophy - prostate (benign)                                           
+474Hypertrophy - tonsils                                                     
+275Hypocalcemia                                                              
+251Hypoglycemia                                                              
+276Hypokalemia                                                               
+252Hypoparathyroidism                                                        
+286Hypoprothrombinemia                                                       
+458Hypotension                                                               
+991Hypothermia                                                               
+244Hypothyroidism                                                            
+300Hysteria                                                                  
+Z30I.C.U. - Cardio-pulmonary monitoring                                      
+555Ileitis - regional                                                        
+560Ileus - paralytic                                                         
+781Imbalance                                                                 
+276Imbalance - electrolyte                                                   
+259Imbalance - endocrine                                                     
+259Imbalance - hormone                                                       
+386Imbalance - labyrinth                                                     
+684Impetigo                                                                  
+607Impotence                                                                 
+302Impotence - psychogenic                                                   
+424Incompetency - aortic                                                     
+622Incompetency - cervix                                                     
+654Incompetency - cervix - in pregnancy                                      
+625Incontinence stress - female                                              
+788Incontinence stress - male                                                
+307Incontinence urinary & fecal of psychogenic origin                        
+557Infarction - bowel                                                        
+434Infarction - cerebral                                                     
+410Infarction - coronary                                                     
+410Infarction - myocardial                                                   
+415Infarction - pulmonary                                                    
+039Infection - actinomycotic                                                 
+474Infection - adenoids                                                      
+041Infection - bacterial                                                     
+730Infection - bone                                                          
+112Infection - candida                                                       
+073Infection - chlamydia                                                     
+674Infection - episiotomy                                                    
+360Infection - eye                                                           
+686Infection - finger                                                        
+117Infection - fungus                                                        
+111Infection - fungus skin                                                   
+110Infection - fungus skin - hand or foot                                    
+009Infection - gastro-intestinal                                             
+523Infection - gums                                                          
+127Infection - intestinal helminthiasis                                      
+129Infection - intestinal parasitism                                         
+711Infection - joint                                                         
+528Infection - mouth                                                         
+041Infection - mycoplasma                                                    
+681Infection - nail                                                          
+478Infection - nose                                                          
+996Infection - prosthesis                                                    
+519Infection - respiratory                                                   
+686Infection - skin                                                          
+996Infection - skin - graft                                                  
+478Infection - throat                                                        
+522Infection - tooth                                                         
+686Infection - umbilicus                                                     
+771Infection - umbilicus - newborn                                           
+465Infection - upper respiratory                                             
+599Infection - urinary                                                       
+079Infection - virus                                                         
+958Infection - wound                                                         
+112Infection - yeast                                                         
+075Infectious Mononucleosis (glandular fever)                                
+628Infertility - female                                                      
+606Infertility - male                                                        
+134Infestation                                                               
+129Infestation - parasitic intestinal                                        
+Z02Inflammation of cervix (uteri)                                            
+487Influenza                                                                 
+008Influenza - with digestive symptoms                                       
+487Influenza - with respiratory symptoms                                     
+703Ingrowing nail                                                            
+Z13Injection (no diagnosis and less than $5.00)                              
+913Injury - elbow - forearm & wrist                                          
+921Injury - eye & adnexa                                                     
+910Injury - face - neck & scalp                                              
+915Injury - finger                                                           
+917Injury - foot & toe                                                       
+914Injury - hand(s)                                                          
+854Injury - head                                                             
+916Injury - hip - thigh - leg & ankle                                        
+919Injury - multiple                                                         
+912Injury - shoulder & upper arm                                             
+952Injury - spinal cord                                                      
+873Injury - tooth                                                            
+911Injury - trunk                                                            
+861Injury internal - heart & lung                                            
+868Injury internal - intra-abdominal organs                                  
+862Injury internal - intrathoracic organs                                    
+866Injury internal - kidney                                                  
+865Injury internal - spleen                                                  
+869Injury internal - unspecified                                             
+951Injury nerve - cranial                                                    
+950Injury nerve - optic and pathways                                         
+956Injury nerve - pelvic girdle lower limb                                   
+957Injury nerve - peripheral                                                 
+955Injury nerve - shoulder girdle upper limb                                 
+957Injury nerve - unspecified nerves                                         
+919Insect bite - multiple                                                    
+Z06Insomnia                                                                  
+717Insufficiency - anterior cruciate                                         
+435Insufficiency - basilar artery                                            
+437Insufficiency - cerebro-vascular                                          
+459Insufficiency - circulatory (vascular)                                    
+411Insufficiency - coronary                                                  
+428Insufficiency - myocardial                                                
+786Insufficiency - respiratory                                               
+736Internal torsion of tibia                                                 
+695Intertrigo                                                                
+459Intolerance - cold                                                        
+271Intolerance - disaccharide                                                
+995Intolerance - drug                                                        
+579Intolerance - fat                                                         
+271Intolerance - fructose                                                    
+271Intolerance - glucose                                                     
+992Intolerance - heat                                                        
+271Intolerance - lactose                                                     
+579Intolerance - milk                                                        
+305Intoxication                                                              
+364Iritis                                                                    
+312Irritable child                                                           
+360Irritation - eye                                                          
+686Irritation - skin                                                         
+459Ischemia                                                                  
+437Ischemic cerebrovascular disease                                          
+414Ischemic heart disease                                                    
+782Jaundice                                                                  
+774Jaundice - newborn                                                        
+576Jaundice - obstructive                                                    
+774Jaundice - perinatal                                                      
+370Keratitis                                                                 
+701Keratosis                                                                 
+701Keratosis - actinic                                                       
+702Keratosis - seborrheic                                                    
+661Labor - abnormal                                                          
+644Labor - false                                                             
+661Labor - incoordinate                                                      
+660Labor - obstructed                                                        
+661Labor - precipitate                                                       
+644Labor - premature                                                         
+662Labor - prolonged                                                         
+662Labor - slow progress                                                     
+Z19Laboratory examination                                                    
+386Labyrinthitis                                                             
+676Lactation                                                                 
+464Laryngitis (croup)                                                        
+464Laryngo - Tracheitis                                                      
+315Learning defect                                                           
+218Leiomyoma of uterus                                                       
+348Lesion - brain                                                            
+528Lesion - buccal - lip                                                     
+722Lesion - cervical disc                                                    
+569Lesion - colonic                                                          
+518Lesion - lung - coin                                                      
+353Lesion - nerve root                                                       
+709Lesion - skin                                                             
+336Lesion - spinal cord                                                      
+208Leukemia                                                                  
+624Leukoplakia - vulva                                                       
+Z03Leukorrhea                                                                
+697Lichen Planus                                                             
+765Light for dates infant                                                    
+272Lipemia                                                                   
+214Lipoma                                                                    
+718Loose body in joint                                                       
+717Loose body in joint - knee                                                
+783Loss of weight                                                            
+765Low birth weight                                                          
+724Lumbago                                                                   
+695Lupus erythematosus                                                       
+710Lupus erythematosus - systemic                                            
+289Lymphadenitis                                                             
+785Lymphadenopathy                                                           
+457Lymphangitis                                                              
+229Lymphoma                                                                  
+780Malaise                                                                   
+736Mallet Finger(acquired)                                                   
+755Mallet Finger(congenital)                                                 
+261Malnutrition Not Otherwise Specified                                      
+524Malocclusion                                                              
+652Malposition & malpresentation of fetus                                    
+309Marital problems                                                          
+789Mass - abdominal or pelvic                                                
+625Mass - adnexal                                                            
+611Mass - breast                                                             
+786Mass - chest                                                              
+789Mass - iliac fossa                                                        
+518Mass - lung                                                               
+519Mass - mediastinum                                                        
+620Mass - ovary                                                              
+527Mass - parotid                                                            
+608Mass - testes                                                             
+611Mastitis                                                                  
+055Measles                                                                   
+296Melancholia                                                               
+709Melasma                                                                   
+578Melena                                                                    
+386Meniere's Disease                                                         
+322Meningitis                                                                
+296Menopausal depression                                                     
+627Menopause                                                                 
+626Menorrhagia                                                               
+626Menstrual disorder                                                        
+319Mental retardation Not Otherwise Specified                                
+355Meralgia paraesthetica                                                    
+726Metatarsalgia                                                             
+754Metatarsus Varus                                                          
+625Mittelsmertz                                                              
+216Mole                                                                      
+112Moniliasis                                                                
+528Mucocele (buccal cavity)                                                  
+340Multiple Sclerosis                                                        
+919Multiple trauma (injuries)                                                
+072Mumps                                                                     
+785Murmur heart                                                              
+359Muscular dystrophies & myopathies                                         
+729Myalgia                                                                   
+117Mycosis                                                                   
+323Myelitis                                                                  
+741Myelocele                                                                 
+742Myelodysplasia                                                            
+203Myeloma                                                                   
+410Myocardial Infarction                                                     
+428Myocardial Insufficiency                                                  
+414Myocardial Ischemia                                                       
+429Myocarditis                                                               
+729Myofibrositis                                                             
+367Myopia                                                                    
+729Myositis                                                                  
+244Myxedema                                                                  
+347Narcolepsy                                                                
+460Nasopharyngitis                                                           
+472Nasopharyngitis - chronic                                                 
+787Nausea                                                                    
+785Necrosis                                                                  
+730Necrosis - bone                                                           
+733Necrosis - bone -aseptic or avascular                                     
+213Neoplasm (benign) - bone & articular cartilage                            
+225Neoplasm (benign) - brain & nervous system                                
+217Neoplasm (benign) - breast                                                
+211Neoplasm (benign) - cecum                                                 
+219Neoplasm (benign) - cervix                                                
+211Neoplasm (benign) - colon                                                 
+215Neoplasm (benign) - connective tissue                                     
+211Neoplasm (benign) - digestive system - other parts                        
+211Neoplasm (benign) - esophagus                                             
+224Neoplasm (benign) - eye                                                   
+221Neoplasm (benign) - genital organs (female)                               
+222Neoplasm (benign) - genital organs (male)                                 
+226Neoplasm (benign) - gland thyroid                                         
+227Neoplasm (benign) - glands endocrine - other and related structures       
+211Neoplasm (benign) - intestine                                             
+229Neoplasm (benign) - intrathoracic organs                                  
+210Neoplasm (benign) - lip - oral cavity & pharynx                           
+212Neoplasm (benign) - lung                                                  
+220Neoplasm (benign) - ovary                                                 
+227Neoplasm (benign) - parathyroid                                           
+210Neoplasm (benign) - parotid                                               
+227Neoplasm (benign) - pituitary                                             
+222Neoplasm (benign) - prostate                                              
+212Neoplasm (benign) - respiratory                                           
+216Neoplasm (benign) - skin                                                  
+211Neoplasm (benign) - stomach                                               
+222Neoplasm (benign) - testes                                                
+229Neoplasm (benign) - unspecified sites                                     
+223Neoplasm (benign) - urinary organs - kidney - other                       
+219Neoplasm (benign) - uterus                                                
+201Neoplasm (malignant) - Hodgkin's                                          
+195Neoplasm (malignant) - back                                               
+188Neoplasm (malignant) - bladder                                            
+170Neoplasm (malignant) - bone & articular cartilage                         
+159Neoplasm (malignant) - bowel                                              
+191Neoplasm (malignant) - brain                                              
+174Neoplasm (malignant) - breast (female)                                    
+175Neoplasm (malignant) - breast (male)                                      
+162Neoplasm (malignant) - bronchus                                           
+153Neoplasm (malignant) - cecum                                              
+191Neoplasm (malignant) - cerebral                                           
+180Neoplasm (malignant) - cervix uteri                                       
+153Neoplasm (malignant) - colon                                              
+171Neoplasm (malignant) - connective tissue                                  
+152Neoplasm (malignant) - duodenum                                           
+194Neoplasm (malignant) - endocrine glands                                   
+182Neoplasm (malignant) - endometrium                                        
+150Neoplasm (malignant) - esophagus                                          
+190Neoplasm (malignant) - eye                                                
+156Neoplasm (malignant) - gall bladder & extrahepatic bile ducts             
+184Neoplasm (malignant) - genital organs - (female)                          
+187Neoplasm (malignant) - genital organs - (male)                            
+143Neoplasm (malignant) - gum                                                
+153Neoplasm (malignant) - hepatic flexure                                    
+148Neoplasm (malignant) - hypopharynx                                        
+152Neoplasm (malignant) - ileum                                              
+159Neoplasm (malignant) - intestines                                         
+195Neoplasm (malignant) - intrathoracic organs                               
+189Neoplasm (malignant) - kidney & unspecified organs                        
+161Neoplasm (malignant) - larynx                                             
+140Neoplasm (malignant) - lip (non skin)                                     
+155Neoplasm (malignant) - liver & intrahepatic bile ducts                    
+162Neoplasm (malignant) - lung                                               
+196Neoplasm (malignant) - lymph nodes - secondary & unspecified              
+202Neoplasm (malignant) - lymphoid & histocyctic tissue                      
+172Neoplasm (malignant) - melanoma                                           
+145Neoplasm (malignant) - mouth                                              
+160Neoplasm (malignant) - nasal cavities - middle ear & accessory sinuses    
+147Neoplasm (malignant) - nasopharynx                                        
+195Neoplasm (malignant) - neck                                               
+192Neoplasm (malignant) - nervous system & unspecified parts                 
+195Neoplasm (malignant) - nose                                               
+150Neoplasm (malignant) - oesophagus                                         
+158Neoplasm (malignant) - omentum                                            
+145Neoplasm (malignant) - oral cavity                                        
+146Neoplasm (malignant) - oropharynx                                         
+159Neoplasm (malignant) - other digestive organs                             
+183Neoplasm (malignant) - ovary & uterine adnexa                             
+157Neoplasm (malignant) - pancreas                                           
+194Neoplasm (malignant) - parathyroid                                        
+142Neoplasm (malignant) - parotid                                            
+187Neoplasm (malignant) - penis - other male genital organs                  
+158Neoplasm (malignant) - peritoneum                                         
+149Neoplasm (malignant) - pharynx                                            
+181Neoplasm (malignant) - placenta                                           
+163Neoplasm (malignant) - pleura                                             
+185Neoplasm (malignant) - prostate                                           
+154Neoplasm (malignant) - rectosigmoid junction                              
+154Neoplasm (malignant) - rectum                                             
+165Neoplasm (malignant) - respiratory system                                 
+158Neoplasm (malignant) - retroperitoneum                                    
+142Neoplasm (malignant) - salivary gland                                     
+198Neoplasm (malignant) - secondary - other specified sites                  
+197Neoplasm (malignant) - secondary - respiratory & digestive                
+153Neoplasm (malignant) - sigmoid colon                                      
+173Neoplasm (malignant) - skin (non melanoma)                                
+152Neoplasm (malignant) - small intestine - including duodenum               
+151Neoplasm (malignant) - stomach                                            
+186Neoplasm (malignant) - testes                                             
+164Neoplasm (malignant) - thymus - heart & mediostinum                       
+193Neoplasm (malignant) - thyroid gland                                      
+141Neoplasm (malignant) - tongue                                             
+162Neoplasm (malignant) - trachea                                            
+199Neoplasm (malignant) - unspecified                                        
+189Neoplasm (malignant) - ureter                                             
+179Neoplasm (malignant) - uterus                                             
+184Neoplasm (malignant) - vagina                                             
+233Neoplasm in-situ - cervix                                                 
+232Neoplasm in-situ - skin                                                   
+583Nephritis Not Otherwise Specified                                         
+344Nervous - bladder                                                         
+306Nervous - dyspepsia                                                       
+799Nervous - tension                                                         
+307Nervous - tic                                                             
+799Nervousness                                                               
+729Neuralgia                                                                 
+300Neurasthenia                                                              
+351Neuritis - facial                                                         
+377Neuritis - optic                                                          
+350Neuritis - trigeminal                                                     
+354Neuritis - ulnar                                                          
+729Neuritis Not Otherwise Specified                                          
+698Neurodermatitis                                                           
+355Neuropathy                                                                
+355Neuropathy - entrapment - lateral cutaneous nerve of thigh                
+354Neuropathy - entrapment - median nerve                                    
+355Neuropathy - entrapment - posterior tibial nerve                          
+354Neuropathy - entrapment - ulnar nerve                                     
+377Neuropathy - optic                                                        
+356Neuropathy - peripheral                                                   
+300Neurosis Not Otherwise Specified (anxiety - tension state)                
+094Neurosyphilis                                                             
+V30Newborn care (in hospital)                                                
+782Node or nodule - cutaneous                                                
+785Node or nodule - lymph                                                    
+600Node or nodule - prostate                                                 
+241Node or nodule - thyroid                                                  
+478Node or nodule - vocal cords                                              
+458Normotensive                                                              
+782Numbness                                                                  
+278Obesity Not Otherwise Specified                                           
+560Obstruction - bowel                                                       
+530Obstruction - esophageal                                                  
+381Obstruction - eustachian tube                                             
+628Obstruction - fallopian tube                                              
+375Obstruction - lacrimal - tear duct - adult                                
+743Obstruction - lacrimal - tear duct - congenital                           
+600Obstruction - prostate                                                    
+496Obstructive lung disease                                                  
+703Onychogryphosis                                                           
+604Orchitis                                                                  
+073Ornithosis                                                                
+732Osgood-Schlatter disease                                                  
+731Osteitis deformans                                                        
+715Osteoarthritis                                                            
+721Osteoarthritis - spine                                                    
+732Osteochondropathies                                                       
+730Osteomyelitis                                                             
+733Osteoporosis                                                              
+388Otalgia                                                                   
+380Otitis Externa                                                            
+382Otitis Media - Otitis Not Otherwise Specified                             
+388Otorrhea                                                                  
+387Otosclerosis                                                              
+256Ovarian dysfunction                                                       
+977Overdose of drugs                                                         
+997Pain - amputee                                                            
+724Pain - back                                                               
+786Pain - chest (musculo-skeletal)                                           
+724Pain - dorsal nerve root                                                  
+789Pain - epigastric                                                         
+784Pain - face                                                               
+789Pain - groin                                                              
+523Pain - gums                                                               
+719Pain - joint                                                              
+729Pain - limb                                                               
+723Pain - neck                                                               
+625Pain - ovarian                                                            
+625Pain - pelvic - female                                                    
+789Pain - pelvic - male                                                      
+569Pain - rectal                                                             
+786Pain - retro sternal                                                      
+524Pain - temporal mandibular                                                
+785Palpitations - heart                                                      
+351Palsy - Bell's                                                            
+767Palsy - Erb's                                                             
+335Palsy - bulbar                                                            
+343Palsy - cerebral - infantile                                              
+351Palsy - facial                                                            
+577Pancreatitis - acute - chronic - Not Otherwise Specified                  
+V76Pap smear                                                                 
+616Pap smear - abnormal                                                      
+229Papilloma                                                                 
+344Paralysis                                                                 
+297Paranoia                                                                  
+344Paraplegia                                                                
+344Paresis Not Otherwise Specified                                           
+782Paresthesia                                                               
+332Parkinsonism                                                              
+681Paronychia                                                                
+527Parotitis                                                                 
+747Patent ductus arteriosus                                                  
+Z19Pathological examination                                                  
+132Pediculosis Pubis                                                         
+625Pelvic congestion - female                                                
+614Pelvic inflammatory disease - female                                      
+789Pelvic inflammatory disease - male                                        
+694Pemphigoid                                                                
+384Perforated ear drum - non traumatic                                       
+446Periarteritis nodosa                                                      
+567Peritonitis                                                               
+301Personality disorder                                                      
+736Pes - acquired - any type except planus                                   
+754Pes - congenital                                                          
+734Pes - planus                                                              
+345Petit Mal                                                                 
+462Pharyngitis (sore throat)                                                 
+605Phimosis                                                                  
+451Phlebitis                                                                 
+735Pigeon Toe                                                                
+685Pilonidal sinus                                                           
+696Pityriasis Rosea                                                          
+641Placenta Previa                                                           
+511Pleural Effusion                                                          
+511Pleurisy                                                                  
+486Pneumonia                                                                 
+481Pneumonia - pneumococcal - lobar                                          
+480Pneumonia - viral                                                         
+486Pneumonitis                                                               
+512Pneumothorax                                                              
+989Poisoning - chemical                                                      
+005Poisoning - food                                                          
+045Poliomyelitis (old 335)                                                   
+716Polyarthritis                                                             
+759Polycystic disease                                                        
+753Polycystic disease - kidney                                               
+751Polycystic disease - liver - hepatic                                      
+256Polycystic disease - ovary                                                
+238Polycythemia Vera                                                         
+783Polydipsia                                                                
+258Polyglandular dysfunction                                                 
+657Polyhydramnios                                                            
+626Polymenorrhea                                                             
+725Polymyalgia rheumatic                                                     
+356Polyneuritis                                                              
+356Polyneuropathy                                                            
+471Polyp - nasal                                                             
+Z24Polysomnography (P.S.G.)-No diagnosis                                     
+788Polyuria                                                                  
+729Poor posture                                                              
+473Post nasal drip                                                           
+V24Post partum                                                               
+V58Post-op care                                                              
+998Post-op complications                                                     
+790Pre-diabetic                                                              
+642Pre-eclampsia                                                             
+Z16Pre-operative assessment                                                  
+V22Pregnancy                                                                 
+650Pregnancy - delivered                                                     
+633Pregnancy - ectopia                                                       
+641Pregnancy - hemorrhage                                                    
+V23Pregnancy - high risk                                                     
+642Pregnancy - hypertension                                                  
+656Pregnancy - intrauterine death                                            
+656Pregnancy - intrauterine growth retardation                               
+652Pregnancy - malpresentation - breech                                      
+646Pregnancy - other complications                                           
+645Pregnancy - post maturity                                                 
+642Pregnancy - toxemia                                                       
+Z22Pregnancy - unconfirmed                                                   
+643Pregnancy - vomiting                                                      
+765Premature infant                                                          
+644Premature labour                                                          
+V22Prenatal care                                                             
+367Presbyopia                                                                
+607Priapism                                                                  
+618Procidentia Uteri                                                         
+569Proctitis                                                                 
+618Prolapse - cystocele - rectocele - urethrocele - vaginal or uterine       
+601Prostatitis                                                               
+791Proteinuria                                                               
+698Pruritis                                                                  
+696Psoriasis                                                                 
+298Psychosis                                                                 
+372Pterygium                                                                 
+374Ptosis                                                                    
+514Pulmonary - congestion                                                    
+514Pulmonary - edema                                                         
+518Pulmonary - edema - acute                                                 
+416Pulmonary - heart disease                                                 
+287Purpura                                                                   
+590Pyelitis                                                                  
+590Pyelocystitis                                                             
+590Pyelonephritis                                                            
+537Pylorospasm                                                               
+686Pyoderma                                                                  
+523Pyorrhea                                                                  
+780Pyrexia or P.U.O. - fever Not Otherwise Specified                         
+599Pyuria                                                                    
+344Quadriplegia                                                              
+475Quinsy                                                                    
+Z09RH Incompatibility                                                        
+071Rabies                                                                    
+990Radiation sickness                                                        
+Z21Radiological exam - no diagnosis specified                                
+Z39Rape                                                                      
+782Rash                                                                      
+443Raynauds Phenomenon                                                       
+309Reaction - adjustment                                                     
+995Reaction - allergic                                                       
+995Reaction - anaphylactic                                                   
+995Reaction - drug                                                           
+308Reaction - stress                                                         
+995Reaction to drug                                                          
+569Rectal bleeding                                                           
+618Rectocele - female                                                        
+530Reflux - esophagus                                                        
+593Reflux - urinary                                                          
+424Regurgitation - aortic                                                    
+787Regurgitation - food                                                      
+424Regurgitation - mitral                                                    
+996Rejection of graft or transplant                                          
+Z66Removal of sutures (laceration)                                           
+586Renal failure                                                             
+770Respiratory problems of newborn                                           
+770Resuscitation of newborn                                                  
+666Retained - placenta                                                       
+632Retained - products of conception - early pregnancy                       
+666Retained - products of conception - following delivery                    
+656Retardation - intrauterine growth - affecting pregnancy                   
+783Retardation - intrauterine growth - fetus                                 
+788Retention of urine                                                        
+361Retinal detachment                                                        
+362Retinopathy - diabetic                                                    
+621Retroversion - anteversion - cervix                                       
+621Retroversion - anteversion - uterus                                       
+390Rheumatic - fever                                                         
+398Rheumatic - heart disease                                                 
+729Rheumatism - muscular                                                     
+460Rhinitis - acute                                                          
+472Rhinitis Not Otherwise Specified                                          
+110Ringworm                                                                  
+056Roseola                                                                   
+726Rotator cuff lesion                                                       
+056Rubella                                                                   
+658Ruptured - membranes (spontaneous)(premature)                             
+459Ruptured - vein (leg)                                                     
+614Salpingitis                                                               
+381Salpingitis - eustachian                                                  
+135Sarcoidosis                                                               
+133Scabies                                                                   
+034Scarlet fever                                                             
+034Scarletina                                                                
+295Schizophrenia                                                             
+722Sciatica                                                                  
+341Sclerosis - cerebral                                                      
+414Sclerosis - coronary                                                      
+737Scoliosis                                                                 
+706Seborrhea                                                                 
+780Seizure                                                                   
+345Seizure - petite mal                                                      
+290Senile psychosis - Dementia                                               
+797Senility - senile debility                                                
+034Septic sore throat                                                        
+038Septicaemia                                                               
+302Sexual deviation & disorder                                               
+004Shigellosis                                                               
+995Shock - anaesthetic                                                       
+995Shock - anaphylactic                                                      
+785Shock - cardiogenic                                                       
+999Shock - due to serum                                                      
+994Shock - electrocution                                                     
+639Shock - following abortion                                                
+785Shock - hypovolemic                                                       
+669Shock - obstetrical                                                       
+998Shock - post-operative                                                    
+785Shock - septic                                                            
+958Shock - traumatic                                                         
+994Sickness - motion                                                         
+990Sickness - radiation                                                      
+999Sickness - serum                                                          
+427Sinus - arrhythmia                                                        
+686Sinus - skin                                                              
+427Sinus - tachycardia                                                       
+461Sinusitis - acute                                                         
+473Sinusitis - chronic                                                       
+473Sinusitis - unqualified                                                   
+Z63Skin immunity & sensitization test                                        
+656Small-for-dates - affecting pregnancy                                     
+765Small-for-dates - for infant                                              
+462Sore throat                                                               
+728Spasm - muscle - Not Otherwise Specified                                  
+564Spastic colon                                                             
+784Speech defect (incl. dyslexia)                                            
+608Spermatocele                                                              
+741Spina bifida                                                              
+789Splenomegaly                                                              
+720Spondylitis                                                               
+720Spondylitis - ankylosing                                                  
+721Spondylosis                                                               
+845Sprains & strains - ankle and foot                                        
+841Sprains & strains - elbow & forearm                                       
+843Sprains & strains - hip & thigh                                           
+844Sprains & strains - knee & leg                                            
+846Sprains & strains - sacroiliac region                                     
+840Sprains & strains - shoulder & upper arm                                  
+848Sprains & strains - unspecified                                           
+847Sprains & strains - unspecified parts of back                             
+842Sprains & strains - wrist & hand                                          
+726Spur Calcaneal                                                            
+424Stenosis - aortic                                                         
+596Stenosis - bladder neck                                                   
+433Stenosis - carotid artery                                                 
+530Stenosis - esophagus                                                      
+447Stenosis - iliac                                                          
+375Stenosis - lacrimal duct                                                  
+598Stenosis - meatal                                                         
+394Stenosis - mitral                                                         
+537Stenosis - pyloric (adult)                                                
+750Stenosis - pyloric (baby)                                                 
+569Stenosis - rectal                                                         
+724Stenosis - spinal                                                         
+V25Sterilization (tubal ligation)                                            
+Z62Stillbirth                                                                
+528Stomatitis                                                                
+378Strabismus                                                                
+994Strangulation                                                             
+034Strept throat                                                             
+593Stricture of ureter                                                       
+598Stricture urethral                                                        
+436Stroke                                                                    
+373Stye                                                                      
+992Sunstroke                                                                 
+Z18Surgical assist -No diagnosis specified                                   
+729Swelling of limb                                                          
+785Swollen glands                                                            
+704Sycosis barbae                                                            
+780Syncope                                                                   
+364Syndrome - Behcet's                                                       
+356Syndrome - Charcot-Marie-Tooth                                            
+759Syndrome - Cornelian-De-Lange                                             
+710Syndrome - Crest                                                          
+255Syndrome - Cushing's                                                      
+758Syndrome - Down's                                                         
+686Syndrome - Gianotte Croste                                                
+357Syndrome - Guillain-Barre                                                 
+287Syndrome - Henoch (Schonlein)                                             
+446Syndrome - Kawasaki                                                       
+359Syndrome - Kearns Sayre                                                   
+758Syndrome - Klinefelter's                                                  
+732Syndrome - Legg-Calve-Perthes                                             
+759Syndrome - Marfan's                                                       
+386Syndrome - Meniere's                                                      
+759Syndrome - Noonan's                                                       
+443Syndrome - Raynaud (phenomenon)                                           
+743Syndrome - Reiger's                                                       
+788Syndrome - Reiter's                                                       
+798Syndrome - Romano-Ward                                                    
+135Syndrome - Schaumann's                                                    
+710Syndrome - Sjogren's                                                      
+256Syndrome - Stein-Leventhal                                                
+733Syndrome - Sudeck's                                                       
+307Syndrome - Tourette                                                       
+426Syndrome - Wolfe-Parkinson-White                                          
+958Syndrome - anterior compartment                                           
+579Syndrome - blind loop                                                     
+310Syndrome - brain - organic                                                
+354Syndrome - carpal tunnel                                                  
+344Syndrome - cauda-equina                                                   
+459Syndrome - cold feet                                                      
+564Syndrome - dumping (post gastrectomy)                                     
+759Syndrome - fetal alcohol                                                  
+729Syndrome - gluteous maximus                                               
+314Syndrome - hyperkinetic of childhood                                      
+728Syndrome - hypermobility                                                  
+306Syndrome - hyperventilation                                               
+276Syndrome - hypokalemic                                                    
+253Syndrome - hypopituitarism                                                
+276Syndrome - hypopotassemia                                                 
+729Syndrome - ilio-tibial band                                               
+042Syndrome - immunity deficiency combined                                   
+253Syndrome - inappropriate secretion of antidiuretic hormone                
+775Syndrome - infant of diabetic mother                                      
+564Syndrome - irritable colon                                                
+579Syndrome - malabsorption                                                  
+627Syndrome - menopausal symptoms                                            
+Z99Syndrome - myeloproliferative                                             
+729Syndrome - myofascial                                                     
+723Syndrome - neck - shoulder                                                
+581Syndrome - nephrotic                                                      
+719Syndrome - painful arc                                                    
+717Syndrome - patello-femoral                                                
+353Syndrome - phantom limb                                                   
+724Syndrome - piriformis                                                     
+310Syndrome - post concussional                                              
+564Syndrome - post gastrectomy (dumping)                                     
+518Syndrome - respiratory distress (adult)                                   
+770Syndrome - respiratory distress (newborn)                                 
+333Syndrome - restless legs                                                  
+620Syndrome - round ligament                                                 
+593Syndrome - salt losing                                                    
+709Syndrome - scalded skin                                                   
+579Syndrome - short gut (bowel)                                              
+723Syndrome - shoulder arc                                                   
+355Syndrome - shoulder impingement                                           
+520Syndrome - teething                                                       
+524Syndrome - temporomandibular joint - pain dysfunction                     
+742Syndrome - tethered cord                                                  
+040Syndrome - toxic shock                                                    
+364Synechia (pupil)                                                          
+621Synechia - intra-uterine                                                  
+727Synovitis                                                                 
+729Systremia                                                                 
+785Tachycardia                                                               
+427Tachycardia - paroxysmal                                                  
+701Tag skin                                                                  
+754Talipes (congenital)                                                      
+736Talipes - acquired                                                        
+836Tear meniscus                                                             
+520Teething                                                                  
+448Telangiectasis                                                            
+726Tendinitis                                                                
+726Tennis elbow                                                              
+727Tenosynovitis                                                             
+307Tension - headache                                                        
+728Tension - muscle                                                          
+799Tension - nervous                                                         
+300Tension - state                                                           
+Z77Terminal cancer                                                           
+257Testicular dysfunction                                                    
+745Tetralogy of fallot                                                       
+229Thrombocythemia                                                           
+287Thrombocytopenia                                                          
+289Thrombocytosis                                                            
+451Thrombophlebitis                                                          
+453Thrombosis                                                                
+451Thrombosis - deep vein (lower extremeties)                                
+451Thrombosis - superficial (lower extremeties)                              
+112Thrush                                                                    
+240Thyroid enlargement                                                       
+242Thyrotoxicosis                                                            
+736Tibial torsion                                                            
+110Tinea (ringworm)                                                          
+111Tinea - versicolor                                                        
+388Tinnitus                                                                  
+750Tongue tie                                                                
+463Tonsillitis - acute or Not Otherwise Specified                            
+474Tonsillitis - chronic                                                     
+723Torticollis                                                               
+799Toxemia                                                                   
+038Toxemia - bacterial                                                       
+464Tracheitis                                                                
+466Tracheobronchitis - acute                                                 
+490Tracheobronchitis Not Otherwise Specified                                 
+076Trachoma                                                                  
+371Transplant - cornea                                                       
+429Transplant - heart                                                        
+Z64Transplant - kidney                                                       
+366Transplant - lens                                                         
+709Transplant - skin                                                         
+919Trauma - multiple (e.g. M.V.A.)                                           
+781Tremor                                                                    
+333Tremor - essential                                                        
+101Trench mouth                                                              
+131Trichomoniasis                                                            
+727Trigger finger                                                            
+729Trigger point                                                             
+V25Tubal ligation                                                            
+017Tuberculosis - other                                                      
+011Tuberculosis - pulmonary                                                  
+532Ulcer - duodenal                                                          
+528Ulcer - mouth                                                             
+533Ulcer - peptic                                                            
+707Ulcer - skin or decubitus                                                 
+531Ulcer - stomach or gastric                                                
+529Ulcer - tongue                                                            
+707Ulcer of skin or decubitus                                                
+780Unconsciousness                                                           
+783Underweight                                                               
+752Undescended testes                                                        
+586Uremia                                                                    
+597Urethritis                                                                
+708Urticaria (Hives)                                                         
+364Uveitis                                                                   
+V05Vaccination - prophylactic                                                
+V04Vaccination - viral disease                                               
+623Vaginal bleeding                                                          
+Z03Vaginal discharge Not Otherwise Specified                                 
+616Vaginitis                                                                 
+052Varicella                                                                 
+456Varicocele                                                                
+454Varicose eczema                                                           
+454Varicose veins - varicose ulcer                                           
+V25Vasectomy                                                                 
+414Ventricular aneurysm                                                      
+745Ventricular septal defect                                                 
+078Verruca                                                                   
+Z06Vertigo                                                                   
+057Viral exanthema                                                           
+368Visual field defect                                                       
+709Vitiligo                                                                  
+787Vomiting                                                                  
+616Vulvitis                                                                  
+078Warts                                                                     
+380Wax - ear                                                                 
+780Weakness                                                                  
+V20Well baby care up to one year of age                                      
+786Wheeze - wheezing                                                         
+847Whiplash                                                                  
+033Whooping cough                                                            
+876Wound - back                                                              
+877Wound - buttock                                                           
+875Wound - chest (wall)                                                      
+998Wound - dehiscence                                                        
+872Wound - ear                                                               
+881Wound - elbow - forearm - wrist                                           
+871Wound - eyeball                                                           
+870Wound - eyelid                                                            
+873Wound - face                                                              
+883Wound - finger                                                            
+892Wound - foot                                                              
+878Wound - genital organs (external)                                         
+882Wound - hand                                                              
+873Wound - head                                                              
+890Wound - hip and thigh                                                     
+958Wound - infection                                                         
+891Wound - knee - leg and ankle                                              
+879Wound - multiple sites                                                    
+874Wound - neck                                                              
+870Wound - ocular adnexa                                                     
+880Wound - shoulder - upper arm                                              
+893Wound - toe                                                               
+879Wound - unspecified site                                                  
+723Wry neck                                                                  
+272Xanthelasma                                                               
+272Xanthoma                                                                  

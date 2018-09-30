@@ -1,0 +1,1336 @@
+AA
+Not registered.  No record of this person under this number.
+Please re-check the patient's Health Services Card.
+
+AB
+Patient does not appear to be covered for this date of service.
+If you can resubmit with the patient's current address, we will
+determine if the patient was covered.
+
+AC
+Registered as opposite sex.  Please check the Health Services Card.
+
+AD
+Incorrect Health Services Number.  Use the number shown on this
+payment list for future claims.
+
+AE
+Incorrect date of birth.  Please use the date of birth
+shown on the Health Services Card.
+
+AF
+Please review this claim, the Health Services Number is inconsistent
+with the name, sex or birth date on the Health Services Card.
+
+AG
+This claim is for a newborn (child less than one year old).
+The newborn may not be registered yet/or the patient identification
+data is incorrect. Please ensure the beneficiary data is correct or
+that the parents/guardians contact:
+
+	Health Registration
+	3475 Albert Street
+	Regina SK  S4S 6X6
+
+in order to have the newborn registered.
+
+AH
+Please review this claim.  Our records indicate that the beneficiary
+registered under this number died prior to the date of service.
+
+AJ
+The services involving emergency room coverage can not be paid as:
+
+1.  The physician is not eligible to bill these codes;
+2.  Another physician has been paid for the same time period in this community;
+3.  The incorrect dummy HSN has been used for this community;
+4.  Another ICD code must be used for regular services provided to a beneficiary;
+5.  An incorrect service code, day of the week or am9unt has been used; or
+6.  Only itinerant physicians are eligible to bill 713A.
+
+AK
+Please check the Health Services Card.
+The beneficiary has been issued a different Health Services Number.
+
+AL
+This claim was received at Saskatchewan Health
+prior to the date of service indicated on the claim.
+
+AN
+The coverage for this patient has been terminated in accordance
+with his/her Canadian Immigration Authorization.  All attempts
+to contact the patient have been unsuccessful.
+
+The date of service on the claim is after the termination date on the
+Health Services Card.  In order to have the Health Services coverage
+updated, he/she should immediately contact:
+
+	Health Registration
+	3475 Albert Street
+	Regina SK  54S 6X6
+
+AP
+The 9-digit Health Services Number is incorrectly recorded.
+Please recheck your files and/or the patient's Health Services Card.
+
+AQ
+Not an eligible provider of service.  Services provided by other than
+physicians, chiropractors, optometrists and dentists are not insured.
+
+AR
+Patient not registered for coverage on this date of service.
+Please check the effective and expiry dates on the Health Services Card.
+
+If the patient is a resident, he/she should immediately contact
+
+	Health Registration
+	3475 Albert Street
+	Regina SK  54S 6X6
+
+to have coverage updated.  If resubmitting, please indicate the current address.
+
+AS
+Your account had to be split for processing.
+Payment for the listed services was approved based on
+Saskatchewan Health's Payment Schedule.
+
+AT
+Diagnosis and Payment Schedule item are not compatible.
+
+AU
+To assist our Medical Consultants in the assessment of this service
+please resubmit a claim form with a copy of the operative report or
+a descriptive letter.
+
+AV
+This service is not insured.
+
+AW
+This Payment Schedule item applies only to:  a particular type of specialty,
+place of service, etc.  (Refer to Payment Schedule)
+
+AX
+A Medical Consultant has reviewed this claim.  The circumstances described
+are not considered sufficient to warrant additional payment.
+
+AY
+Assessed by a Medical Consultant.
+
+AZ
+Please refer to correspondence.
+
+BA
+Duplicate (same physician) payment has been made for a
+similar service provided on the same day.
+
+BB
+Possible duplication of a payment for a similar service.   If no
+duplication, please resubmit with a note in the "Remarks" area or
+on the back of the claim or a comment in the automated claim submission.
+
+BC
+Duplicate (same clinic) payment has been made to another
+physician in your clinic for a similar service on the same day.
+
+BD
+The beneficiary has been paid, based on the claim previously submitted.
+
+BE
+Age of patient.  Payment based on the age of the patient.
+
+BF
+Adjustment based on correspondence - Re:  "Audit of Services".
+
+BG
+Billed less than Listed Payment.  Appropriate payment for the
+date of service has been approved
+
+BH
+Payment Approved at:
+
+(1)	Listed rate for a specialist in your specialty.
+(2)	Equivalent service code and fee listed in your specialty.
+
+Re:  Definition of "Specialist".
+
+BI
+Paid at the unreferred rate because:
+
+(a)	The referring physician has not practised in Saskatchewan
+	during the past two years, OR
+
+(b)	No referring physician's name indicated; if patient was referred
+	please re-submit for the difference between referred and unreferred
+	rate giving name and initials of referring physician, OR
+
+(c)	We were not able to identify the name of the referring physician;
+	please re-submit indicating the name, initials and practice locale, OR
+
+(d)	We could find no record of the 11referring doctor" being
+	licensed to practice.
+
+BJ
+Payment for this item can only be made if the patient was referred,
+and if the name of the referring physician is indicated.
+Please re-submit:
+
+(a)  if referred, with the name of the referring physician,
+(b)  if unreferred, using appropriate code and fee.
+
+BK
+Payment based on the service code and related payment
+approved by Saskatchewan Health.
+
+BL
+This service is being discussed with the S.M.A.  The payment may be adjusted.
+
+BM
+Unilateral/Bilateral procedure.
+Please re-submit indicating left/right or bilateral.
+
+BN
+You were asked for additional information to assess this claim,
+no reply received.  Without this information, the claim can not be processed.
+
+BO
+The approved service code and payment is
+based on your description of the service.
+
+BP
+Payment adjustment based on:
+
+(a)  your re-submission;
+(b)  our review of assessment; or
+(c)  information received on Review of Claim Assessment form.
+
+
+BQ
+The service code and/or amount submitted are incorrect.
+Please review and re-submit.
+
+BR
+Invalid service code.  Please review.
+
+BS
+The service code submitted is not correct for:
+
+(a)  the condition described; or
+(b)  the service(s) provided.
+
+BT
+Approved at the maximum amount consistent with
+your description of the service provided.
+
+BU
+
+Payment not approved for:
+
+1.	Surcharge alone;
+2.	Surcharge with:
+	(a)	another surcharge code:  615A, 721A, 815A, 816A, 817A, 818A,
+		819A1 836A, 837A, 838A, 839A, 915A, 31H, 32H or 33H;
+	(b)	service codes 620A, 624A, 130D, 131D, 35H to 38H, 93H, 665H to 667H;
+	(c)	hospital care codes, including newborn care and attendant care (50B);
+	(d)	a pre-arranged service;
+	(e)	phone calls (760A and 761A).
+	
+3.	Surcharge for an extra patient not paid for the day and time indicated.
+
+4.	Premium service codes should not be submitted based on the eligible
+	service codes being paid.  They are automatically generated by
+	Saskatchewan Health.
+
+5.	Surcharges for emergency room physicians providing emergency room shifts
+	or first on-call services.
+
+6.	Hospital care premium 700A for non statutory holidays.
+
+BV
+Payment based on the appropriate service code and
+amount listed for the date provided.
+
+BW
+Billed more than Listed Payment.  Appropriate payment
+for the date of service has been approved.
+
+BX
+"Fee-for-service" - This service is approved on the basis of
+individual visit and/or procedure items.  Please re-submit,
+for individual dates, the appropriate service code(s) and amount(s).
+
+BY
+Payment on a time basis.  Please designate the treatment time and resubmit.
+
+BZ
+Payment is based on the amount payable to a Saskatchewan physician in the
+same specialty providing the same or similar service.
+
+CA
+Medical examinations, services and provision of certificates
+or reports requested by a third party, e.g. for:
+
+	Attendance at camps
+	Autopsies
+	Third party counselling
+	Employment
+	Insurance
+	Seat belt exemption
+	Employment Insurance Program
+	Judicial purposes (other than adoption or commitment)
+	Motor vehicle or other license
+	Participation in sports
+	Passport or visa
+	University or private school entrance
+
+CB
+Materials & other services, e.g.:
+
+	Acupuncture
+	Advice by telephone or letter (most)
+	Ambulance services
+	Anaesthetic materials
+	Appliances (Prostheses)
+	Casts
+	Committee or Advisory service
+	Contractual service for a government department or agency
+	Dentistry
+	Dressing or Medication
+	Drugs
+	Eyeglasses or Contact Lenses
+	Facility fee
+	Medical testimony in court
+	Medical - legal opinion and report
+	Secretarial or reporting fee(s)
+	Services of a special duty nurse
+	Surgical supplies
+	Travel by a physician
+	Tray service (see code 897L for description)
+
+CC
+Immunization services when available under Saskatchewan Health programs.
+If this patient was referred by Saskatchewan Health personnel or there
+are medical factors which prohibited immunization under Saskatchewan Health
+programs, please resubmit with an explanation.
+
+CD
+Hospital Services:
+
+(a)	services provided by:
+	(i)	hospital personnel; or
+	(ii)	any out-patient facility having a contract with the
+		District Support Branch, Saskatchewan Health,
+(b)	the technical component of a diagnostic procedure performed in a
+	hospital utilizing hospital equipment, e.g. ECG, EEC.
+
+CE
+A service by a physician who is not registered with or licensed by the
+appropriate agency of the Province, State or Country on the date the service
+was provided.
+
+CF
+This service code is not valid for this date, because it is either:
+
+(a)  prior to implementation; or
+(b)  after deletion from the Payment Schedule.
+
+CG
+The College of Physicians and Surgeons has declared it unethical for a
+physician to bill for services provided to him(her)self, spouse or children.
+
+CH
+These services appear to be the responsibility of the Department of
+Veteran's Affairs (D.V.A.).  Please send the appropriate form to D.V.A.:
+
+	Department of Veteran's Affairs
+	Treatment Benefit Unit
+	Box 6050
+	Winnipeg MB  R3C 4G5
+
+If they do not accept responsibility, D.V.A. will
+forward the claim to Saskatchewan Health.
+
+
+CI
+The service provided can not be paid for an out-of-province beneficiary;
+it is on the excluded list of services for reciprocal billing purposes
+or it can not be billed under the reciprocal billing process.
+
+CJ
+Our records indicate this patient was not in the hospital on this date.
+If this information is incorrect, please resubmit with a copy of the
+hospital discharge record.
+
+CK
+This service is not insured.  Our records indicate that the beneficiary
+died more than 30 days prior to date of service.
+
+CL
+In-hospital services for which payment may be made by the District 
+Support Branch.  If additional information is required, send claim to:
+
+	Benefits Section, District Support Branch
+	Saskatchewan Health
+	3475 Albert Street
+	Regina  SK S4S 6X6
+
+CM
+Claims received more than six months after the date of service.
+If factors beyond your control prevented submission within six months,
+kindly provide an explanation.  A re-submitted claim must be returned
+within one month (see pg. 117).  Resubmitted claims must include original
+claim or batch number and the date of original submission.
+
+Re:  "lnformation For Physicians".
+
+CN
+Claim received more than twelve months after the date of service.
+
+Re:   "Information For Physicians".
+
+CO
+Date of Service is prior to:
+
+(a)	the physician's registration date; OR
+(b)	the effective specialty date as indicated by the Saskatchewan
+	College of Physicians and Surgeons.
+
+CP
+Our latest information from the College of Physicians and Surgeons
+indicates that you are registered in Saskatchewan as a General Practitioner.
+
+CS
+Department of Veterans' Affairs have advised Saskatchewan Health
+that they have paid you for this service.
+
+CT
+Workers' Compensation Board have advised Saskatchewan Health that they
+have paid you or another physician in your clinic for the same service,
+a similar related service or a service which includes post-operative care.
+
+CU
+Payment is only approved for those physicians listed by the provincial
+COLLEGE or STATE BOARD in their practice locale as having qualified to
+receive payment for this service.
+
+CW
+These services appear to be the responsibility of the Workers'
+Compensation Board.  Please submit a claim to the W.C.B. at
+
+	Workers' Compensation Board
+	Suite 200 - 1881 Scarth Street
+	Regina SK  54P 4L1
+
+If they do not accept responsibility, W.C.B. will forward the claim to you.
+If the claim has not yet been paid, please submit an automated to MSP with a
+comment "Not WCB".
+
+CY
+This service not usually billed by a physician in your specialty.
+
+CZ
+Service Code of 20A should be on the same claim number (form) as a visit code,
+laboratory service, 131A, 204A, 205A or 206A.  Also, a diagnostic code of Z90
+should only be used in conjunction with a claim containing a service of 20A.
+
+DA
+Not approved for payment.  Only one visit type service
+is approved during a single patient contact.
+
+DB
+Please clarify the second visit on the same day by the same
+physician or the same specialty and clinic.
+
+DC
+Multiple diagnosis during a single patient contact.  Another agency appears
+to be responsible for the assessment and/or treatment of one condition.
+Payment of services for another condition is not approved.
+
+DD
+Please verify date(s) of service and resubmit.
+
+DE
+Included in the payment for another service provided
+during the same Physician/Patient contact.
+
+DF
+Hospital care is not payable on the day of admission when
+a physician also bills a visit or consultation service.
+
+DG
+Please resubmit under the Health Services Number of the patient who was treated.
+
+DH
+Please identify the person(s) interviewed, e.g.,
+wife, son, employer, teacher, etc.
+
+DI
+A return visit on the same day by either the same physician or another
+physician in the same specialty and clinic for the purposes of reviewing
+or taking of x-rays is regarded as an inclusion in the first visit service.
+
+DJ
+Maximum approved.  This service with prior services would exceed the maximum.
+
+DK
+The code approved is based on the patient's designated level of care.
+
+DL
+Surcharge 721A applies to a life-threatening situation and admission
+to hospital.  The information given on your claim does not indicate
+the necessity for an immediate "stat" response.
+
+Your surcharge may have been adjusted to another surcharge based on the
+information provided.  If resubmitting, please provide further information
+or submit under an alternate surcharge.
+
+DM
+Payment is made for this visit when provided in the physician1s office
+only when the claim confirms a "Visit - Specially Called" made after
+regular office hours or on a holiday.  Please resubmit with explanation.
+
+
+DN
+Surcharge 721A does not apply where the patient is already hospitalized.
+
+DO
+Our record and your service description indicate that this service
+appears to be inconsistent with the definition of a special call.
+
+DP
+Service codes 918A, 920A, 922A, 923A, 33C and 35H to 38H.
+Include all services provided during continuous attendance.
+Payment based on your description of services.
+
+DQ
+Additional patient.  Payment has been previously approved for a special
+call made to another patient at the same location on the same date.
+
+If you were "specially called" a second time and returned to provide
+this specific service please re-submit for the difference in payment
+under the initial service code with a notation confirming the return visit.
+
+Re:     "Payment Schedule Item".
+
+DR
+Service codes 918A, 920A, 922A, 923A, and 35H to 38H relate to the time
+actually spent with the patient, and all services provided during this
+continuous personal attendance.  Please indicate:
+
+(a)  time spent with the patient,
+(b)  clinical factors necessitating this personal attendance,
+(c)  services provided during that time.
+
+DS
+Service codes 918A, 922A and 923A are not paid when other service codes apply.
+
+DT
+Continued hospital care.  Payment is based on continuous hospital care.
+
+Re:	1.  Payment Schedule item.
+	2.  Assessment Rules - "Hospital Care", item b.
+
+DU
+Our records indicate that the beneficiary was a hospital in-patient on
+the date of service.  Payment rejected or adjusted to the appropriate
+item for hospital care.
+
+DV
+920A applies to the actual time spent in transit with the patient.
+Please resubmit indicating:
+
+(a)  Location from which patient was transferred,
+(b)  Location of hospital to which patient was transferred,
+(c)  Times of departure and arrival.
+
+DW
+Multiple visits, hospital.  The payment for daily in-hospital or total newborn
+care is a maximum regardless of the number of visits made by the physician:
+
+Re:	1.  Payment Schedule Item
+	2.  Assessment Rules - "Hospital Care", item a.
+
+DX
+Concurrent care.  Payment has been made to another physician for daily
+hospital care for this period.  Payment to a second physician is only
+approved when a satisfactory explanation is provided that care by two
+physicians was required.
+
+DY
+Special Call or emergency visit (in-hospital care) will not be approved
+for a hospital in-patient without additional information.  Please re-submit 
+with an indication of the factors requiring the visit.
+
+Re:  "Assessment Rules - Hospital Care", item d.
+
+DZ
+"READMISSION" must be indicated in order to be eligible for the higher
+rate of payment when a patient is readmitted within 14 days.
+
+Re:  "Assessment Rules - Hospital Care", item b.
+
+EA
+Consultation converted to a repeat.
+
+Re:  "Assessment Rules - Consultations", items f(i) and (vi).
+
+EB
+Our records indicate that the "referring physician" ceased to practise
+in the province prior to the consultation. Please re-submit with a copy
+of the consultation report OR adjust to the appropriate visit.
+
+EC
+Consultation includes all visits necessary to
+prepare report for the referring doctor.
+
+ED
+A Medical Consultant has reviewed this claim.  The diagnosis does not
+seem to indicate the necessity for a Consultation.  If resubmitting,
+please provide a copy of the consultation report.
+
+EL
+Consultation converted to a partial/follow-up assessment.
+
+Re:  "Assessment Rules - Consultations", item f(ii)
+
+EM
+Complete/initial assessment converted to a partial/follow-up assessment.
+
+Re:  "Assessment Rules - Consultations", items f(iii), (v) and (vii).
+
+EN
+Consultation converted to a complete/initial assessment.
+
+Re:  "Assessment Rules - Consultations" - items f(iv) and g.
+
+EO
+An initial in-hospital consultation on the same day or within 42 days
+after a complete/initial assessment is converted to a complete/initial.
+
+EP
+An initial in-hospital consultation on the same day or within 90 days
+after another consultation is converted to a complete/initial assessment.
+
+FA
+Paid at the greater of the procedure or visit/consultation.
+
+Re:	(1)  "Assessment Rules - Multiple Services", Rule 1
+	(2)  Payment Schedule Listing.
+
+FB
+Minor procedures for which no payment is listed are considered
+an inclusion in the visit or consultation.
+
+FC
+Second procedure paid at 75% when performed bilaterally.
+
+Re:  "Assessment Rules - Multiple Services", Rule 5.
+
+FD
+Listed as a bilateral procedure.
+
+Re:  Payment Schedule.
+
+FE
+The greater payment approved.
+
+(1)  Procedure not approved in addition to another service.
+(2)  Included in the payment for the procedure.
+
+Re:	(1)  "Assessment Rules - Multiple Services", Rule 1.
+	(2)  Payment Schedule listing.
+
+FF
+Maximum approved.  This service with prior services by the same physician
+or clinic would exceed the maximum.
+
+Re:  Payment Schedule listing.
+
+FG
+Multiple interpretations billed on the same date.  Please resubmit
+indicating if these interpretations are for tracings done on different
+days, the time and reason for multiple interpretations.
+
+FH
+Technical component not approved.  Only the interpretation component can be
+approved when this service is provided in any part of a hospital.  If not
+provided to either an in-patient or an out-patient, please re-submit
+designating the locale.
+
+FI
+Considered an inclusion within the payment for a related procedure.
+
+FK
+Echocardiography service code and payment is adjusted or rejected
+based on prior services by the same physician or clinic in accordance
+with annual maximums.  Re: Page A.5.
+
+FL
+Payment restricted to a specialist in Paediatrics or Internal Medicine.
+
+Re:	(1)  Payment Schedule listing
+	(2)  Definition of Specialist.
+
+FP
+A "0" or "10" day Procedure billed in addition to a visit (including
+hospital care) or consultation.  Approved at the greater of:
+
+(1)  the procedure alone; OR
+(2)  the visit plus the procedure at 75%.
+
+Re:  "Assessment Rules - Multiple Services", Rule 2.
+
+FS
+Approved as repeat procedure.  Previously paid to you or to another
+physician in the same specialty and clinic.
+
+FT
+Code 34F, PUVA therapy, is paid once only on alternate days.
+Repeat billings are converted to 15OA.
+
+EW
+A manipulation not performed under anaesthetic or
+alternative agent is included in visit payment.
+
+FY
+A code and a fee have been approved by Saskatchewan Health that are not yet
+available for billing.  A temporary code has been used to process your claim.
+
+FZ
+The calculated premium is based on the submitted service code and is paid
+as the premium approved service code.  The amount has been calculated using
+the appropriate premium percentage multiplied by the approved amount of the
+eligible service code.
+
+GD
+Payment for report is not approved 3 days preceding,
+the day of and 3 days after a consultation.
+
+GE
+Payment for report is not approved during the usual post-operative period.
+
+GR
+Service rejected - ineligible surgeon.  Payment for cancer surgery can only
+be made by Saskatchewan Health to a surgeon given entitlement by the
+Saskatchewan Cancer Foundation.  To obtain further information, write to:
+
+	Executive Director
+	Saskatchewan Cancer Foundation,
+	400 - 2631 28th Avenue
+	Regina SK  S4S 6X3
+
+GY
+Assessed by a Medical Consultant based on Saskatchewan Cancer Foundation's advice.
+
+HA
+Based on the total payment (calculated at the specialist rate, regardless 
+of "repeat surgery rule" or surgery by a general practitioner) for the 
+procedure(s) performed.
+
+Re:  Section  "H", item 3.
+
+HB
+Service code for Additional Time converted to the appropriate
+Service Code for the Base Time approved.
+
+HC
+Another service provided during a period of intensive care has been
+paid in lieu of that period of 35H - 38H series.
+
+HD
+"Standby" - Please indicate:
+
+(a)	the physician who requested the "standby",
+(b)	the commencement and completion times of both the "standby"
+	and the anaesthesia, and
+(c)	the services provided during the "standby".
+
+Re:  Section "H", item 7.
+
+HE
+Included in payment of anaesthesia.  E.g., Consultation is not approved
+to the physician who also provided Anaesthesia same day.
+
+Re:  Section "H", item 1 and 2.
+
+HG
+Paid as a second anaesthetist.
+
+Re:  Section "H", item 6.
+
+HH
+This service, with previous 35H to 38H services, exceeds the listed maximums
+(see Payment Schedule).  Adjusted to the approved service code and fee.
+
+HJ
+Invasive Monitoring Services approved only to the Primary Anaesthetist.
+
+Re:  Section "H", item 2 (b).
+
+HL
+Payment for general anaesthesia for dental procedures outside a hospital
+restricted to specialists in anaesthesia.
+
+Re:	(1) Definitions - "Specialist".
+	(2) Information for Physicians - "Services Not Insured by Saskatchewan Health".
+
+HN
+Greater payment approved - nerve block and other service.
+
+Re:  Nerve Blocks, page H.6.
+
+HO
+Greater payment approved - Pain Clinic and other service.
+
+HP
+Epidural anaesthesia provided during labour and delivery should
+be billed as service codes 664H, 665H, 666H, 667H.
+
+HQ
+Approved only for services by a specialist in a designated Pain Clinic.
+
+HZ
+Special service codes 300H-302H - payment for this date of service
+has been made to another physician.
+
+JA
+Payment for assistance is not approved for this procedure unless special
+circumstances satisfactory to Saskatchewan Health are described.
+Please provide details.
+
+Re:  Section "J", item 2.
+
+JC
+Payment based on related Anaesthetic time - additional time has been rejected.
+
+JD
+Assistant standby not paid if assistant fees are billed.
+
+JE
+Payment for more than one surgical assistant is not approved for this type
+of surgical procedure unless special circumstances satisfactory to
+Saskatchewan Health are described.
+
+Re:  Section "J", item 3.
+
+JM
+Control of post-op hemorrhage in the first 24 hours is included
+in the composite fee for the surgical procedure.
+
+JN
+Considered an inclusion within the payment for a more major procedure.
+
+JO
+Paid in accordance with rules for two or more procedures performed on the
+same day by the same physician, another physician in same specialty and
+clinic or part of the surgical team.
+
+Re:  "Assessment Rules - Multiple Services", Rule 8.
+
+JP
+This claim is being rejected because this service
+code has been billed and paid to another physician.
+
+JQ
+Paid at the maximum listed for these multiple procedures.
+
+Re:  Payment Schedule item.
+
+JR
+Paid at 1/3 of listed payment when a surgical procedure is performed by
+two specialists and payment is not defined for the second surgeon.
+
+JT
+The bilateral procedure payment is approved when unilateral
+procedures are staged during the same hospital admission.
+
+Re:  "Assessment Rules - Multiple Services", Rule 9.
+
+JW
+Paid as a repeat or related procedure within the
+designated post-operative period.
+
+Re:  "Assessment Rules   Multiple Services", Rule 10.
+
+KA
+An inclusion in the payment for the procedure when provided by the
+same physician, another physician in same specialty and clinic or
+part of the surgical team.
+
+Re:	(1)	"Assessment Rules - Procedures", items b and d.
+		"Assessment Rules -Multiple Services", Rule 8 (a)
+	(2)	Various Payment Schedule items.
+
+KB
+The anaesthetic is an inclusion in the surgical fee
+when provided by the same physician.
+
+KH
+Only the greater payment is approved when a physician acts in
+more than one capacity, e.g. anaesthetist, assistant or surgeon.
+
+KM
+Diagnostic procedure on the day of a "42" Day procedure approved at 75%.
+
+Re:  "Assessment Rules - Multiple Services", Rule 6.
+
+KN
+Related diagnostic procedure during the designated post-operative
+period of a "10" or "42" Day procedure approved at 75%.
+
+Re:  "Assessment Rules - Multiple Services", Rule 7.
+
+KO
+The two days of pre-operative care in hospital are included
+in the payment for a "10" or "42" Day procedure.
+
+Re:  "Assessment Rules - Procedures", item e.
+
+KP
+Visit (including hospital care) or consultation, same day, is included
+in the payment for a "42" Day procedure when provided by the same physician,
+another physician in same specialty and clinic or part of the surgical team.
+
+Re:  "Assessment Rules - Multiple Services", Rule 3.
+
+KQ
+Related visit (including hospital care) or consultation during the designated
+post-operative period is included in the payment for a "10" or "42" Day
+procedure when provided by same physician, a general practitioner in the
+same clinic or a specialist in the same specialty and clinic.
+
+Re:  "Assessment Rules - Multiple Services", Rule 4.
+
+KR
+Only one special call is approved per major
+surgical procedure, fracture or dislocation.
+
+KS
+Codes 232L and 142P are only payable for Malignancy.
+Code 142P is only payable in addition to 123P or 134P.
+
+LA
+348L included in payment for 355L.
+
+LB
+The 898L is for removal of sutures from lacerations or major surgical
+incisions (i.e. 42 day procedures) by another physician not in the same clinic.
+
+LC
+890L-895L:  Please indicate:
+
+(1)	the total length of the lacerations by site.
+(2)	the length of the facial component of any laceration extending
+	from facial to non-facial area.
+
+Re:  Payment Schedule items.
+
+LD
+Approved only with specified services as listed in the schedule under
+payment item 897L where provided in a physician's office.
+
+LE
+Please identify the site and extent of burn area.
+
+Re:  Payment Schedule item.
+
+LF
+Not approved to same physician or clinic.
+
+Re:  Payment Schedule item.
+
+MB
+Included in the "composite" paid for the
+initial immobilization or closed reduction.
+
+Re:	(1)  "Fractures", items 1, 2 and 3
+	(2)  "Dislocations", items 1 and 2.
+
+MC
+Maximum for undisplaced fracture.
+
+Re:  "Fractures", item 2.
+
+MD
+Paid as closed reduction plus 50%.
+
+Re:  "Fractures", item 3(c) (ii).
+
+ME
+When an "open reduction" or a "closed reduction with external fixation"
+is performed by any physician within the post-operative period of a previous
+attempted reduction, the payment for the prior fracture is reduced by 50%.
+
+Re:	(1) "Fractures", item 3(c)
+	(2) "Dislocations", item 2.
+
+MF
+Payment for the previously attempted reduction is reduced by 50%.
+
+Re:	(1)  "Fractures", item 3(b)
+	(2)  "Dislocations", item 2.
+
+MH
+Reduction of a dislocated hip within the post-operative
+period is included in the arthroplasty payment.
+
+MI
+"Fracture" and "dislocation" - same date - same site - greater payment approved.
+
+MJ
+Paid in accordance with rules for multiple fractures.
+
+Re:  "Fractures", item 3(d).
+
+MK
+631M: This item applies to "rupture" or "tearing" of a muscle during use.
+It does not apply to cuts or lacerations of a muscle.  Please resubmit 
+with alternate service code.
+
+ML
+133M:  the source of the autogenous bone from a
+different site has not been identified.
+
+MM
+32M or 33M:  NOT paid in addition to, or part of, another
+orthopaedic procedure, performed through the same or extended
+incision by any physician.
+
+MP
+Synovectomy not paid in addition to major joint surgery.
+
+NB
+Care provided for cosmetic purposes is not an insured service.
+
+Re: Information for Physicians - Services Not Insured by Saskatchewan Health.
+
+NC
+382N & 383N:  Restricted to a "plastic surgeon" treating a referred patient;
+890L approved.
+
+ND
+287N for reconstruction of nose not paid in addition to rhinoplasty.
+
+PB
+Included in the payment for delivery and post-natal care in hospital.
+
+Re:  "Obstetrics", item 4(a-g).
+
+PD
+Complicated Genital Tract Injury - Post Delivery.
+Please re-submit your claim, identifying the extent
+of the surgery, structures and site(s) involved.
+
+PG
+42P approved.  Patient was turned over to consultant who provided the delivery.
+
+Re:  "Obstetrics", item 2.
+
+PH
+40P or 41P is only approved for the delivery
+of a viable foetus of 20 weeks or more.
+
+PI
+Only one special call surcharge is approved per confinement (case).
+
+PL
+Payment approved as subsequent pre-natal or post-natal care.
+
+PR
+Payment for ectopic gestation includes treatment
+of shock or continuous care by the surgeon.
+
+PS
+Two complications of pregnancy may be claimed per
+patient per pregnancy.  Report required for more than two.
+
+PU
+Continuous personal attendance is not paid with a delivery.
+
+SA
+6S: A previous examination was provided to this beneficiary by yourself
+or another physician within the designated time span:
+	Age 18 - 64: minimum time - 24 months;
+	All other ages: minimum time - 12 months.
+
+If resubmitting, please indicate:
+
+(a)	Previous and current complete refractive errors.
+(b)	Medical factors necessitating current refraction.
+
+Re:  "Ophthalmology", item A(c)
+
+SB
+170S-171S:  Included in payment for retinal detachment.
+
+Re:  Section "S", item B.
+
+SC
+12S:  Approved only once within a period of 12
+consecutive months for the same physician or clinic.
+
+SF
+The factors indicated have been reviewed and are not considered sufficient
+to warrant payment of a second refraction within the designated time span.
+
+SI
+Code 138S is converted to 189S - unless it is specified
+as being done by an open surgical technique.
+
+SS
+Coverage for routine examination of the eyes (6S) is limited to those
+under the age of 18, Social Assistance recipients nominated to receive
+Supplementary Health benefits, recipients of Family Income Plan benefits
+and seniors receiving the Saskatchewan Income Plan supplement.  According
+to our information, the patient is not eligible for coverage.
+
+VB
+Procedure not insured in office practice.
+
+Re:  Lists 1 and 2.
+
+VC
+
+204-206A:  Not approved in addition to any other service.
+
+Re:  Payment Schedule item.
+
+VD
+204-206A & 770-772V:  Payment includes referral of
+multiple specimens of the same type.
+
+Re:  Payment Schedule item.
+
+VE
+The appropriate Biochemistry Panel Code is approved
+based on the total number of tests per patient.
+
+VH
+Exceeds maximum number of units paid without an explanation.
+
+VJ
+No explanation provided for manual performance.
+
+Re:  Laboratory Medicine - List 3, item 3.
+
+VI
+Multiples of codes 32V or 441V plus urinalysis (60V) are being paid at
+the appropriate number of units for the composite code - 33V, 442V.
+
+VL
+According to information received from Laboratory Licensing, you have
+not been licensed to perform this test.  Please review your licence.
+If any disagreements, please write or call:
+
+	Laboratory Licensing
+	Saskatchewan Health
+	3475 Albert Street
+	Regina SK  S4S 6X6
+
+	Phone: 787-5791
+
+VM
+The code and payment approved is the maximum for the series.
+
+VN
+Included in the "composite" paid for the related laboratory procedure.
+
+VP
+Paid at the appropriate code and fee for automated procedures.
+
+XA
+Radiology is not insured when:
+
+(a)	provided in:
+	(i)	a hospital, or
+	(ii)	any facility funded by the District Support Branch,
+		Saskatchewan Health.
+(b)	performed by other than a radiologist.
+
+Re:  Section "X" - items 1 and 2.
+
+XB
+Interpretation component is "Column B".
+
+Re:  Payment Schedule item.
+
+XG
+Administration of the media is included in the payment for the procedure.
+
+Re:  Section "X", item 3.
+
+XJ
+Considered an inclusion within the payment for a similar procedure
+on the same day.  If re-submitting please clarify.
+
+YA
+Patient's Name.  Please clarify the full name.
+
+YB
+Registration.  Indicate the complete 9-digit Health Services Number.
+
+YC
+Date of Birth.  Indicate the month and year of
+birth recorded on the Health Services Card.
+
+YD
+Family Head.  Please indicate the full name and address.
+
+YE
+The province code is blank, invalid or not legible.  Please provide
+the necessary information in the "REMARKS" area.
+
+YF
+The signature block on this claim is completed differently than what you
+previously indicated to Saskatchewan Health.
+
+The acceptable methods are:
+
+1.	Personal signature.
+2.	Impress a rubber stamp facsimile of the practitioner's signature
+3.	Impress a rubber stamp of the practitioner's name in capital letters.
+4.	Hand print the practitioner's name in capital letters.
+5.	Delegate a member of your staff to personally sign on the practitioner's
+	behalf.
+
+Prior to resubmission, please complete the signature block by either:
+
+(a)	your previously designated method of signing; or
+(b)	personal signature
+
+If you wish to change your previously designated method of signing claims,
+you must first advise Saskatchewan Health in writing of the specific
+acceptable method you intend to use in the future.
+
+YG
+The Out of Province registration number provided on your claim is not correct.
+Please check your records and modify the number, if incorrect.  If the number
+is correct according to your records, please indicate this on the claim.
+
+YH
+Additional information requested.  Please ensure all the
+following have been provided:
+
+(1)  Diagnosis
+(2)  Site of lesion or injury
+(3)  Cause and site of edema
+(4)  Condition requiring the injection.
+
+YI
+Clarification.  Please clarify the item(s) circled on the claim
+or recheck the entire claim.
+
+YJ
+We cannot interpret the diagnosis.  Please explain the term(s) used.
+
+YK
+Code and Fee.  Please indicate the service code
+and amount charged for each service.
+
+YL
+Date of Service.  Please indicate the proper day, month and year.
+
+YM
+Hospital visits.  Please clarify the date of the first and last
+visit and the total number of days billed.
+
+YN
+Please review this claim.  The payment schedule code and/or
+diagnosis/diagnostic code is not consistent with the patient's age and/or sex.
+
+YP
+The clinic number is invalid for the submitted dates of service or the hospital
+days span two clinics.  Please review the dates of service and clinic number.
+
+YR
+Please clarify the name, specialty and initials
+of the physician who provided each service.
+
+YS
+We are unable to identify who referred the patient.  A referring doctor's
+name either has not been supplied, or if a name is present on the claim,
+he or she cannot be located in our listing of active Saskatchewan physicians.
+If the patient was referred, please re-submit the claim with the full name
+of the physician and the location of his or her practice.
+
+YT
+Please resubmit the claim indicating the hospital admission and discharge dates.
+
+YU
+Your claim has been returned because of the
+omission of one or both of the following items:
+
+(a)  designation of the operative procedure.
+(b)  the total time when additional time is billed.
+
+YV
+Please indicate whether the dental anaesthetic was administered in a hospital.
+
+ZA
+The patient identity information on the claim (month or year of birth,
+sex or surname) does not correspond to information on the Health Services Card.
+Please check the Health Services Card, make the claim corrections and resubmit.
+
+ZC
+The submitted claim contains invalid data other than patient identification
+data, e.g. September 31, the submitted fee at zero dollars, the 13 month,
+a lower case surname, a partially blank field as HSN, units or birth date, etc.
+
+ZD
+The dates of service or month of birth are invalid.  The date of service may
+be greater than the date of computer processing or there are two months of
+service on 50 records with the same claim number.
+
+ZF
+The doctor is not eligible to submit for
+services on the indicated dates of service.
+
+ZG
+
+Two premium eligible services on same claim with different locations of service.
+See Page A.13 - A.15 of the Payment Schedule
+
+ZH
+Only Hospital visits (25 to 28), 31B, 32B, 31C or 32C may be billed in the
+hospital visit area or on a hospital care record (57).  Please resubmit other
+services on a non-hospital visit/procedure record (50).  The number of units
+or number of days billed can never exceed 99.  On a computer submission,
+the 50 record must precede all 57 records with the same claim number.
+
+ZL
+The submitted referring doctor number is invalid or an invalid referring
+doctor number has been used for a non-cancer diagnosis.  Please check the
+referring doctor name and number.
+
+ZM
+The claim contains an invalid diagnostic code according to the
+International Classification of Diseases - 9th Revision.
+Please check the diagnosis, diagnostic code and table of invalid codes.
+
+ZN
+Saskatchewan Health has received multiple claims with the same clinic, doctor,
+claim and Health Services Number.  One of the claims is being processed, all
+other claims with the same claim number are being returned.
+
+ZP
+An invalid mode of payment has been used on the claim.
+
+ZR
+The indicated location of service, service code or time is invalid for a
+premium payment on this date.   (See 'OUT OF HOURS PREMIUMS" section in
+Part A of the Payment Schedule) OR location of service must be 9 for an
+emergency room physician.
+
+ZT
+Please refer to the comment record(s) being returned by MSP for a more
+detailed explanation.
+
+ZW
+The direct input claim cannot be processed.
+Please resubmit on a regular claim form.
+
+ZY
+The direct input claim cannot be processed.  Please resubmit with comments
+or an explanation of the service provided.  If an operative report or a
+detailed explanation is required, it should be submitted and attached to
+a regular claim form.
+

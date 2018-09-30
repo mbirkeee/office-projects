@@ -1,5 +1,16 @@
 *.o
+*.obj
 backup/mak/backup
 backup/mak/restore
 *.a
 .echoget-lockfile
+*.exe
+*.tds
+*.dsk
+*.~cpp
+*.~dsk
+pracman.prefs
+mbUtils.lib
+mbSqlLib.lib
+hpSonosDB.lib
+*.log
