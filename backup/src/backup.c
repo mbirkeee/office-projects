@@ -83,7 +83,7 @@ int main
 
     qHead_t         skipQueue;
     qHead_p         skip_q;
-    
+
     Boolean_t       helpFlag = TRUE;
     Boolean_t       recurseFlag = TRUE;
     Char_t          curDir[MAX_NAME_LEN];
@@ -104,7 +104,7 @@ int main
 
     dir_q = qInitialize( &dirQueueHead );
     skip_q = qInitialize( &skipQueue );
-    
+
     getcwd( curDir, MAX_NAME_LEN );
 
     while( ( option = getopt( argc, argv, "r:d:l:b:h:v?fs:" )) != -1 )
@@ -561,7 +561,7 @@ Int32s_t backup_remote( Char_p host_p, Char_p remoteDir_p, Char_p localDir_p )
             {
                 /* Ensure file matches expected checksum */
                 mbMD5File( target_p, NIL, md5str2, &size1 );
-                
+
                 mbLog( "Got file: '%s'  -- %u\n", source_p, size1 );
 
                 if( strcmp( md5str, md5str2 ) == 0 )
@@ -820,6 +820,7 @@ Int32s_t snapshot
 {
     Char_p          lastPath_p = NIL;
     Boolean_t       newPath;
+    Boolean_t       pathEmitted = FALSE;
     MbFile_p        file_p;
     MbFile_p        skipFile_p;
     Int32u_t        length;
@@ -847,7 +848,8 @@ Int32s_t snapshot
 
             if( newPath )
             {
-                fprintf( fp, "P:%s\n", file_p->path_p );
+                pathEmitted = FALSE;
+                // fprintf( fp, "P:%s\n", file_p->path_p );
                 lastPath_p = file_p->path_p;
             }
 
@@ -877,12 +879,17 @@ Int32s_t snapshot
                         }
                     }
                 }
-                
+
                 if( skip == FALSE )
                 {
+                    if( pathEmitted == FALSE )
+                    {
+                        fprintf( fp, "P:%s\n", file_p->path_p );
+                        pathEmitted = TRUE;
+                    }
                     mbMD5File( file_p->pathName_p, file_p->md5, file_p->md5str, &length );
                     fprintf( fp, "F:%s %s\n",  file_p->md5str, file_p->name_p );
-                    
+
                     totalLength += (Int64u_t)length;
                     fileCount++;
                 }
