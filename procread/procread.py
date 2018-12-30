@@ -26,6 +26,7 @@ class Runner(object):
 
             x = simplejson.loads(line.strip())
 
+            # print "GOT X", x
 
 if __name__ == "__main__":
 

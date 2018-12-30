@@ -10,7 +10,7 @@
 
 #define TCP_FILE    "/proc/net/tcp"
 #define UDP_FILE    "/proc/net/udp"
-#define BUF_SIZE    1024
+#define BUF_SIZE    2048 // Longer than a UDP packet??
 #define PROC_DIR    "/proc"
 
 #define ERR_BUF_OVERFLOW "ERROR: Buffer overflow!"
@@ -76,22 +76,9 @@ void free_string_list()
  * Add line to the singly linked list of lines
  *-----------------------------------------------------------------------------
  */
-void add_line(Char_p start_p, Char_p end_p)
+void add_line(Char_p start_p)
 {
-    Intu_t          line_length;
     StringList_p    entry_p;
-
-    if( end_p != NIL )
-    {
-        line_length = (Intu_t)(end_p - start_p);
-        // printf("Want to add line of length: %d\n", line_length);
-
-        if( line_length == 0 ) return;
-
-        // Terminate the line. Assume that there is space in the buffer
-        // (i.e., assume that length checked in calling code)
-        *end_p = 0;
-    }
 
     // printf("Add line: '%s'\n", start_p);
 
@@ -182,7 +169,7 @@ Void_t read_pid_cwd( Char_p proc_dir_p, Char_p pid_p )
     bytes = snprintf(gBuf2, BUF_SIZE, "%s/%s/cwd", proc_dir_p, pid_p);
     if( bytes < 0 || bytes >= BUF_SIZE )
     {
-        add_line(ERR_BUF_OVERFLOW, NIL);
+        add_line( ERR_BUF_OVERFLOW );
         // printf("BUFFER OVERFLOW!!!\n");
         return;
     }
@@ -194,7 +181,7 @@ Void_t read_pid_cwd( Char_p proc_dir_p, Char_p pid_p )
 
     if( bytes < 0 || bytes >= BUF_SIZE )
     {
-        add_line( ERR_BUF_OVERFLOW, NIL );
+        add_line( ERR_BUF_OVERFLOW );
         return;
     }
 
@@ -208,11 +195,11 @@ Void_t read_pid_cwd( Char_p proc_dir_p, Char_p pid_p )
     bytes = snprintf(gBuf2, BUF_SIZE, "pid: %s cwd: %s", pid_p, gBuf1 );
     if( bytes < 0 || bytes >= BUF_SIZE )
     {
-        add_line(ERR_BUF_OVERFLOW, NIL);
+        add_line( ERR_BUF_OVERFLOW );
         return;
     }
 
-    add_line(gBuf2, NIL);
+    add_line( gBuf2 );
     return;
 }
 
@@ -230,7 +217,7 @@ Void_t read_pid_cmdline( Char_p proc_dir_p, Char_p pid_p )
     bytes = snprintf(gBuf1, BUF_SIZE, "%s/%s/cmdline", proc_dir_p, pid_p);
     if( bytes < 0 || bytes >= BUF_SIZE )
     {
-        add_line(ERR_BUF_OVERFLOW, NIL);
+        add_line( ERR_BUF_OVERFLOW );
         // printf("BUFFER OVERFLOW!!!\n");
         return;
     }
@@ -242,11 +229,11 @@ Void_t read_pid_cmdline( Char_p proc_dir_p, Char_p pid_p )
         bytes = snprintf(gBuf2, BUF_SIZE, "ERROR: cannot open: %s", gBuf1);
         if( bytes < 0 || bytes >= BUF_SIZE )
         {
-            add_line(ERR_BUF_OVERFLOW, NIL);
+            add_line( ERR_BUF_OVERFLOW );
         }
         else
         {
-            add_line(gBuf2, NIL);
+            add_line( gBuf2 );
         }
         // printf( "Failed to open file: %s\n", gBuf1 );
         return;
@@ -260,11 +247,11 @@ Void_t read_pid_cmdline( Char_p proc_dir_p, Char_p pid_p )
         bytes = snprintf(gBuf1, BUF_SIZE, "ERROR: cannot read: %s/%s/cmdline", proc_dir_p, pid_p);
         if( bytes < 0 || bytes >= BUF_SIZE )
         {
-            add_line(ERR_BUF_OVERFLOW, NIL);
+            add_line( ERR_BUF_OVERFLOW );
         }
         else
         {
-            add_line(gBuf1, NIL);
+            add_line( gBuf1 );
         }
         goto exit;
     }
@@ -274,7 +261,7 @@ Void_t read_pid_cmdline( Char_p proc_dir_p, Char_p pid_p )
         // Check for potential buffer overflow before escaping potential quote escape
         if( j >= (BUF_SIZE - 3))
         {
-            add_line(ERR_BUF_OVERFLOW, NIL);
+            add_line( ERR_BUF_OVERFLOW );
             goto exit;
         }
 
@@ -292,9 +279,9 @@ Void_t read_pid_cmdline( Char_p proc_dir_p, Char_p pid_p )
         {
             gBuf1[j++] = gBuf2[i];
         }
-    //    printf( "%c %d\n", gBuf2[i], (Int8u_t)gBuf2[i] );
+        // printf( "%c %d\n", gBuf2[i], (Int8u_t)gBuf2[i] );
     }
-    gBuf1[i] = 0;
+    gBuf1[j] = 0;
 
     // printf("got CMDLINE: '%s'\n", gBuf1);
 
@@ -307,10 +294,10 @@ Void_t read_pid_cmdline( Char_p proc_dir_p, Char_p pid_p )
     bytes = snprintf(gBuf2, BUF_SIZE, "pid: %s cmdline: %s", pid_p, gBuf1 );
     if( bytes < 0 || bytes >= BUF_SIZE )
     {
-        add_line(ERR_BUF_OVERFLOW, NIL);
+        add_line( ERR_BUF_OVERFLOW );
         goto exit;
     }
-    add_line(gBuf2, NIL);
+    add_line( gBuf2 );
 
 exit:
     if( fp ) fclose( fp );
@@ -333,7 +320,7 @@ Void_t read_pid( Char_p proc_dir_p, Char_p pid_p )
     bytes = snprintf(gBuf1, BUF_SIZE, "%s/%s/fd", proc_dir_p, pid_p);
     if( bytes < 0 || bytes >= BUF_SIZE )
     {
-        add_line( ERR_BUF_OVERFLOW, NIL );
+        add_line( ERR_BUF_OVERFLOW );
         return;
     }
 
@@ -344,11 +331,11 @@ Void_t read_pid( Char_p proc_dir_p, Char_p pid_p )
         bytes = snprintf(gBuf1, BUF_SIZE, "ERROR: Failed to open: %s/%s/fd", proc_dir_p, pid_p);
         if( bytes < 0 || bytes >= BUF_SIZE )
         {
-            add_line( ERR_BUF_OVERFLOW, NIL );
+            add_line( ERR_BUF_OVERFLOW );
         }
         else
         {
-            add_line(gBuf1, NIL);
+            add_line( gBuf1 );
         }
         return;
     }
@@ -362,7 +349,7 @@ Void_t read_pid( Char_p proc_dir_p, Char_p pid_p )
 
         if( bytes < 0 || bytes >= BUF_SIZE )
         {
-            add_line( ERR_BUF_OVERFLOW, NIL );
+            add_line( ERR_BUF_OVERFLOW );
             // printf("BUFFER OVERFLOW!!!\n");
             continue;
         }
@@ -373,7 +360,7 @@ Void_t read_pid( Char_p proc_dir_p, Char_p pid_p )
 
         if( bytes < 0 || bytes >= BUF_SIZE )
         {
-            add_line( ERR_BUF_OVERFLOW, NIL );
+            add_line( ERR_BUF_OVERFLOW  );
            // printf("BUFFER OVERFLOW!!!\n");
             continue;
         }
@@ -394,7 +381,7 @@ Void_t read_pid( Char_p proc_dir_p, Char_p pid_p )
 
         if( bytes < 0 || bytes >= BUF_SIZE )
         {
-            add_line( ERR_BUF_OVERFLOW, NIL );
+            add_line( ERR_BUF_OVERFLOW );
             // printf("BUFFER OVERFLOW!!!\n");
             continue;
         }
@@ -402,7 +389,7 @@ Void_t read_pid( Char_p proc_dir_p, Char_p pid_p )
         //printf("GOT SOCKET: %s\n", gBuf2);
 
         // Add this to the set of data to return
-        add_line(gBuf2, NIL);
+        add_line( gBuf2 );
     }
     closedir( dir_p );
 
@@ -444,10 +431,11 @@ Void_t scan_pid_dir( Char_p dirname_p )
  *-----------------------------------------------------------------------------
  */
 
-Ints_t  read_net_file( Char_p filename_p )
+Ints_t  read_net_file( Char_p filename_p, Char_p type_p )
 {
     FILE           *fp = NIL;
     size_t          bytes;
+    size_t          index;
     Intu_t          size = 0;
     Intu_t          line_length;
     Char_p          next_char_p;
@@ -456,16 +444,25 @@ Ints_t  read_net_file( Char_p filename_p )
 
     if( ( fp = fopen( filename_p, "rb" ) ) == NIL )
     {
-        printf( "Failed to open file: '%s'\n", filename_p );
+        snprintf( gBuf1, (size_t)BUF_SIZE, "Failed to open file: %s", filename_p );
+        add_line( gBuf1 );
         goto exit;
     }
 
     // Put the received characters into global buf2
-    next_char_p = gBuf2;
+    index = snprintf(gBuf2, (size_t)BUF_SIZE, "%s: ", type_p);
+    next_char_p = &gBuf2[index];
 
     for( ; ; )
     {
         bytes = fread( gBuf1, 1, rx_buf_size, fp );
+        if( bytes < 0 || bytes > rx_buf_size )
+        {
+            snprintf( gBuf1, (size_t)BUF_SIZE, "Failed to read file: %s", filename_p );
+            add_line( gBuf1 );
+            goto exit;
+        }
+
         size += bytes;
 
         //printf( "Read %d bytes\n", size );
@@ -478,14 +475,18 @@ Ints_t  read_net_file( Char_p filename_p )
             if( gBuf1[i] == '\n')
             {
                 //printf( "Found a LF\n" );
-                add_line(gBuf2, next_char_p);
-                next_char_p = gBuf2;
+                *next_char_p = 0;
+                add_line( gBuf2 );
+                index = snprintf(gBuf2, (size_t)BUF_SIZE, "%s: ", type_p);
+                next_char_p = &gBuf2[index];
             }
             else if( gBuf1[i] == '\r' )
             {
                 //printf( "Found a CR\n");
-                add_line(gBuf2, next_char_p);
-                next_char_p = gBuf2;
+                *next_char_p = 0;
+                add_line( gBuf2 );
+                index = snprintf(gBuf2, (size_t)BUF_SIZE, "%s: ", type_p);
+                next_char_p = &gBuf2[index];
             }
             else
             {
@@ -543,8 +544,8 @@ int main
 
     free_string_list();
 
-    read_net_file( TCP_FILE );
-    read_net_file( UDP_FILE );
+    read_net_file( TCP_FILE, "tcp" );
+    read_net_file( UDP_FILE, "udp" );
     scan_pid_dir( PROC_DIR );
 
     // Loop through all the data buffered for return
