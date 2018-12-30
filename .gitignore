@@ -16,3 +16,4 @@ hpSonosDB.lib
 *.bak
 *.log
 reports/*.txt
+.idea

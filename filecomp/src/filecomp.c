@@ -87,6 +87,7 @@ int main
 #undef  MN
 #define MN "main"
 
+
     printf( "\n" );
 
     dir_q = qInitialize( &dirQueueHead );
@@ -244,10 +245,10 @@ int main
             qInsertLast( fileUnique_q, file_p );
         }
 
-	if( matchCount > 0 )
-	{
-	   matchSets++;
-	}
+    if( matchCount > 0 )
+    {
+       matchSets++;
+    }
     }
 
     if( showUnique )
@@ -392,7 +393,7 @@ dsFileStruct_p fileAdd
 
             if( *( path_p + pathLen - 1 ) == '/' )
             {
-                *( path_p + pathLen - 1 ) = (Char_t)NULL;
+                *( path_p + pathLen - 1 ) = (Char_t)NIL;
             }
             else
             {
@@ -463,7 +464,7 @@ Int32s_t getFileList
     else
     {
         printf("dir_p: %s, n: %d\n", dir_p, n);
-        
+
         /* Step through all the entries */
         while( n-- )
         {
