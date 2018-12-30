@@ -225,7 +225,7 @@ Void_t read_pid_cmdline( Char_p proc_dir_p, Char_p pid_p )
 {
     FILE           *fp = NIL;
     size_t          bytes;
-    int             i;
+    int             i, j;
 
     bytes = snprintf(gBuf1, BUF_SIZE, "%s/%s/cmdline", proc_dir_p, pid_p);
     if( bytes < 0 || bytes >= BUF_SIZE )
@@ -269,15 +269,28 @@ Void_t read_pid_cmdline( Char_p proc_dir_p, Char_p pid_p )
         goto exit;
     }
 
-    for( i = 0 ; i < bytes ; i++ )
+    for( i = 0, j = 0 ; i < bytes ; i++ )
     {
+        // Check for potential buffer overflow before escaping potential quote escape
+        if( j >= (BUF_SIZE - 3))
+        {
+            add_line(ERR_BUF_OVERFLOW, NIL);
+            goto exit;
+        }
+
         if( gBuf2[i] == 0 )
         {
-            gBuf1[i] = ' ';
+            gBuf1[j++] = ' ';
+        }
+        else if( gBuf2[i] == '"' )
+        {
+            gBuf1[j++] = '\\';
+            gBuf1[j++] = '\\';
+            gBuf1[j++] = '"';
         }
         else
         {
-            gBuf1[i] = gBuf2[i];
+            gBuf1[j++] = gBuf2[i];
         }
     //    printf( "%c %d\n", gBuf2[i], (Int8u_t)gBuf2[i] );
     }
