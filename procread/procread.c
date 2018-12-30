@@ -272,7 +272,7 @@ Void_t read_pid_cmdline( Char_p proc_dir_p, Char_p pid_p )
         else if( gBuf2[i] == '"' )
         {
             gBuf1[j++] = '\\';
-            gBuf1[j++] = '\\';
+            // gBuf1[j++] = '\\';
             gBuf1[j++] = '"';
         }
         else
