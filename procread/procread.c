@@ -119,6 +119,7 @@ void add_line(Char_p start_p, Char_p end_p)
 Char_p get_line(int index)
 {
     StringList_p    entry_p;
+    int             i;
 
     // printf( "Want to get line index: %d\n", index);
 
@@ -127,7 +128,7 @@ Char_p get_line(int index)
     entry_p = gStringListBase_p;
 
     // Loop until desired entry found.  This is a little "brute force"
-    for( int i = 0 ; i < index ; i++ )
+    for( i = 0 ; i < index ; i++ )
     {
         if( entry_p == 0 )
         {
@@ -155,10 +156,11 @@ Char_p get_line(int index)
 Ints_t is_pid_dir( Char_p name_p )
 {
     Char_t  c;
+    int     i;
 
     if( name_p == NIL) return FALSE;
 
-    for( int i = 0 ; ; i++)
+    for( i = 0 ; ; i++)
     {
         c = *(name_p + i);
         if( c == 0 ) break;
@@ -437,6 +439,7 @@ Ints_t  read_net_file( Char_p filename_p )
     Intu_t          line_length;
     Char_p          next_char_p;
     size_t          rx_buf_size = BUF_SIZE;
+    int             i;
 
     if( ( fp = fopen( filename_p, "rb" ) ) == NIL )
     {
@@ -455,7 +458,7 @@ Ints_t  read_net_file( Char_p filename_p )
         //printf( "Read %d bytes\n", size );
 
         // Loop through the received bytes looking for newlines and linefeeds
-        for( int i = 0 ; i < bytes ; i++ )
+        for( i = 0 ; i < bytes ; i++ )
         {
             // printf( "%c", *(buf1_p + i));
 
@@ -515,6 +518,7 @@ int main
 {
     Char_p          result_p;
     size_t          bytes;
+    int             i;
 
 //    printf( "Hello world!\n" );
 
@@ -533,7 +537,7 @@ int main
     // Loop through all the data buffered for return
 //    printf( "THIS IS THE ACQUIRED DATA -----------------------\n");
 
-    for( int i = 0 ;  ; i++)
+    for( i = 0 ;  ; i++)
     {
         result_p = get_line( i );
         if( result_p == NIL ) break;
