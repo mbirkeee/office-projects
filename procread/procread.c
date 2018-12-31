@@ -4,6 +4,14 @@
 #include <string.h>
 #include <dirent.h>
 #include <unistd.h>
+#include <time.h>
+#include <assert.h>
+
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <netdb.h>
 
 #include "procread.h"
 #include "mytypes.h"
@@ -13,10 +21,18 @@
 #define BUF_SIZE    2048 // Longer than a UDP packet??
 #define PROC_DIR    "/proc"
 
+#define HEART               "HEART"
+#define HEARTBEAT_VERSION   "2.0"
+#define HEARTBEAT_PORT      5066
+
 #define ERR_BUF_OVERFLOW "ERROR: Buffer overflow!"
 
+#define RX_TIMEOUT_SEC      2
+
+#define CMD_NETSTAT         0x7F201C3B
+
 /******************************************************************************
- * Structure for storing strings
+ * Structure for storing strings in singlely linked list
  *-----------------------------------------------------------------------------
  */
 
@@ -27,12 +43,25 @@ typedef struct StringList_s
 } StringList_t, *StringList_p;
 
 /******************************************************************************
+ * Structure for storing strings in singlely linked list
+ *-----------------------------------------------------------------------------
+ */
+
+typedef struct RxMessage_s
+{
+    unsigned command;
+    unsigned heartbeat;
+    unsigned offset;
+    unsigned handle;
+} RxMessage_t, *RxMessage_p;
+
+/******************************************************************************
  * Global Variables
  *-----------------------------------------------------------------------------
  */
 
-StringList_p        gStringListBase_p = 0;
-StringList_p        gStringListCurrent_p = 0;
+StringList_p        gStringListBase_p = NIL;
+StringList_p        gStringListCurrent_p = NIL;
 
 Char_t              gBuf1[BUF_SIZE];
 Char_t              gBuf2[BUF_SIZE];
@@ -519,6 +548,132 @@ exit:
 }
 
 /******************************************************************************
+ * Read the passed in file and add lines to the singly liked list
+ *-----------------------------------------------------------------------------
+ */
+
+void send_netstat(
+    int                      sock,
+    struct sockaddr_storage *addr_storage_p,
+    char                    *buf_p,
+    unsigned                 offset,
+    unsigned                 handle
+)
+{
+    Char_p                   line_p;
+    struct sockaddr_in      *addr_p;
+    int                      bytes;
+    int                      status;
+    // int                      addr_len;
+
+    // printf("send_netstat called with offset %u handle %u\n", offset, handle);
+
+    if( offset == 0 )
+    {
+        // refresh the netstat data
+        // printf("REFRESH START\n");
+        free_string_list();
+        read_net_file( TCP_FILE, "tcp" );
+        read_net_file( UDP_FILE, "udp" );
+        scan_pid_dir( PROC_DIR );
+        // printf("REFRESH DONE\n");
+    }
+
+    line_p = get_line( offset );
+
+    if( line_p == NIL)
+    {
+        bytes = snprintf(gBuf1, BUF_SIZE, "{\"handle\":\"%u\",\"offset\":\"%u\",\"line\":\"__NONE__\"}",
+            handle, offset);
+    }
+    else
+    {
+        bytes = snprintf(gBuf1, BUF_SIZE, "{\"handle\":\"%u\",\"offset\":\"%u\",\"line\":\"%s\"}",
+            handle, offset, line_p);
+    }
+    if( bytes < 0 || bytes >= BUF_SIZE )
+    {
+        fprintf( stderr, "%s: buffer overflow!\n", HEART);
+        bytes = snprintf(gBuf1, BUF_SIZE, "{\"handle\":\"%u\",\"offset\":\"%u\",\"ERROR\":\"buffer overflow\"}",
+            handle, offset);
+    }
+
+    addr_p = (struct sockaddr_in *)addr_storage_p;
+    // addr_len = sizeof(struct sockaddr_in);
+
+    status = sendto(sock, gBuf1, bytes, 0, (struct sockaddr *)addr_p,
+        sizeof(struct sockaddr_in));
+
+    if( status < 0 ) fprintf( stderr, "%s: send_pvs() failed\n", HEART);
+
+    return;
+}
+
+/******************************************************************************
+ * Looks at received command. It must have:
+ * - the expected number of bytes
+ * - a valid command
+ * - a heartbeat value within 1 of the current heartbeat
+ *-----------------------------------------------------------------------------
+ */
+
+Ints_t process_rx_command(
+    int                      sock,
+    struct sockaddr_storage *addr_storage_p,
+    int                      rx_count,
+    char                    *buf_p,
+    Int32u_t                 heartbeat
+)
+{
+    RxMessage_p             message_p;
+    Ints_t                  result = FALSE;
+    Int32u_t                handle;
+    Int32u_t                offset;
+    Int32u_t                command;
+
+    /* Check the received number of bytes against expected */
+    if( rx_count < 0 ) goto exit;
+
+    if( rx_count != (int)sizeof( RxMessage_t ))
+    {
+        fprintf( stderr, "%s: Expect %d bytes, got %d\n",
+            HEART, (int)sizeof(RxMessage_t), rx_count);
+        goto exit;
+    }
+
+    /* The message is in the passed in buffer */
+    message_p = (RxMessage_p)buf_p;
+
+    if( heartbeat - ntohl(message_p->heartbeat) > 1 )
+    {
+        fprintf(stderr, "%s: Invalid count %u (expect %u)\n", HEART,
+            ntohl(message_p->heartbeat), heartbeat);
+        goto exit;
+    }
+
+    handle  = ntohl(message_p->handle);
+    offset  = ntohl(message_p->offset);
+    command = ntohl(message_p->command);
+
+    // printf("handle:  0x%08x\n", handle);
+    // printf("offset:  0x%08x\n", offset);
+    // printf("command: 0x%08x\n", command);
+
+    if( command == CMD_NETSTAT )
+    {
+        send_netstat( sock, addr_storage_p, buf_p, offset, handle );
+    }
+    else
+    {
+        fprintf(stderr, "%s: Invalid command: 0x%08x\n", HEART, command);
+        goto exit;
+    }
+    result = TRUE;
+exit:
+    return result;
+}
+
+/******************************************************************************
  * Procedure: main( )
  *-----------------------------------------------------------------------------
  * This code is written to be as lean as possible.
@@ -530,27 +685,134 @@ int main
     Char_p          argv[]
 )
 {
-    Char_p          result_p;
-    size_t          bytes;
-    int             i;
+    size_t                  bytes;
+    int                     yes = 1;
+    int                     sock;
+    int                     status;
+    unsigned                counter = 0;
+    unsigned long           starttime;
+    unsigned long           curtime;
+    unsigned long           uptime;
+    unsigned long           pid;
+    unsigned long           beacon_interval = 30;
+    unsigned long           next_beacon_time;
+    struct sockaddr_in      sock_in;
+    struct sockaddr_storage rx_addr;
+    socklen_t               rx_addr_len = sizeof(rx_addr);
+    struct timeval          tv;
+    char                   *cwd_p;
 
-//    printf( "Hello world!\n" );
+    unsigned short ca_server_port;
 
-//    printf( "sizeof( Int8u_t ): %ld\n", sizeof( Int8u_t ) );
-//    printf( "sizeof( Int16u_t ): %ld\n", sizeof( Int16u_t ) );
-//    printf( "sizeof( Int32u_t ): %ld\n", sizeof( Int32u_t ) );
-//    printf( "sizeof( Int64u_t ): %ld\n", sizeof( Int64u_t ) );
-//    printf( "sizeof( Intu_t ): %ld\n", sizeof( Intu_t ) );
+    printf( "sizeof( Int8u_t ):  %ld\n", sizeof( Int8u_t ) );
+    printf( "sizeof( Int16u_t ): %ld\n", sizeof( Int16u_t ) );
+    printf( "sizeof( Int32u_t ): %ld\n", sizeof( Int32u_t ) );
+    printf( "sizeof( Int64u_t ): %ld\n", sizeof( Int64u_t ) );
+    printf( "sizeof( Intu_t ):   %ld\n", sizeof( Intu_t ) );
 
-    free_string_list();
+    assert( sizeof( Int8u_t ) == 1 );
+    assert( sizeof( Int16u_t ) == 2 );
+    assert( sizeof( Int32u_t ) == 4 );
+    assert( sizeof( Int32s_t ) == 4 );
+    assert( sizeof( Int64u_t ) == 8 );
 
-    read_net_file( TCP_FILE, "tcp" );
-    read_net_file( UDP_FILE, "udp" );
-    scan_pid_dir( PROC_DIR );
+    // assert( sizeof( unsigned ) == 4 );
 
-    // Loop through all the data buffered for return
-//    printf( "THIS IS THE ACQUIRED DATA -----------------------\n");
+    //free_string_list();
 
+    //read_net_file( TCP_FILE, "tcp" );
+    //read_net_file( UDP_FILE, "udp" );
+    //scan_pid_dir( PROC_DIR );
+
+    // Seed random number generator
+    srand(time(NULL));
+
+    ca_server_port = (unsigned short)(10000 + 1000.0 * rand() / RAND_MAX );
+
+    memset(&sock_in, 0, sizeof(struct sockaddr_in));
+
+    sock = socket( PF_INET, SOCK_DGRAM, IPPROTO_UDP );
+
+    sock_in.sin_addr.s_addr = htonl(INADDR_ANY);
+    sock_in.sin_port = htons(0);
+    sock_in.sin_family = PF_INET;
+
+    status = bind(sock, (struct sockaddr *)&sock_in, sizeof(struct sockaddr_in));
+    if( status < 0 ) fprintf(stderr, "%s: bind() error: %d\n", HEART, status);
+
+    status = setsockopt(sock, SOL_SOCKET, SO_BROADCAST, &yes, sizeof(int) );
+    if( status < 0 ) fprintf( stderr, "%s: setsockopt SO_BROADCAST failed\n", HEART);
+
+    tv.tv_sec = RX_TIMEOUT_SEC;
+    tv.tv_usec = 0;
+
+    status = setsockopt(sock, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
+    if( status < 0 ) fprintf( stderr, "%s: setsockopt SO_RCVTIMEO failed\n", HEART);
+
+    getcwd(gBuf1, BUF_SIZE);
+
+    cwd_p = (Char_p)malloc(strlen(gBuf1) + 1);
+    strcpy(cwd_p, gBuf1);
+
+    pid = (unsigned long)getpid();
+    starttime = (unsigned long)time(0);
+
+    next_beacon_time = starttime;
+
+    /* Use just a single socket and thread to send heartbeats */
+    /* and handle incoming requests */
+    for( ; ; )
+    {
+        /* Look for received commands */
+        bytes = recvfrom(sock, gBuf1, BUF_SIZE, 0,
+            (struct sockaddr *)&rx_addr, &rx_addr_len);
+
+        // printf("received %ld bytes\n", bytes);
+
+        if( bytes > 0 )
+        {
+            /* Process any received commands */
+            process_rx_command(sock, &rx_addr, bytes, gBuf1, counter);
+        }
+
+        curtime = (unsigned long)(time(0));
+
+//        printf("curtime: %lu next_beacon_time: %lu\n", curtime, next_beacon_time);
+
+        /* Send the next heartbeat if needed.  Due to the timeout */
+        /* in the recvfrom() call above, we could be up to 'timeout' late */
+        if( curtime > next_beacon_time )
+        {
+            counter++;
+            next_beacon_time += beacon_interval;
+            uptime = curtime - starttime;
+
+            bytes = snprintf(gBuf1, BUF_SIZE,
+                "{\"seq\":\"%u\",\"sp\":\"%u\",\"up\":\"%lu\",\"cur\":\"%lu\",\"pid\":\"%lu\",\"cwd\":\"%s\",\"ver\":\"%s\"}",
+                counter, ca_server_port, uptime, curtime, pid, cwd_p, HEARTBEAT_VERSION
+            );
+
+            if( bytes < 0 || bytes >= BUF_SIZE )
+            {
+                fprintf(stderr, "%s: Buffer overflow composing heartbeat\n", HEART);
+                continue;
+            }
+
+            printf("SEND HEARTBEAT: ca_server_port: %u\n", ca_server_port);
+
+            sock_in.sin_addr.s_addr = htonl(-1); /* send message to 255.255.255.255 */
+            sock_in.sin_port = htons(HEARTBEAT_PORT); /* port number */
+
+            status = sendto(sock, gBuf1, bytes, 0,
+                (struct sockaddr *)&sock_in, sizeof(struct sockaddr_in));
+
+            if( status < 0 ) fprintf(stderr, "%s: sendto() failed\n", HEART);
+        }
+    }
+
+    free(cwd_p);
+
+#if 0
     for( i = 0 ;  ; i++)
     {
         result_p = get_line( i );
@@ -566,6 +828,7 @@ int main
             printf("%s\n", gBuf1);
         }
     }
+#endif
 
     return 0;
 }

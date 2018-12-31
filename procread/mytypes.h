@@ -78,6 +78,7 @@ typedef signed short    Int16s;
 typedef signed short    Int16s_t;
 typedef signed short   *Int16s_p;
 
+#if 0
 typedef unsigned long   Int32u;
 typedef unsigned long   Int32u_t;
 typedef unsigned long  *Int32u_p;
@@ -85,6 +86,17 @@ typedef unsigned long  *Int32u_p;
 typedef signed long     Int32s;
 typedef signed long     Int32s_t;
 typedef signed long    *Int32s_p;
+
+#else
+
+typedef unsigned        Int32u;
+typedef unsigned        Int32u_t;
+typedef unsigned       *Int32u_p;
+
+typedef signed          Int32s;
+typedef signed          Int32s_t;
+typedef signed         *Int32s_p;
+#endif
 
 typedef unsigned char   Boolean;
 typedef unsigned char   Boolean_t;
