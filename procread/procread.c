@@ -31,6 +31,8 @@
 
 #define CMD_NETSTAT         0x7F201C3B
 
+#define DEBUG               1
+
 /******************************************************************************
  * Structure for storing strings in singlely linked list
  *-----------------------------------------------------------------------------
@@ -66,6 +68,10 @@ StringList_p        gStringListCurrent_p = NIL;
 Char_t              gBuf1[BUF_SIZE];
 Char_t              gBuf2[BUF_SIZE];
 
+#if DEBUG
+Intu_t              gMallocCount = 0;
+#endif
+
 /******************************************************************************
  * Frees memory allocated for the singly linked list of strings
  *-----------------------------------------------------------------------------
@@ -83,11 +89,11 @@ void free_string_list()
         next_p = current_p->next_p;
         if( current_p->string_p )
         {
-            // gMallocCount--;
+            gMallocCount--;
             free( current_p->string_p );
         }
         free( current_p );
-        // gMallocCount--;
+        gMallocCount--;
         current_p = next_p;
     }
 
@@ -109,10 +115,30 @@ void add_line(Char_p start_p)
 {
     StringList_p    entry_p;
 
-    // printf("Add line: '%s'\n", start_p);
+#if DEBUG
+    printf("Add line: '%s'\n", start_p);
+#endif
 
     entry_p = (StringList_p)calloc( 1, sizeof(StringList_t) );
     entry_p->string_p = (char *)malloc( strlen(start_p) + 1 );
+
+    if( entry_p == NIL )
+    {
+        fprintf( stderr, "ERROR: %s: add_line(): malloc failed\n", HEART);
+        return;
+    }
+
+    if( entry_p->string_p == NIL )
+    {
+        free( entry_p );
+        fprintf( stderr, "ERROR: %s: add_line(): malloc failed\n", HEART);
+        return;
+    }
+
+#if DEBUG
+    gMallocCount++;
+    gMallocCount++;
+#endif
 
     strcpy( entry_p->string_p, start_p );
 
@@ -165,18 +191,20 @@ Char_p get_line(int index)
 }
 
 /******************************************************************************
+ * Check to see if this is a "pid" directory.
  *
+ * Returns TRUE if there are only digits in the string name_p; FALSE otherwise
  *-----------------------------------------------------------------------------
  */
 
 Ints_t is_pid_dir( Char_p name_p )
 {
-    Char_t  c;
-    int     i;
+    Char_t      c;
+    Ints_t      i;
 
     if( name_p == NIL) return FALSE;
 
-    for( i = 0 ; ; i++)
+    for( i = 0 ; ; i++ )
     {
         c = *(name_p + i);
         if( c == 0 ) break;
@@ -193,13 +221,13 @@ Ints_t is_pid_dir( Char_p name_p )
 
 Void_t read_pid_cwd( Char_p proc_dir_p, Char_p pid_p )
 {
-    size_t          bytes;
+    size_t  bytes;
 
     bytes = snprintf(gBuf2, BUF_SIZE, "%s/%s/cwd", proc_dir_p, pid_p);
     if( bytes < 0 || bytes >= BUF_SIZE )
     {
         add_line( ERR_BUF_OVERFLOW );
-        // printf("BUFFER OVERFLOW!!!\n");
+        fprintf( stderr, "ERROR: %s: read_pid_cwd(): buffer overflow\n", HEART);
         return;
     }
 
@@ -219,9 +247,9 @@ Void_t read_pid_cwd( Char_p proc_dir_p, Char_p pid_p )
 
     // printf( "THIS IS THE CWD: %s\n", gBuf1 );
 
-    if( strlen(gBuf1) <= 1) return;
+    if( strlen( gBuf1 ) <= 1 ) return;
 
-    bytes = snprintf(gBuf2, BUF_SIZE, "pid: %s cwd: %s", pid_p, gBuf1 );
+    bytes = snprintf( gBuf2, BUF_SIZE, "pid: %s cwd: %s", pid_p, gBuf1 );
     if( bytes < 0 || bytes >= BUF_SIZE )
     {
         add_line( ERR_BUF_OVERFLOW );
@@ -241,7 +269,7 @@ Void_t read_pid_cmdline( Char_p proc_dir_p, Char_p pid_p )
 {
     FILE           *fp = NIL;
     size_t          bytes;
-    int             i, j;
+    Ints_t          i, j;
 
     bytes = snprintf(gBuf1, BUF_SIZE, "%s/%s/cmdline", proc_dir_p, pid_p);
     if( bytes < 0 || bytes >= BUF_SIZE )
@@ -252,10 +280,9 @@ Void_t read_pid_cmdline( Char_p proc_dir_p, Char_p pid_p )
     }
 
     //printf("Want to read CMDLINE: %s\n", gBuf1 );
-
     if( ( fp = fopen( gBuf1, "rb" ) ) == NIL )
     {
-        bytes = snprintf(gBuf2, BUF_SIZE, "ERROR: cannot open: %s", gBuf1);
+        bytes = snprintf( gBuf2, BUF_SIZE, "ERROR: failed to open: %s", gBuf1 );
         if( bytes < 0 || bytes >= BUF_SIZE )
         {
             add_line( ERR_BUF_OVERFLOW );
@@ -273,7 +300,7 @@ Void_t read_pid_cmdline( Char_p proc_dir_p, Char_p pid_p )
 
     if( bytes < 0 || bytes >= BUF_SIZE )
     {
-        bytes = snprintf(gBuf1, BUF_SIZE, "ERROR: cannot read: %s/%s/cmdline", proc_dir_p, pid_p);
+        bytes = snprintf(gBuf1, BUF_SIZE, "ERROR: cannot read: %s/%s/cmdline", proc_dir_p, pid_p );
         if( bytes < 0 || bytes >= BUF_SIZE )
         {
             add_line( ERR_BUF_OVERFLOW );
@@ -287,7 +314,7 @@ Void_t read_pid_cmdline( Char_p proc_dir_p, Char_p pid_p )
 
     for( i = 0, j = 0 ; i < bytes ; i++ )
     {
-        // Check for potential buffer overflow before escaping potential quote escape
+        // Check for potential buffer overflow due to injected escape char
         if( j >= (BUF_SIZE - 3))
         {
             add_line( ERR_BUF_OVERFLOW );
@@ -301,8 +328,12 @@ Void_t read_pid_cmdline( Char_p proc_dir_p, Char_p pid_p )
         else if( gBuf2[i] == '"' )
         {
             gBuf1[j++] = '\\';
-            // gBuf1[j++] = '\\';
             gBuf1[j++] = '"';
+        }
+        else if( gBuf2[i] == '\\' )
+        {
+            gBuf1[j++] = '\\';
+            gBuf1[j++] = '\\';
         }
         else
         {
@@ -443,7 +474,7 @@ Void_t scan_pid_dir( Char_p dirname_p )
 
     if( dir_p )
     {
-        while( ( dir_entry_p = readdir( dir_p )) != NULL )
+        while( ( dir_entry_p = readdir( dir_p ) ) != NULL )
         {
             if( is_pid_dir( dir_entry_p->d_name ) )
             {
@@ -529,7 +560,7 @@ Ints_t  read_net_file( Char_p filename_p, Char_p type_p )
                 }
                 else
                 {
-                    printf("ERROR! Buffer overflow storing line!\n");
+                    fprintf( stderr, "ERROR: %s: Buffer overflow\n", HEART);
                 }
             }
         }
@@ -553,18 +584,17 @@ exit:
  */
 
 void send_netstat(
-    int                      sock,
+    Ints_t                   sock,
     struct sockaddr_storage *addr_storage_p,
-    char                    *buf_p,
-    unsigned                 offset,
-    unsigned                 handle
+    Char_p                   buf_p,
+    Int32u_t                 offset,
+    Int32u_t                 handle
 )
 {
     Char_p                   line_p;
     struct sockaddr_in      *addr_p;
-    int                      bytes;
-    int                      status;
-    // int                      addr_len;
+    Ints_t                   bytes;
+    Ints_t                   status;
 
     // printf("send_netstat called with offset %u handle %u\n", offset, handle);
 
@@ -599,7 +629,6 @@ void send_netstat(
     }
 
     addr_p = (struct sockaddr_in *)addr_storage_p;
-    // addr_len = sizeof(struct sockaddr_in);
 
     status = sendto(sock, gBuf1, bytes, 0, (struct sockaddr *)addr_p,
         sizeof(struct sockaddr_in));
@@ -673,6 +702,37 @@ exit:
     return result;
 }
 
+#if DEBUG
+/******************************************************************************
+ *
+ *-----------------------------------------------------------------------------
+ */
+
+Void_t display_string_list()
+{
+    Ints_t      i;
+    size_t      bytes;
+    Char_p      result_p;
+
+    for( i = 0 ;  ; i++)
+    {
+        result_p = get_line( i );
+        if( result_p == NIL ) break;
+
+        bytes = snprintf( gBuf1, (size_t)BUF_SIZE, "LINE: %d: %s", i, result_p );
+        if( bytes < 0 || bytes >= BUF_SIZE )
+        {
+            printf("buffer overflow\n");
+        }
+        else
+        {
+            printf("%s\n", gBuf1);
+        }
+    }
+}
+
+#endif /* DEBUG */
+
 /******************************************************************************
  * Procedure: main( )
  *-----------------------------------------------------------------------------
@@ -718,11 +778,14 @@ int main
 
     // assert( sizeof( unsigned ) == 4 );
 
-    //free_string_list();
+    free_string_list();
 
-    //read_net_file( TCP_FILE, "tcp" );
-    //read_net_file( UDP_FILE, "udp" );
-    //scan_pid_dir( PROC_DIR );
+    read_net_file( TCP_FILE, "tcp" );
+    read_net_file( UDP_FILE, "udp" );
+    scan_pid_dir( PROC_DIR );
+    display_string_list();
+
+    // exit(0);
 
     // Seed random number generator
     srand(time(NULL));
@@ -777,7 +840,7 @@ int main
 
         curtime = (unsigned long)(time(0));
 
-//        printf("curtime: %lu next_beacon_time: %lu\n", curtime, next_beacon_time);
+        // printf("curtime: %lu next_beacon_time: %lu\n", curtime, next_beacon_time);
 
         /* Send the next heartbeat if needed.  Due to the timeout */
         /* in the recvfrom() call above, we could be up to 'timeout' late */
@@ -798,7 +861,9 @@ int main
                 continue;
             }
 
-            printf("SEND HEARTBEAT: ca_server_port: %u\n", ca_server_port);
+#if DEBUG
+            printf("SEND HEARTBEAT: ca_server_port: %u gMallocCount: %u\n", ca_server_port, gMallocCount );
+#endif
 
             sock_in.sin_addr.s_addr = htonl(-1); /* send message to 255.255.255.255 */
             sock_in.sin_port = htons(HEARTBEAT_PORT); /* port number */
@@ -812,23 +877,7 @@ int main
 
     free(cwd_p);
 
-#if 0
-    for( i = 0 ;  ; i++)
-    {
-        result_p = get_line( i );
-        if( result_p == NIL ) break;
 
-        bytes = snprintf( gBuf1, (size_t)BUF_SIZE, "{\"i\":\"%d\",\"l\":\"%s\"}", i, result_p );
-        if( bytes < 0 || bytes >= BUF_SIZE )
-        {
-            printf("buffer overflow\n");
-        }
-        else
-        {
-            printf("%s\n", gBuf1);
-        }
-    }
-#endif
 
     return 0;
 }

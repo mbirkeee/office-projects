@@ -166,8 +166,10 @@ class Runner(object):
 
 
             except:
+
                 print_binary(data_str)
                 print "FAILED TO DECODE RESPONSE"
+                print data_str
                 break
 
             print data
