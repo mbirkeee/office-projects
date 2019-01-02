@@ -31,7 +31,7 @@
 
 #define CMD_NETSTAT         0x7F201C3B
 
-#define DEBUG               1
+#define DEBUG               (0)
 
 /******************************************************************************
  * Structure for storing strings in singlely linked list
@@ -89,18 +89,17 @@ void free_string_list()
         next_p = current_p->next_p;
         if( current_p->string_p )
         {
+#if DEBUG
             gMallocCount--;
+#endif
             free( current_p->string_p );
         }
         free( current_p );
+#if DEBUG
         gMallocCount--;
+#endif
         current_p = next_p;
     }
-
-    //if( gMallocCount != 0 )
-   // {
-   //     fprintf(stderr, "%s: non-zero malloc count: %d\n", HEART, gMallocCount);
-   // }
     gStringListBase_p = 0;
     gStringListCurrent_p = 0;
 
@@ -776,16 +775,15 @@ int main
     assert( sizeof( Int32s_t ) == 4 );
     assert( sizeof( Int64u_t ) == 8 );
 
-    // assert( sizeof( unsigned ) == 4 );
 
+#if DEBUG
     free_string_list();
 
     read_net_file( TCP_FILE, "tcp" );
     read_net_file( UDP_FILE, "udp" );
     scan_pid_dir( PROC_DIR );
     display_string_list();
-
-    // exit(0);
+#endif
 
     // Seed random number generator
     srand(time(NULL));

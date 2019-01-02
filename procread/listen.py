@@ -127,6 +127,8 @@ class Runner(object):
         addr = address
         counter = sequence
 
+        start_time = time.time()
+
         # udp_port = addr[1]
         # print "originating UDP PORT: %d" % int(udp_port)
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -187,12 +189,14 @@ class Runner(object):
 
             line = data.get('line')
             if line == "__NONE__":
-                print "We are done"
+                print "found a __NONE__, assume no more lines"
                 break
 
             print "LINE: %s" % line
 
-        print "Done getting netstat data"
+
+        duration = time.time() - start_time
+        print "Done getting netstat data, duration: %f" % duration
 
             # try:
             #     data = json.loads(data_str)
