@@ -9,10 +9,12 @@ backup/mak/restore
 *.dsk
 *.~cpp
 *.~dsk
+*.~bpr
 pracman.prefs
 mbUtils.lib
 mbSqlLib.lib
 hpSonosDB.lib
+hpSonosLib.lib
 *.bak
 *.log
 reports/*.txt
