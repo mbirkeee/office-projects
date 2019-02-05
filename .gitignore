@@ -5,6 +5,7 @@ backup/mak/restore
 *.a
 .echoget-lockfile
 *.exe
+!pracman/pracman_data/echoview/EchoView.exe
 *.tds
 *.dsk
 *.~cpp
