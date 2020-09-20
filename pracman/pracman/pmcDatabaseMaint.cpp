@@ -1136,8 +1136,11 @@ void pmcDatabaseIncrementClaimNumbers( void )
     //Int32u_t                    minClaimNumber = 40000;     // 2016_03_26
     //Int32u_t                    maxClaimNumber = 50000;     // 2016_03_26
 
-    Int32u_t                    minClaimNumber = 50000;     // 2019_02_05
-    Int32u_t                    maxClaimNumber = 60000;     // 2019_02_05
+    // Int32u_t                    minClaimNumber = 50000;     // 2019_02_05
+    // Int32u_t                    maxClaimNumber = 60000;     // 2019_02_05
+
+    Int32u_t                    minClaimNumber = 60000;     // 2020_09_20
+    Int32u_t                    maxClaimNumber = 70000;     // 2020_09_20
 
     claimCheckStruct_p          claim_p;
 
@@ -1173,10 +1176,12 @@ void pmcDatabaseIncrementClaimNumbers( void )
     // goto exit;
 
     //mbDlgInfo( "Claim numbers from 40000 to 50000 were incremented on Mar. 26 2016");
-    mbDlgInfo( "Claim numbers from 50000 to 60000 were incremented on Feb. 5 2019");
+    //mbDlgInfo( "Claim numbers from 50000 to 60000 were incremented on Feb. 5 2019");
 
+    mbDlgInfo( "Claim numbers from 60000 to 70000 were incremented on Sept. 20, 2020");
+    goto exit
     // The "if" statement prevents a compile WARNING
-    if( maxClaimNumber == 60000 ) goto exit;
+    // if( maxClaimNumber == 60000 ) goto exit;
 
     if( mbDlgOkCancel( "Increment claim numbers?" ) == MB_BUTTON_CANCEL ) goto exit;
 
