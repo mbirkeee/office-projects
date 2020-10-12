@@ -22,7 +22,6 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-
 #include "mbUtils.h"
 
 /******************************************************************************
@@ -36,7 +35,6 @@
 Int32s_t    mbLockFileGet( Char_p lockFile_p )
 {
     Int32s_t        returnCode = FALSE;
-    Boolean_t       foundPidFile = FALSE;
     Boolean_t       foundPid = FALSE;
     FILE           *fp = NIL;
     FILE           *fp2 = NIL;
@@ -47,8 +45,6 @@ Int32s_t    mbLockFileGet( Char_p lockFile_p )
     fp = fopen( lockFile_p, "r" );
     if( fp )
     {
-        foundPidFile = TRUE;
-
         /* Get pid from lockfile  */
         fgets( buf1_p, 1020, fp );
         checkPid = atol( buf1_p );

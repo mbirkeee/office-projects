@@ -158,7 +158,7 @@ Int32u_t mbDateIntFromString( Char_p str_p )
 
     if( str_p == NIL ) goto exit;
 
-    for( temp_p = str_p ; *temp_p != (Char_t)NULL ; temp_p++ )
+    for( temp_p = str_p ; *temp_p != 0 ; temp_p++ )
     {
         if( *temp_p >= '0' && *temp_p <= '9' )
         {
@@ -423,7 +423,7 @@ Char_p  mbStrRemoveSlashLeading( Char_p str_p )
         for( ; ; )
         {
             *temp2_p++ = *temp1_p;
-            if( *temp1_p == (Char_t)NULL ) break;
+            if( *temp1_p == 0 ) break;
             temp1_p++;
         }
     }
@@ -789,7 +789,7 @@ Char_p mbDigitsOnly
 
     for( ; ; )
     {
-        if( *p1 == (Char_t)NULL ) break;
+        if( *p1 == 0 ) break;
 
         if( *p1 >= '0' && *p1 <= '9' )
         {
@@ -798,7 +798,7 @@ Char_p mbDigitsOnly
 
         p1++;
     }
-    *p2 = (Char_t)NULL;
+    *p2 = 0;
 
 exit:
     return string_p;

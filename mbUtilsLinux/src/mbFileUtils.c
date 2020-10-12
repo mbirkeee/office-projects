@@ -157,7 +157,7 @@ Char_p          mbFileNamePathStrip
     if( outIn_p )
     {
         out_p = outIn_p;
-        *out_p = (Char_t)NULL;
+        *out_p = 0;
     }
   
     if( name_p == NIL ) goto exit;
@@ -410,7 +410,7 @@ MbFile_p mbFileMalloc
 
             if( *( path_p + pathLen - 1 ) == '/' )
             {
-                *( path_p + pathLen - 1 ) = (Char_t)NULL;
+                *( path_p + pathLen - 1 ) = 0;
             }
             else
             {
