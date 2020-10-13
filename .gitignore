@@ -2,6 +2,8 @@
 *.obj
 backup/mak/backup
 backup/mak/restore
+echoget/mak/echoget
+filecomp/mak/filecomp
 *.a
 .echoget-lockfile
 *.exe
