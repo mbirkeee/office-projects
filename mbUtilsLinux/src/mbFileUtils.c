@@ -381,6 +381,7 @@ exit:
  * This function returns the starting position of substring i2 within i1.
  *-----------------------------------------------------------------------------
  */
+
 MbFile_p mbFileMalloc
 (
     Char_p  name_p,
@@ -506,7 +507,7 @@ Int32s_t mbFileListGet
     n = scandir( dir_p, &namelist_pp, 0, 0 );
     if( n < 0 )
     {
-        printf( "scandir() error: %d on directory '%s'\n", n, dir_p );
+        fprintf( stderr, "scandir() error: %d on directory '%s'\n", n, dir_p );
         goto exit;
     }
     else
@@ -570,7 +571,7 @@ Int32s_t mbFileListGet
                 else
                 {
                     /* Check to see if this is a directory */
-                    if( S_ISDIR( buf.st_mode ) )
+                    if( S_ISDIR( buf.st_mode ) || S_ISLNK( buf.st_mode ) )
                     {
                         if( strcmp( namelist_pp[n]->d_name, ".." ) !=  0 )
                         {
@@ -600,6 +601,10 @@ Int32s_t mbFileListGet
                                 ignore = FALSE;
                             }
                         }
+                    }
+                    else
+                    {
+                        printf("not processing %s\n", filename_p );
                     }
                 }
                 //if( ignore )  printf( "ignoring file '%s'\n", filename_p );

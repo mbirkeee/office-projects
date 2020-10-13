@@ -35,7 +35,8 @@ Boolean_t   gThreadStopped = FALSE;
 Ints_t      gSystemPid = 0;
 
 /* Function prototypes */
-Int32s_t backup( qHead_p dir_q, qHead_p skip_q, Boolean_t recurseFlag );
+Int32s_t backup( qHead_p dir_q, qHead_p skip_q, Boolean_t recurseFlag,
+                 Boolean_t followSymLinkFlag );
 
 Int32s_t snapshot( qHead_p      q_p,
                    qHead_p      skip_q,
@@ -58,6 +59,7 @@ typedef struct ThreadArgs_s
     qHead_p     dir_q;
     qHead_p     skip_q;
     Boolean_t   recurseFlag;
+    Boolean_t   followSymLinkFlag;
     Char_p      host_p;
     Char_p      remoteDir_p;
     Char_p      localDir_p;
@@ -97,6 +99,7 @@ int main
     Boolean_t       backupFlag = FALSE;
     Boolean_t       restoreFlag = FALSE;
     Boolean_t       getFlag = FALSE;
+    Boolean_t       followSymLinkFlag = FALSE;
     Ints_t          modeCount = 0;
     Ints_t          i;
     Int32u_t        ticks = 0;
@@ -112,8 +115,12 @@ int main
         switch( option )
         {
           case 's':
-            file_p = mbFileMalloc( NIL, optarg );
-            qInsertLast( skip_q, file_p );
+            printf("we want to skip '%s'\n", (Char_p)optarg );
+            //file_p = mbFileMalloc( NIL, optarg );
+
+            mbStrListAdd( skip_q, optarg );
+
+            //qInsertLast( skip_q, file_p );
             break;
 
           case 'd':
@@ -135,6 +142,10 @@ int main
             getFlag = TRUE;
             break;
 
+          case 'f':
+            followSymLinkFlag = TRUE;
+            printf("Follow symlink = True\n");
+
           case 'r':
             remoteDir_p = mbMallocStr( optarg );
             break;
@@ -148,6 +159,8 @@ int main
             goto exit;
         }
     }
+
+    // exit( 0 );
 
     mbStrRemoveSlashTrailing( logDir_p );
     mbStrRemoveSlashTrailing( gBackupDir_p );
@@ -206,7 +219,7 @@ int main
         threadArgs.dir_q = dir_q;
         threadArgs.skip_q = skip_q;
         threadArgs.recurseFlag = recurseFlag;
-
+        threadArgs.followSymLinkFlag = followSymLinkFlag;
     }
     else if( getFlag == TRUE )
     {
@@ -282,7 +295,8 @@ exit:
     if( gotLock ) unlink( lockFile );
 
     mbFileListFree( dir_q );
-    mbFileListFree( skip_q );
+    // mbFileListFree( skip_q );
+    mbStrListFree( skip_q );
 
     if( helpFlag )
     {
@@ -300,7 +314,7 @@ exit:
         printf( " -h <remote_host>      Remote host to backup\n" );
         printf( " -r <remote_dir>       Remote directory (i.e., remote file list location)\n" );
         printf( " -s <skip_string>      In -d, skip any /path/file containing <skip_string>\n" );
-
+        printf( " -f                    Follow SymLinks\n" );
         printf( "\n" );
     }
     else
@@ -347,7 +361,8 @@ Void_p              workerThreadEntry
 
     if( threadArgs_p->mode == BK_MODE_BACKUP )
     {
-        backup( threadArgs_p->dir_q, threadArgs_p->skip_q, threadArgs_p->recurseFlag );
+        backup( threadArgs_p->dir_q, threadArgs_p->skip_q,
+                threadArgs_p->recurseFlag, threadArgs_p->followSymLinkFlag );
     }
     else if( threadArgs_p->mode == BK_MODE_GET )
     {
@@ -737,7 +752,12 @@ exit:
  *-----------------------------------------------------------------------------
  */
 
-Int32s_t backup( qHead_p dir_q, qHead_p skip_q, Boolean_t recurseFlag )
+Int32s_t backup(
+    qHead_p         dir_q,
+    qHead_p         skip_q,
+    Boolean_t       recurseFlag,
+    Boolean_t       followSymLinkFlag
+)
 {
 
     qHead_t         fileQueueHead;
@@ -771,7 +791,11 @@ Int32s_t backup( qHead_p dir_q, qHead_p skip_q, Boolean_t recurseFlag )
     {
         mbLog( "Examining directory '%s'...\n", file_p->path_p );
 
-        mbFileListGet( file_p->path_p, file_q, recurseFlag, FALSE, FALSE );
+        printf("follow symlink flag: %d\n", (Ints_t)followSymLinkFlag);
+
+        mbFileListGet( file_p->path_p, file_q, recurseFlag,
+                       followSymLinkFlag, FALSE );
+
         snapshot( file_q, skip_q, fp, &fileCount, &length );
         mbFileListFree( file_q );
 
@@ -822,7 +846,7 @@ Int32s_t snapshot
     Boolean_t       newPath;
     Boolean_t       pathEmitted = FALSE;
     MbFile_p        file_p;
-    MbFile_p        skipFile_p;
+    mbStrList_p     skipFile_p;
     Int32u_t        length;
     Int64u_t        totalLength = 0;
     Int32u_t        fileCount = 0;
@@ -870,9 +894,10 @@ Int32s_t snapshot
                 // See if the file contains the skip string
                 if( skip_q && skip == FALSE )
                 {
-                    qWalk( skipFile_p, skip_q, MbFile_p )
+                    qWalk( skipFile_p, skip_q, mbStrList_p )
                     {
-                        if( mbStrPos( file_p->pathName_p, skipFile_p->path_p ) >= 0 )
+                        // printf("searching %s for %s\n", file_p->pathName_p, skipFile_p->str_p);
+                        if( mbStrPos( file_p->pathName_p, skipFile_p->str_p ) >= 0 )
                         {
                             skip = TRUE;
                             break;
