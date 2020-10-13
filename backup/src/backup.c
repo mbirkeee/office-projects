@@ -382,6 +382,8 @@ exit:
  *-----------------------------------------------------------------------------
  * Description:
  *
+ * Coming back and looking at this in 202 I can't beleive I wrote code like
+ * this.  This function does way too much and is difficult to test.
  *-----------------------------------------------------------------------------
  */
 
@@ -533,7 +535,7 @@ Int32s_t backup_remote( Char_p host_p, Char_p remoteDir_p, Char_p localDir_p )
         //mbLog( buf_p );
         if( mbStrPos( buf_p, "P:" ) == 0 )
         {
-            //mbLog( "Found path '%s'\n",  buf_p + 2 );
+            mbLog( "Found path '%s'\n",  buf_p + 2 );
             mbFree( path_p );
             path_p = mbMallocStr( buf_p + 2 );
             mbStrCleanWhite( path_p, NIL );
@@ -545,8 +547,7 @@ Int32s_t backup_remote( Char_p host_p, Char_p remoteDir_p, Char_p localDir_p )
 
             strcpy( name_p, buf_p + 35 );
             mbStrCleanWhite( name_p, NIL );
-            // mbLog( "Found file '%s' md5 '%s'PATH '%s'\n", name_p, md5str, path_p );
-
+            mbLog( "Found file '%s' md5 '%s'PATH '%s'\n", name_p, md5str, path_p );
 
             /* Check to see if we already have this file */
             found = FALSE;
@@ -558,6 +559,7 @@ Int32s_t backup_remote( Char_p host_p, Char_p remoteDir_p, Char_p localDir_p )
                     // mbLog( "Already have file %s '%s' \n", md5str, name_p );
                     found = TRUE;
                     filesPrev++;
+                    break;
                 }
             }
 
@@ -568,6 +570,7 @@ Int32s_t backup_remote( Char_p host_p, Char_p remoteDir_p, Char_p localDir_p )
 
             filesFailed++;
 
+            mbLog( "Calling scp %s -> %s\n", source_p, target_p );
             if( scpFile( host_p, source_p, target_p ) == FALSE )
             {
                 mbLog( "Failed to get file: '%s'\n", source_p );
@@ -577,7 +580,7 @@ Int32s_t backup_remote( Char_p host_p, Char_p remoteDir_p, Char_p localDir_p )
                 /* Ensure file matches expected checksum */
                 mbMD5File( target_p, NIL, md5str2, &size1 );
 
-                mbLog( "Got file: '%s'  -- %u\n", source_p, size1 );
+                mbLog( "Got file %d: '%s'  -- %u\n", (fileCount + 1), source_p, size1 );
 
                 if( strcmp( md5str, md5str2 ) == 0 )
                 {
