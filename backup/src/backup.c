@@ -33,6 +33,7 @@ pthread_t   gWorkerThread = 0;
 Int32u_t    gWatchdogCounter = 0;
 Boolean_t   gThreadStopped = FALSE;
 Ints_t      gSystemPid = 0;
+Ints_t      gSkipCount = 0;
 
 /* Function prototypes */
 Int32s_t backup( qHead_p dir_q, qHead_p skip_q, Boolean_t recurseFlag,
@@ -923,7 +924,8 @@ Int32s_t snapshot
                 }
                 else
                 {
-                    mbLog( "Skipping file: %s\n", file_p->pathName_p );
+                    gSkipCount++;
+                    mbLog( "Skipping file: %d %s\n", gSkipCount, file_p->pathName_p );
                 }
             }
             gWatchdogCounter++;
