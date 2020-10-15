@@ -48,5 +48,6 @@
 #define CMD_GZIP            "/bin/gzip"
 #define CMD_GUNZIP          "/bin/gzip -d"
 // #define CMD_SCP             "/usr/bin/scp -p -B -C -q -c blowfish"
-#define CMD_SCP             "/usr/bin/scp -p -B -C -q"
+//#define CMD_SCP             "/usr/bin/scp -p -B -C -q"
+#define CMD_SCP             "/usr/bin/scp -p -B -C -q -l 8192 -v -o ConnectTimeout=30"
 #endif /* H_BACKUP */
