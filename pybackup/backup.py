@@ -4,6 +4,7 @@ import queue
 import hashlib
 import datetime
 import json
+import time
 
 SAVE_FILE_PATTERN   = '_####_##_##-##_##_##.'
 
@@ -146,6 +147,10 @@ class Application(object):
 
         self._file_saver = FileSaver(path=self._directory_meta, prefix="md5sum_cache")
 
+        paths = list(set(args.directory_backup))
+        for item in paths:
+            self._dir_queue.put_nowait(item)
+
     def read_old_file(self, file_name):
 
         f = None
@@ -189,7 +194,7 @@ class Application(object):
 
         self.md5sum_cache_read()
 
-        self._dir_queue.put_nowait('/home/mikeb/nobackup/office-projects')
+        # self._dir_queue.put_nowait('/home/mikeb/nobackup/office-projects')
 
         # self.read_old_file('2020-10-13.txt')
         self.scan()
@@ -210,8 +215,11 @@ class Application(object):
 
     def md5sum_cache_save(self):
 
+        start_time = time.time()
         data_str = json.dumps(self._md5sum_dict)
         self._file_saver.save(data_str)
+        elapsed_time = time.time() - start_time
+        print("Time to write cache: %.1f" % elapsed_time)
 
     def md5sum_cache_read(self):
 
@@ -285,10 +293,10 @@ class Application(object):
             self._count_file_total += 1
 
             self._count_progress += 1
-            if self._count_progress >= 1000:
+            if self._count_progress >= 10000:
                 self.print_stats()
                 self._count_progress = 0
-
+                self.md5sum_cache_save()
 
             if item.path.endswith('.o'):
                 self._count_file_skipped += 1
