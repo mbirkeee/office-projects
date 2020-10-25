@@ -8,7 +8,6 @@ import time
 
 SAVE_FILE_PATTERN   = '_####_##_##-##_##_##.'
 
-
 class FileSaver(object):
 
     def __init__(self, path=None, prefix='FileSaver', keep_last=5):

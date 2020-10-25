@@ -575,6 +575,7 @@ Int32s_t backup_remote( Char_p host_p, Char_p remoteDir_p, Char_p localDir_p )
 
             filesFailed++;
 
+            sleep( 1 );
             mbLog( "Calling scp %s -> %s\n", source_p, target_p );
             if( scpFile( host_p, source_p, target_p ) == FALSE )
             {

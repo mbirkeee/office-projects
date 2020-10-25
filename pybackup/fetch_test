@@ -1,0 +1,6 @@
+#!/bin/bash
+/home/mikeb/anaconda3/bin/python fetch.py \
+    -s server@drbree.com \
+    -r /data/backups/local_xcelera \
+    -d /data3/backups/hazel3_xcelera \
+    -l /data3/backups/hazel3_xcelera/logs
