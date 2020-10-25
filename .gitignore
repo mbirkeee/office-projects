@@ -14,6 +14,8 @@ filecomp/mak/filecomp
 *.~dsk
 *.~bpr
 *.~h
+*.~ddp
+*.~dfm
 pracman.prefs
 mbUtils.lib
 mbSqlLib.lib

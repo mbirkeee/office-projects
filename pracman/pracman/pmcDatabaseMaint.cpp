@@ -1177,11 +1177,11 @@ void pmcDatabaseIncrementClaimNumbers( void )
 
     //mbDlgInfo( "Claim numbers from 40000 to 50000 were incremented on Mar. 26 2016");
     //mbDlgInfo( "Claim numbers from 50000 to 60000 were incremented on Feb. 5 2019");
-
     mbDlgInfo( "Claim numbers from 60000 to 70000 were incremented on Sept. 20, 2020");
-    goto exit
+    //goto exit;
+
     // The "if" statement prevents a compile WARNING
-    // if( maxClaimNumber == 60000 ) goto exit;
+    if( maxClaimNumber == 70000 ) goto exit;
 
     if( mbDlgOkCancel( "Increment claim numbers?" ) == MB_BUTTON_CANCEL ) goto exit;
 

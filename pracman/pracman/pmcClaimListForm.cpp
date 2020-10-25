@@ -3261,9 +3261,10 @@ void __fastcall TClaimListForm::SubmitButtonClick(TObject *Sender)
 
                     // if( provider_p->claimNumber > 15000 && provider_p->claimNumber < 20000 )     // 2013_12_27
                     // if( provider_p->claimNumber > 45000 && provider_p->claimNumber < 50000 )     // 2014_12_29
-                    if( provider_p->claimNumber > 55000 && provider_p->claimNumber < 60000 )        // 2019_02_05
+                    // if( provider_p->claimNumber > 55000 && provider_p->claimNumber < 60000 )     // 2019_02_05
+                    if( provider_p->claimNumber > 65000 && provider_p->claimNumber < 70000 )        // 2020_09_20
                     {
-                        mbDlgExclaim("Get Mike to increment the next batch of claim numbers!!!");
+                        mbDlgExclaim("Get Mike to increment claim numbers (%ld)!", provider_p->claimNumber );
                     }
 
                     if( provider_p->claimNumber >= PMC_CLAIM_NUMBER_MAX )
