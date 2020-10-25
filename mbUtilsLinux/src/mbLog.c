@@ -127,6 +127,7 @@ Ints_t mbLog
         fclose( fp );
 
         fprintf( stdout, "%s: %ld: %s", timeStr, gPid, str_p );
+        fflush( stdout );
     }
 
     mbFree( str_p );
@@ -253,17 +254,27 @@ Ints_t mbSystem( Char_p cmd_p, Ints_p pid_p )
 
     do
     {
+        fprintf( stdout, "calling waitpid (%s)\n", cmd_p);
+        fflush( stdout );
         if( waitpid( pid, &status, 0 ) == -1 )
         {
             if( errno != EINTR )
             {
                 if( pid_p ) *pid_p = 0;
+
+                fprintf(stdout, "returning -1\n");
+                fflush(stdout);
                 return -1;
             }
+            fprintf( stdout, "errno: %d\n", errno );
+            fflush( stdout );
+            sleep( 1 );
         }
         else
         {
             if( pid_p ) *pid_p = 0;
+            fprintf(stdout, "returning status: %d\n", status);
+            fflush(stdout);
             return status;
         }
     }

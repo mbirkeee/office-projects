@@ -33,6 +33,7 @@ pthread_t   gWorkerThread = 0;
 Int32u_t    gWatchdogCounter = 0;
 Boolean_t   gThreadStopped = FALSE;
 Ints_t      gSystemPid = 0;
+Ints_t      gSkipCount = 0;
 
 /* Function prototypes */
 Int32s_t backup( qHead_p dir_q, qHead_p skip_q, Boolean_t recurseFlag,
@@ -382,7 +383,7 @@ exit:
  *-----------------------------------------------------------------------------
  * Description:
  *
- * Coming back and looking at this in 202 I can't beleive I wrote code like
+ * Coming back and looking at this in 2020 I can't beleive I wrote code like
  * this.  This function does way too much and is difficult to test.
  *-----------------------------------------------------------------------------
  */
@@ -405,6 +406,7 @@ Int32s_t backup_remote( Char_p host_p, Char_p remoteDir_p, Char_p localDir_p )
     Int32u_t        filesFailed = 0;
     Int32u_t        filesPrev = 0;
     Int32u_t        size1, size2;
+    Int32u_t        test_count = 0;
     qHead_t         fileQueue;
     qHead_p         file_q;
     qHead_t         tempQueue;
@@ -434,7 +436,7 @@ Int32s_t backup_remote( Char_p host_p, Char_p remoteDir_p, Char_p localDir_p )
 
     if( mbFileExists( target_p ) )
     {
-        mbLog( "File '%s' aleady processed\n", target_p );
+        mbLog( "File '%s' already processed\n", target_p );
         goto exit;
     }
 
@@ -527,6 +529,7 @@ Int32s_t backup_remote( Char_p host_p, Char_p remoteDir_p, Char_p localDir_p )
 #endif
 
     mbLog( "Detected %lu local files\n", file_q->size );
+    // return;
 
     while( fgets( buf_p, 4096, fp ) != NULL )
     {
@@ -551,18 +554,20 @@ Int32s_t backup_remote( Char_p host_p, Char_p remoteDir_p, Char_p localDir_p )
 
             /* Check to see if we already have this file */
             found = FALSE;
+            test_count = 0;
             qWalk( file_p, file_q, MbFile_p )
             {
+                test_count++;
                 //mbLog( "Local file '%s' (%s)\n", file_p->pathName_p, file_p->name_p );
                 if( mbStrPos( file_p->name_p, md5str ) == 0 )
                 {
-                    // mbLog( "Already have file %s '%s' \n", md5str, name_p );
+                    mbLog( "Already have file %s '%s' \n", md5str, name_p );
                     found = TRUE;
                     filesPrev++;
-                    break;
+                    //break;
                 }
             }
-
+            mbLog("Checked %lu files\n", test_count);
             if( found ) continue;
 
             sprintf( source_p, "%s/%s", path_p, name_p );
@@ -570,6 +575,7 @@ Int32s_t backup_remote( Char_p host_p, Char_p remoteDir_p, Char_p localDir_p )
 
             filesFailed++;
 
+            sleep( 1 );
             mbLog( "Calling scp %s -> %s\n", source_p, target_p );
             if( scpFile( host_p, source_p, target_p ) == FALSE )
             {
@@ -617,6 +623,7 @@ Int32s_t backup_remote( Char_p host_p, Char_p remoteDir_p, Char_p localDir_p )
                         }
 
                         sprintf( cmd_p, "%s %s %s/.", CMD_MV, source_p, target_p );
+                        mbLog("Moving file: %s -> %s\n", source_p, target_p);
                         if( mbSystem( cmd_p, &gSystemPid ) != 0 )
                         {
                             mbLog( "Failed to move file: '%s'\n", source_p );
@@ -624,6 +631,7 @@ Int32s_t backup_remote( Char_p host_p, Char_p remoteDir_p, Char_p localDir_p )
                         }
                         else
                         {
+                            mbLog("Move finished\n");
                             file_p = mbFileMalloc( md5str, NIL );
                             qInsertLast( file_q, file_p );
                             fileCount++;
@@ -923,7 +931,8 @@ Int32s_t snapshot
                 }
                 else
                 {
-                    mbLog( "Skipping file: %s\n", file_p->pathName_p );
+                    gSkipCount++;
+                    mbLog( "Skipping file: %d %s\n", gSkipCount, file_p->pathName_p );
                 }
             }
             gWatchdogCounter++;

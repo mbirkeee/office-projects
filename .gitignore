@@ -25,3 +25,4 @@ hpSonosLib.lib
 *.log
 reports/*.txt
 .idea
+md5sum_cache_*
