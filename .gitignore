@@ -26,3 +26,5 @@ hpSonosLib.lib
 reports/*.txt
 .idea
 md5sum_cache_*
+*/__pycache__/*
+ECG_bill/data/*
