@@ -1,178 +1,17 @@
 import argparse
-import os
-import queue
-import hashlib
-import datetime
-import json
-import time
-import traceback
 import sys
-import MySQLdb
+import io
+import readline
 
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.pdfpage import PDFPage
 from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
-import io
 
-SKIP_CR_ON_INPUT = False
+from claim import Claim
+from my_sql import SQL
 
-# from my_sql import MyConnector
-MONTH_MAP = {
-    'JAN':1, 'FEB':2, 'MAR':3, 'APR': 4, 'MAY':5,  'JUN': 6,
-    'JUL':7, 'AUG':8, 'SEP':9, 'OCT':10, 'NOV':11, 'DEC':12
-}
-class Claim(object):
-    def __init__(self):
-        self._phn = None
-        self._firstName = None
-        self._lastName = None
-        self._gender = None
-        self._birthday = None
-        self._acqDate = None
-        self._patientID = None
-
-    def __repr__(self):
-        result = ''
-        result += "%20s" % self._lastName
-        result += "%20s" % self._firstName
-        result += "%15s" % self._phn
-        result += "%4s"  % self._gender
-        result += "%20s" % self._birthday
-        result += "%25s" % self._acqDate
-        return result
-
-                    # print("%20s  %20s %20s" % (lastNames[i], firstNames[i], phns[i]))
-
-    def setPatientID(self, value):
-        self._patientID = value
-
-    def setAcqDate(self, value):
-        self._acqDate = value
-
-    def getAcqDate(self):
-        return self._acqDate
-
-    def setBirthday(self, value):
-        self._birthday = value
-
-    def getBirthday(self):
-        return self._birthday
-
-    def getBirthdayInt(self):
-        parts = self._birthday.split("-")
-        # print(parts)
-        day = int(parts[0])
-        year = int(parts[2].upper())
-        month = MONTH_MAP.get(parts[1].upper())
-        # print(year, month, day)
-        result = year * 10000 + month * 100 + day
-
-        return result
-
-    def setPhn(self, value):
-        self._phn = value
-
-    def getPhn(self):
-        return self._phn
-
-    def getPhnProv(self):
-        return 'SK'
-
-    def setFirstName(self, value):
-        self._firstName = value
-
-    def getFirstName(self):
-        return self._firstName
-
-    def setLastName(self, value):
-        self._lastName = value
-
-    def getLastName(self):
-        return self._lastName
-
-    def setGender(self, value):
-        self._gender = value
-
-    def getGender(self):
-        return self._lastName
-
-    def getGenderInt(self):
-        if self._gender == 'M':
-            return 0
-        elif self._gender == 'F':
-            return 1
-
-        raise ValueError("bad gender")
-
-    def getTitle(self):
-        if self._gender == 'M':
-            return 'Mr.'
-        elif self._gender == 'F':
-            return 'Ms.'
-
-        raise ValueError("bad gender")
-class SQL(object):
-
-    def __init__(self):
-        self._db = None
-
-    def connect(self):
-
-        try:
-            self._db = MySQLdb.connect(host="127.0.0.1", db="clinic_active", user="mikenp", port=3307)
-        except:
-            self.db = None
-
-        if self._db is None:
-            return False
-
-        return True
-
-    def select(self, cmd):
-
-        print("CMD: %s" % cmd)
-        result = None
-        c = None
-
-        try:
-            c = self._db.cursor()
-            c.execute(cmd)
-            result =  c.fetchall()
-
-        finally:
-            if c: c.close()
-
-        return result
-
-    def select_one(self, cmd):
-
-        print("CMD: %s" % cmd)
-        c = None
-
-        try:
-            c = self._db.cursor()
-            c.execute(cmd)
-            result = c.fetchall()
-
-            if len(result) != 1:
-                print(result(result))
-                raise ValueError("wanted 1, got %d" % len(result))
-
-        finally:
-            if c: c.close()
-
-        return result[0][0]
-
-    def execute(self, cmd):
-        print("CMD: %s" % cmd)
-        c = None
-        try:
-            c = self._db.cursor()
-            c.execute(cmd)
-
-        finally:
-            if c: c.close()
+from definitions import SKIP_CR_ON_INPUT
 
 class Application(object):
 
@@ -184,7 +23,6 @@ class Application(object):
         self._skip_database = args.skip_database
         self._claims = []
         self._sql = SQL()
-
 
     def run(self):
 
@@ -198,32 +36,212 @@ class Application(object):
 
         self.readPDFFile()
         self.displayClaims()
+
+        msg = "Next step: Check patients. Continue? [y|n]: "
+        result = self.my_input(msg)
+        if not self.checkResult(result):
+            return
+
         self.checkPatients()
+
+        msg = "Next step: Create ECG claims. Continue? [y|n]: "
+        result = self.my_input(msg)
+        if not self.checkResult(result):
+            return
+
+        self.createClaims()
+
+    def createClaims(self):
+
+        for claim in self._claims:
+            print(claim)
+            self.createOneClaim(claim)
+
+    def createOneClaim(self, claim):
+
+        patient_id = claim.getPatientID()
+        if patient_id is None:
+            patient_id = -1000
+
+        acqDateInt = claim.getAcqDateInt()
+        acqTime = claim.getAcqTime()
+
+        # Check if claim exists
+        cmd = 'select id from claims where patient_id=%d and fee_code="031D" ' \
+            'and service_day=%d and comment_in="%s"' % (patient_id, acqDateInt, acqTime)
+
+        claim_id = self._sql.select_one(cmd, display=False)
+        if claim_id is not None:
+            msg = "EGC claim id for -- %s, %s' (%s) -- %s -- already created (ID: %d)" % \
+                (claim.getLastName(), claim.getFirstName(),
+                 claim.getGender(), claim.getAcqDate(), int(claim_id) )
+            print(msg)
+            # msg = "EGC claim id %s already created for (%s, %s) on %s   Press any key to continue..." % \
+            #     (int(claim_id), claim.getLastName(), claim.getFirstName(), claim.getAcqDate() )
+            # input(msg)
+            return
+
+        doctor_id = self.getReferringDoctorNumbers(claim)
+        if doctor_id is None:
+            print("No referring doctor selected; ECG claim for -- %s, %s (%s) -- NOT created!" %
+                  (claim.getLastName(), claim.getFirstName(), claim.getGender()))
+            return
+
+        # print("Patient ID: %d date: %d time: %s" % (patient_id, acqDateInt, acqTime))
+
+        print("----- CREATING ECG CLAIM -----")
+        print("Patient:         %s, %s (%s)" % (claim.getLastName(), claim.getFirstName(), claim.getGender()))
+        print("Date of birth:   %s (%d)" % (claim.getBirthday(), claim.getBirthdayInt()))
+        print("Date of service: %s (%d)" % (claim.getAcqDate(), claim.getAcgDateInt()))
+        print("Comment to MSP:  %s" % claim.getAcqTime())
+        print("Referring Dr.    %s, %s (Billing: %d)" % (
+            claim.getDoctorLastName(), claim.getDoctorFirstName(), claim.getDoctorNumber()))
+        # Proceed with claim creation - must get the referring doctor
+
+        result = self.my_input("proceed with claim creation? [y|n]")
+
+    def validateDoctor(self, doctor_number, claim):
+        cmd = "select first_name, last_name, id, " \
+              "on_msp_list from doctors where doctor_number=%d" % doctor_number
+
+        rows = self._sql.select(cmd)
+
+        if len(rows) != 1:
+            print("Doctor with MSP number %d not found in database" % doctor_number)
+            return None
+
+        row = rows[0]
+        first_name = row[0]
+        last_name = row[1]
+        doctor_id = int(row[2])
+        on_msp_list = int(row[3])
+        if on_msp_list != 1:
+            raise ValueError("doctor not on msp list")
+
+        msg = "You selected -- Dr. %s, %s -- (MSP: %d ID: %d) -- Is this correct? [y|n]: " % \
+              (last_name, first_name, doctor_number, doctor_id)
+
+        result = self.my_input(msg)
+        if result == 'y':
+            claim.setDoctorLastName(last_name)
+            claim.setDoctorFirstName(first_name)
+            claim.setDoctorID(doctor_id)
+            claim.setDoctorNumber(doctor_number)
+            return doctor_id
+
+        return None
+
+    def getReferringDoctorNumbers(self, claim):
+
+        last_name = claim.getRefDrLastName()
+        # print("%s ----> '%s'" % (claim.getRefDr(), last_name))
+        if last_name:
+            cmd  = 'select id, first_name, doctor_number, on_msp_list from doctors ' \
+                 + 'where last_name="%s" ' % last_name \
+                 + 'and doctor_number>0 and on_msp_list=1 and not_deleted=1'
+
+            rows = self._sql.select(cmd)
+
+            # print("DR RESULT", repr(result))
+            # print("LEN esult: %d" % len(result))
+
+            if len(rows) == 0:
+                print("Doctor %s not found in database (%s)" % last_name, claim.getRefDr() )
+                last_name = None
+
+            elif len(rows) == 1:
+                row = rows[0]
+                doctor_number = int(row[2])
+                doctor_id = self.validateDoctor(doctor_number, claim)
+                if doctor_id is not None:
+                    return doctor_id
+            else:
+                # loop until selection made
+                while True:
+                    print("Select doctor for claim -- %s, %s (%s) -- (Ref: %s)" %
+                          (claim.getLastName(), claim.getFirstName(),
+                           claim.getGender(), claim.getRefDr() ))
+
+                    for i, row in enumerate(rows):
+                        first_name = row[1]
+                        billing_number = row[2]
+                        print("%2d: Dr. %s, %s (%s)" % (i+1, last_name, first_name, billing_number))
+
+                    selection = input("Select 1-%d [n=None]: " % len(rows))
+                    if not selection: continue
+                    selection = selection.strip().lower()
+                    if selection == 'n': break
+
+                    try:
+                        index = int(selection)
+                    except Exception:
+                        continue
+
+                    if index < 1 or index > len(rows):
+                        continue
+
+                    row = rows[index-1]
+                    doctor_number = int(row[2])
+                    doctor_id = self.validateDoctor(doctor_number, claim)
+                    if doctor_id is not None:
+                        return doctor_id
+
+        if last_name is None:
+            msg = "NO DOCTOR - MUST PROMPT for doctor_number"
+            result = self.my_input((msg))
+
+        return None,None
+
+    def checkResult(self, result):
+        result = result.strip().lower()
+        if result.startswith('y'):
+            return True
+        return False
 
     def checkPatients(self):
 
-        for claim in self._claims:
+        for i, claim in enumerate(self._claims):
             self.checkPatient(claim)
+            if i > 5:
+                print("temp early break!!!!")
+                break
 
     def checkPatient(self, claim):
+
         # First, see if patient is in the database
         phn = claim.getPhn()
-        sql = "select id, first_name, last_name, date_of_birth, gender, not_deleted from patients where health_num=%s" % phn
+
+        if phn is None:
+            print("Skipping patient -- %s, %s (%s) -- with PHN: None" %
+                  (claim.getLastName(), claim.getFirstName(), claim.getGender() ))
+            return
+
+        phn_prov = claim.getPhnProv()
+
+        # Must search patient database by PHN which is the unique patient identifier
+        sql = 'select id, first_name, last_name, date_of_birth, gender, not_deleted '\
+             'from patients where health_num="%d" and health_num_prov="%s"' % \
+            (phn, phn_prov)
 
         rows = self._sql.select(sql)
-        print(rows)
-        print("LEN ROWS: %d", len(rows))
         rowCount = len(rows)
 
         if rowCount == 0:
             self.createPatient(claim)
-            raise ValueError("temp stop")
 
         elif rowCount == 1:
-            print("need to validate patient")
+            row = rows[0]
+            patientID = int(row[0])
+            claim.setPatientID(patientID)
+            self.validatePatient(claim, row)
 
         else:
             raise ValueError("Got multiple results")
+
+    def validatePatient(self, claim, row):
+        patientID = int(row[0])
+        print("Found existing patient -- %s, %s (%s) -- ID: %d" %
+            (claim.getLastName(), claim.getFirstName(), claim.getGender(), patientID))
 
     def my_input(self, msg, echo=True):
 
@@ -248,13 +266,47 @@ class Application(object):
                     continue
                 return result[0]
 
+    def input_with_prefill(self, prompt, text):
+
+        if text is None:
+            text = ''
+
+        def hook():
+            readline.insert_text(text)
+            readline.redisplay()
+        readline.set_pre_input_hook(hook)
+        result = input(prompt)
+        readline.set_pre_input_hook()
+        return result
+
+
     def createPatient(self, claim):
-        print("need to create patient %s %s" % (claim.getFirstName(), claim.getLastName()))
 
-        result = self.my_input("create patient [y/n]?")
-        print("THIS IS THE RESULT", repr(result))
+        while True:
+            msg = "Create Patient (%s, %s) [ y=yes | s=skip | l = last | f = first ]: " % \
+                  (claim.getLastName(), claim.getFirstName())
 
-        # raise ValueError("temp stop")
+            result = self.my_input(msg)
+
+            if result.startswith('s'):
+                print("Skipping patient")
+                return
+
+            elif result.startswith('y'):
+                break
+
+            elif result.startswith('f'):
+                new = self.input_with_prefill("First name: ", claim.getFirstName())
+                if new:
+                    claim.setFirstName(new, skip_validate=True)
+
+            elif result.startswith('l'):
+                new = self.input_with_prefill("Last name: ", claim.getFirstName())
+                if new:
+                    claim.setLastName(new, skip_validate=True)
+        #----------------------------------------------------------------------
+
+         # raise ValueError("temp stop")
 
         try:
             self._sql.execute("lock tables patients write")
@@ -265,17 +317,21 @@ class Application(object):
             cmd = "insert into patients (id, created) values (%d, now())" % (maxId)
             self._sql.execute(cmd)
 
-            cmd = 'update patients set first_name="%s", last_name="%s", health_num="%s" where id=%d' % \
-                (claim.getFirstName(), claim.getLastName(), claim.getPhn(), maxId)
-
+            cmd = 'update patients set first_name="%s", last_name="%s" where id=%d' % \
+                (claim.getFirstName(), claim.getLastName(), maxId)
             self._sql.execute(cmd)
+
+            if claim.getPhn() is not None:
+                cmd = 'update patients set health_num="%d", health_num_prov="%s" where id=%d' % \
+                (claim.getPhn(), claim.getPhnProv(), maxId)
+                self._sql.execute(cmd)
 
             cmd = 'update patients set provider_id=1, gender=%d, title="%s" where id=%d' % \
                 (claim.getGenderInt(), claim.getTitle(), maxId)
             self._sql.execute(cmd)
 
-            cmd = 'update patients set not_deleted=1, health_num_prov="%s", date_of_birth=%d where id=%d' % \
-                (claim.getPhnProv(), claim.getBirthdayInt(), maxId)
+            cmd = 'update patients set not_deleted=1, date_of_birth=%d where id=%d' % \
+                (claim.getBirthdayInt(), maxId)
             self._sql.execute(cmd)
 
             cmd = 'update patients set city="Saskatoon", province="SK", country="Canada" where id=%d' % maxId
@@ -296,7 +352,7 @@ class Application(object):
         for i, claim in enumerate(self._claims):
             print("Claim: %3d: %s" % (i, repr(claim)))
             bday = claim.getBirthdayInt()
-            print("bday: %d" % bday)
+            # print("bday: %d" % bday)
 
     def readPDFFile(self):
 
@@ -313,6 +369,7 @@ class Application(object):
         genders     = self.getGenders(items)
         birthdays   = self.getBirthdays(items)
         acqDates    = self.getAcqDates(items)
+        refDrs      = self.getRefDrs(items)
 
         count = len(lastNames)
         if len(firstNames) != count:
@@ -330,6 +387,9 @@ class Application(object):
         if len(acqDates) != count:
             raise ValueError("Got %d acqDates; expected %d" %(len(acqDates), count))
 
+        if len(refDrs) != count:
+            raise ValueError("Got %d refDrs; expected %d" %(len(refDrs), count))
+
         for i in range(count):
 
             claim = Claim()
@@ -339,7 +399,7 @@ class Application(object):
             claim.setGender(genders[i])
             claim.setBirthday(birthdays[i])
             claim.setAcqDate(acqDates[i])
-
+            claim.setRefDr(refDrs[i])
             self._claims.append(claim)
 
         # print("Found %d last names" % len(lastNames))
@@ -382,6 +442,38 @@ class Application(object):
                     result.append(item)
             else:
                 if item == 'Acquisition Date':
+                    inList = True
+
+        return result
+
+    def isInt(self, item):
+        try:
+            i = int(item)
+            print("foud an int")
+            return True
+        except:
+            return False
+
+    def getRefDrs(self, items):
+        inList = False
+
+        result = []
+
+        for item in items:
+            print("ITEM: %s" % item)
+            if inList:
+
+                if self.isInt(item):
+                    inList = False
+
+                elif item == 'Totals for MD':
+                    inList=False
+
+                else:
+                    # print("Found Req Dr: '%s'" % item)
+                    result.append(item)
+            else:
+                if item == 'Req. MD':
                     inList = True
 
         return result
@@ -498,8 +590,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='ECG Billing')
     parser.add_argument('-f', '--ecg-file', help='ECG File (PDF)', required=True)
     parser.add_argument('-s', '--skip-database', help='Skip Database Connection', required=False, action='store_true')
+    parser.add_argument('-c', '--create-claim', help='Create Claim', required=False, action='store_true')
 #    parser.add_argument('-b', '--directory-meta', help='Meta directory', required=True)
     args = parser.parse_args()
 
     app = Application(args)
     app.run()
+    print("Done")
